@@ -1,0 +1,11 @@
+file_format: "1"
+id: splayney
+name: SplayneyBT
+type: shield
+url: https://github.com/Berti1234/zmk-config-test
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - splayney_left
+  - splayney_right

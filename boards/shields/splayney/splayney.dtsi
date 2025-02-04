@@ -1,15 +1,15 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "splayney-layouts.dtsi"
 
+&splayney_layout {
+    transform = <&default_transform>;
+};
+
 / {
 
     zmk,config {
         studio-unlock = <1>;
         studio-support = <1>;
-    };
-
-    &splayney_layout {
-        transform = <&default_transform>;
     };
 
     chosen {

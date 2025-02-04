@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    splaney_layout: splayney_layout {
+    splayney_layout: splayney_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default";
 

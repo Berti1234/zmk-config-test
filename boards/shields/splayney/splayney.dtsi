@@ -12,6 +12,10 @@
         studio-support = <1>;
     };
 
+    chosen {
+        zmk,kscan = &your_kscan_node;
+    };
+    
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <34>;

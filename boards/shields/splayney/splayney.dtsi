@@ -8,6 +8,10 @@
         studio-support = <1>;
     };
 
+    &splayney_layout {
+        transform = <&default_transform>;
+    };
+
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;

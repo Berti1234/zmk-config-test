@@ -6,6 +6,7 @@ url: https://github.com/Berti1234/zmk-config-test
 requires: [pro_micro]
 features:
   - keys
+  - studio
 siblings:
   - splayney_left
   - splayney_right

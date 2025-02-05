@@ -10,10 +10,8 @@
         // Other chosen items
     };
 
-    &zephyr_user {
-        zmk,studio;
-    };
-    
+
+
    default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <16>;

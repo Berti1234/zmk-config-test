@@ -1,0 +1,20 @@
+// my_keyboard_right.overlay
+
+#include "splayney.dtsi"
+
+&default_transform { // Offset of 3 because the left side has 3 columns
+    col-offset = <7>;
+};
+
+&kscan0 {
+    col-gpios = 
+                <&pro_micro 1 GPIO_ACTIVE_HIGH> // C15 p0.06
+              , <&pro_micro 0 GPIO_ACTIVE_HIGH> // C14 p0.08
+              , <&pro_micro 2 GPIO_ACTIVE_HIGH> // C13 p0.17
+
+              , <&pro_micro 6 GPIO_ACTIVE_HIGH> // C10 p1.00
+              , <&pro_micro 7 GPIO_ACTIVE_HIGH> // C11 p0.11
+              , <&pro_micro 8 GPIO_ACTIVE_HIGH> // C12 p1.04
+              , <&pro_micro 9 GPIO_ACTIVE_HIGH> // C9 p1.06
+              , <&pro_micro 10 GPIO_ACTIVE_HIGH>; // C8 p0.09
+};

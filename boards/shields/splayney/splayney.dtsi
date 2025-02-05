@@ -1,22 +1,16 @@
-#include <dt-bindings/zmk/matrix_transform.h>
-#include "splayney-layouts.dtsi"
+// my_keyboard.dtsi
 
-&splayney_layout {
-    transform = <&default_transform>;
-};
+#include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
+#include "splayney-layouts.dtsi"
 
 / {
 
-    zmk,config {
-        studio-unlock = <1>;
-        studio-support = <1>;
-    };
-
     chosen {
-        zmk,kscan = &your_kscan_node;
+        zmk,physical-layout = &physical_layout0;
+        // Other chosen items
     };
-
-    default_transform: keymap_transform_0 {
+    
+   default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <16>;
         rows = <3>;
@@ -27,19 +21,15 @@
         >;
     };
 
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-direct";
-        label = "KSCAN";
-        input-gpios = <&pro_micro P5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // R0
-                      <&pro_micro P6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // R1
-                      <&pro_micro P7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // R2
-                      <&pro_micro P8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // R3
-                      <&pro_micro P21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // C0
-                      <&pro_micro P20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // C1
-                      <&pro_micro P19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // C2
-                      <&pro_micro P18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // C3
-                      <&pro_micro P15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>, // C4
-                      <&pro_micro P14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // C5
-    };
 
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        row-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                  , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                  , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                  ;
+    };
 };

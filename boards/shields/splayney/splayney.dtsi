@@ -28,7 +28,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
-        matrix-transform = <&keymap_transform0>;
+        //matrix-transform = <&keymap_transform0>;
 
         row-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // R0 P0.03
                   , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // R1 P0.04

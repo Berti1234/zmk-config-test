@@ -1,3 +1,5 @@
+#include <physical_layouts.dtsi>
+
 / {
     splayney_layout: splayney_layout {
         compatible = "zmk,physical-layout";

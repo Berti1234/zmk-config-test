@@ -20,19 +20,31 @@
     keymap {
         compatible = "zmk,keymap";
 
+    //     default_layer {
+    //         // ---------------------------------------------------------------------------------------------------------------------------------
+    //         // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
+    //         // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
+    //         // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
+    //         //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+    //         bindings = <
+    //         &kp ESC   &kp Q &kp W &kp E &kp R &kp T    &kp 1 &kp 4   &kp 7 &kp 1   &kp Y &kp U     &kp I &kp O  &kp P     &kp BSLH
+    //         &kp TAB   &kp A &kp S &kp D &kp F &kp G    &kp 2 &kp 5   &kp 8 &kp 2   &kp H &kp J     &kp K &kp L  &kp SEMI  &kp SQT
+    //         &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp 3 &kp 6   &kp 9 &kp 3   &mo 1 &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT 
+    //         >;
+
         default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-            //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
             bindings = <
-            &kp ESC   &kp Q &kp W &kp E &kp R &kp T    &kp 1 &kp 4   &kp 7 &kp 1   &kp Y &kp U     &kp I &kp O  &kp P     &kp BSLH
-            &kp TAB   &kp A &kp S &kp D &kp F &kp G    &kp 2 &kp 5   &kp 8 &kp 2   &kp H &kp J     &kp K &kp L  &kp SEMI  &kp SQT
-            &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp 3 &kp 6   &kp 9 &kp 3   &mo 1 &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT 
+            // Erste Zeile (Zeile 0)
+            &kp ESC   &kp Q &kp W &kp E &kp R &kp T                                &kp Y &kp U &kp I &kp O &kp P &kp BSLH
+            // Zweite Zeile (Zeile 1)
+            &kp TAB   &kp A &kp S &kp D &kp F &kp G                                &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
+            // Dritte Zeile (Zeile 2)
+            &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp a &kp b   &kp c &kp d   &mo e &kp f &kp N &kp M &kp COMMA &kp DOT 
+            // Thumb Cluster (angepasst an deine Transform-Matrix)
+                                            &kp q  &kp w &kp e &kp r &kp t &kp y &kp x &kp c  
             >;
 
-//            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+
         };
     };
 };

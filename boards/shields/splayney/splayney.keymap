@@ -39,9 +39,9 @@
             // Zweite Zeile (Zeile 1)
             &kp TAB   &kp A &kp S &kp D &kp F &kp G                                &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
             // Dritte Zeile (Zeile 2)
-            &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp a &kp b   &kp c &kp d   &mo e &kp f &kp N &kp M &kp COMMA &kp DOT 
+            &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp A &kp B   &kp C &kp D   &mo E &kp F &kp N &kp M &kp COMMA &kp DOT 
             // Thumb Cluster (angepasst an deine Transform-Matrix)
-                                            &kp q  &kp w &kp e &kp r &kp t &kp y &kp x &kp c  
+                                            &kp Q  &kp W &kp E &kp R &kp Y &kp X &kp C &kp V  
             >;
 
 

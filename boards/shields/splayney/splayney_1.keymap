@@ -1,0 +1,106 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        testcombo {
+            bindings = <&kp ENTER>;
+            key-positions = <24 41>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        qwertz {
+            bindings = <
+&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp LCTRL  &kp ENTER  &kp ENTER  &trans     &kp Z  &kp U  &kp I      &kp O    &kp P      &trans
+&kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &kp LGUI   &trans     &trans     &kp BSPC   &kp H  &kp J  &kp K      &kp L    &kp POUND  &trans
+&kp LT   &kp Y  &kp X  &kp C  &kp V  &kp B  &kp LALT   &trans     &trans     &kp SPACE  &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS  &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans  &trans  &trans  &kp ENTER  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans     &kp BSPC  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        button {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&trans  &kp LBKT  &kp N7  &kp N8  &kp N9  &kp RBKT   &trans   &kp MINUS  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp SEMI  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp DOT  &trans     &trans  &trans  &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &trans    &kp N1  &kp N2  &kp N3  &kp BSLH   &kp N0   &trans     &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
+            >;
+        };
+
+        sum {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
+            >;
+        };
+
+        additional {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        colemak {
+            bindings = <
+&trans  &kp Q  &kp W  &kp F  &kp P  &kp B  &trans     &kp TAB  &kp ENTER  &trans    &kp J  &kp L  &kp U      &kp Y    &kp SEMI  &kp LBKT
+&trans  &kp A  &kp R  &kp S  &kp T  &kp G  &kp ESC    &trans   &trans     &trans    &kp M  &kp N  &kp E      &kp I    &kp O     &kp APOS
+&trans  &kp Z  &kp X  &kp C  &kp D  &kp V  &kp SPACE  &trans   &trans     &kp BSPC  &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &trans
+            >;
+        };
+
+        mtgap {
+            bindings = <
+&kp LBKT  &kp Y  &kp P  &kp O     &kp U    &kp J      &trans  &trans  &trans  &trans  &kp K  &kp D  &kp L  &kp C  &kp W  &kp RBKT
+&kp TAB   &kp I  &kp N  &kp E     &kp A    &kp COMMA  &trans  &trans  &trans  &trans  &kp M  &kp H  &kp T  &kp S  &kp R  &kp APOS
+&trans    &kp Q  &kp Z  &kp FSLH  &kp DOT  &kp SEMI   &trans  &trans  &trans  &trans  &kp B  &kp F  &kp G  &kp V  &kp X  &trans
+            >;
+        };
+
+        graphite {
+            bindings = <
+&trans  &kp B  &kp L  &kp D  &kp W  &kp Z  &trans  &trans  &trans  &trans  &trans  &kp F  &kp O   &kp U   &kp J   &kp SEMI
+&trans  &kp N  &kp R  &kp T  &kp S  &kp G  &trans  &trans  &trans  &trans  &kp Y   &kp H  &kp A   &kp E   &kp I   &trans
+&trans  &kp Q  &kp X  &kp M  &kp C  &kp V  &trans  &trans  &trans  &trans  &kp K   &kp P  &trans  &trans  &trans  &trans
+            >;
+        };
+    };
+};

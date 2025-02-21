@@ -7,9 +7,9 @@
               , <&pro_micro 0 GPIO_ACTIVE_HIGH> // C1 p0.08
               , <&pro_micro 2 GPIO_ACTIVE_HIGH> // C2 p0.17
 
-              , <&pro_micro 8 GPIO_ACTIVE_HIGH> // C3 p1.04
-              , <&pro_micro 7 GPIO_ACTIVE_HIGH> // C4 p0.11
               , <&pro_micro 6 GPIO_ACTIVE_HIGH> // C5 p1.00
+              , <&pro_micro 7 GPIO_ACTIVE_HIGH> // C4 p0.11
+              , <&pro_micro 8 GPIO_ACTIVE_HIGH> // C3 p1.04
 
               , <&pro_micro 9 GPIO_ACTIVE_HIGH> // C6 p1.06
               , <&pro_micro 10 GPIO_ACTIVE_HIGH>; // C7 p0.09

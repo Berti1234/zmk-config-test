@@ -10,9 +10,9 @@
 
 /* Uncomment this block if using RGB
 &led_strip {
-    chain-length = <6>;
-    // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
-    // chain-length = <25>; // Uncomment if using only per-key LEDs.
+    chain-length = ;
+    // chain-length = ; // Uncomment if using both per-key and underglow LEDs
+    // chain-length = ; // Uncomment if using only per-key LEDs.
 };
  */
 
@@ -21,27 +21,22 @@
         compatible = "zmk,keymap";
 
         behaviors {
-                tog_colemak: toggle_layer_colemak {
-                    compatible = "zmk,behavior-toggle-layer";
-                    #binding-cells = <0>;
-                    display-name = "Toggle Colemak";
-                    toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-                };
-
-                tog_qwerty: toggle_layer_qwerty {
-                    compatible = "zmk,behavior-toggle-layer";
-                    #binding-cells = <0>;
-                    display-name = "Toggle QWERTY";
-                    toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-                };
-
-                // switch_layer {
-                //     bindings = <
-                //         &set_default_layer 0
-                //         &set_default_layer 1
-                //     >;
-                // };
+            tog_colemak: toggle_layer_colemak {
+                compatible = "zmk,behavior-toggle-layer";
+                #binding-cells = ;
+                display-name = "Toggle Colemak";
+                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
+                to-layer = ; // Explicitly target layer_colemak
             };
+
+            tog_qwerty: toggle_layer_qwerty {
+                compatible = "zmk,behavior-toggle-layer";
+                #binding-cells = ;
+                display-name = "Toggle QWERTY";
+                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
+                to-layer = ; // Explicitly target default_layer
+            };
+        };
 
         default_layer {
             bindings = <
@@ -51,33 +46,13 @@
             >;
         };
 
-         // Zweites Layout (z.B. Colemak)
         layer_colemak {
             bindings = <
-                &kp ESC   &kp Q  &kp W  &kp F  &kp P  &kp G      &tog_qwerty    &tog_qwerty    &tog_colemak   &tog_colemak   &kp X   &kp X  &kp J      &kp L    &kp U      &kp Y    
-                &kp TAB   &kp A  &kp R  &kp S  &kp T  &kp D      &kp X          &kp X          &kp X          &kp X          &kp H   &kp N  &kp E      &kp I    &kp O      &kp X
-                &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B      &kp X          &kp X          &kp X          &kp X          &kp K   &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RSHFT
+                &kp ESC   &kp Q  &kp W  &kp F  &kp P  &kp G      &tog_qwerty    &tog_qwerty    &tog_colemak   &tog_colemak   &kp X   &kp U  &kp J      &kp L    &kp Y      &kp SEMI
+                &kp TAB   &kp A  &kp R  &kp S  &kp T  &kp D      &kp X          &kp H          &kp N          &kp E          &kp H   &kp N  &kp E      &kp I    &kp O      &kp QUOTE
+                &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B      &kp K          &kp M          &kp COMMA      &kp DOT        &kp SLASH &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RSHFT
             >;
         };
-
-        // // Behavior to switch between layers
-        // behaviors {
-        //     tog_layer: toggle_layout {
-        //         compatible = "zmk,behavior-momentary";
-        //         label = "Toggle Layer";
-        //         #binding-cells = <0>;
-        //         bindings = <&switch_to_colemak>, <&switch_to_qwerty>;
-        //     };
-        // };
-
-        // // Switch Layer Action
-        // switch_to_colemak {
-        //     bindings = <&set_default_layer layer_colemak>;
-        // };
-
-        // switch_to_qwerty {
-        //     bindings = <&set_default_layer default_layer>;
-        // };
 
     };
 };

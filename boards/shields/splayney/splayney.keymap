@@ -23,18 +23,16 @@
         behaviors {
             tog_colemak: toggle_layer_colemak {
                 compatible = "zmk,behavior-toggle-layer";
-                #binding-cells = <0>;
+                bindings-cells = <0>;
                 display-name = "Toggle Colemak";
-                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-                to-layer = <1>; // Explicitly target layer_colemak
+//                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
             };
 
             tog_qwerty: toggle_layer_qwerty {
                 compatible = "zmk,behavior-toggle-layer";
                 #binding-cells = <0>;
                 display-name = "Toggle QWERTY";
-                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-                to-layer = <0>; // Explicitly target default_layer
+//                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
             };
         };
 
@@ -48,8 +46,8 @@
 
         layer_colemak {
             bindings = <
-                &kp ESC   &kp Q  &kp W  &kp F  &kp P  &kp G      &tog_qwerty    &tog_qwerty    &tog_colemak   &tog_colemak   &kp X   &kp U  &kp J      &kp L    &kp Y      &kp SEMI
-                &kp TAB   &kp A  &kp R  &kp S  &kp T  &kp D      &kp X          &kp H          &kp N          &kp E          &kp H   &kp N  &kp E      &kp I    &kp O      &kp QUOTE
+                &kp ESC   &kp Q  &kp W  &kp F  &kp P  &kp G      &tog_qwerty    &tog_qwerty    &tog_colemak   &tog_colemak   &kp X     &kp U  &kp J      &kp L    &kp Y      &kp SEMI
+                &kp TAB   &kp A  &kp R  &kp S  &kp T  &kp D      &kp X          &kp H          &kp N          &kp E          &kp H     &kp N  &kp E      &kp I    &kp O      &kp QUOTE
                 &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B      &kp K          &kp M          &kp COMMA      &kp DOT        &kp SLASH &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RSHFT
             >;
         };

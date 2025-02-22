@@ -30,7 +30,7 @@
 
             tog_qwerty: toggle_layer_qwerty {
                 compatible = "zmk,behavior-toggle-layer";
-                #binding-cells = <0>;
+                binding-cells = <0>;
                 display-name = "Toggle QWERTY";
 //                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
             };

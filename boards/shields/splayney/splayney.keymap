@@ -48,33 +48,33 @@
         };
         layer_sym {
             bindings = <
-                &kp HOME &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR &kp PERCENT    &tog 1  &tog 1    &tog 0  &tog 0   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-                &kp END  &kp LGUI  &kp LALT &kp LCTRL &kp LSHFT  &kp PG_UP      &kp B   &kp E     &kp H   &kp K    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
-                &trans   &kp Undo  &kp Cut  &kp Copy  &kp Paste  &kp PG_DN      &kp C   &kp F     &kp I   &kp L    &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
+                &kp HOME &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR &kp PERCENT    &trans  &trans   &trans  &trans   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+                &kp END  &kp LGUI  &kp LALT &kp LCTRL &kp LSHFT  &kp PG_UP      &trans  &trans   &trans  &trans    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+                &trans   &kp Undo  &kp Cut  &kp Copy  &kp Paste  &kp PG_DN      &trans  &trans   &trans  &trans    &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
             >;
             label = "SYM";
         };
         layer_num {
             bindings = <
-                &kp F11 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &tog 1  &tog 1    &tog 0  &tog 0   &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
-                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &kp B   &kp E     &kp H   &kp K    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
-                &trans  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10   &kp C   &kp F     &kp I   &kp L    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
+                &kp F11 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &trans  &trans   &trans  &trans   &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
+                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &trans  &trans   &trans  &trans    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
+                &trans  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10   &trans  &trans   &trans  &trans    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
             >;
             label = "NUM";
         };
         layer_nav {
             bindings = <
-                &kp F11 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &tog 1  &tog 1    &tog 0  &tog 0   &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
-                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &kp B   &kp E     &kp H   &kp K    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
-                &trans  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10   &kp C   &kp F     &kp I   &kp L    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
+                &kp F11 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &trans  &trans   &trans  &trans   &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
+                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &trans  &trans   &trans  &trans   &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
+                &trans  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10   &trans  &trans   &trans  &trans   &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
             >;
             label = "NAV";
         };
         layer_adj {
             bindings = <
-                &to L_MTGAP     &to L_GRAPHITE  &to L_MTGAP1  &to L_COLEMAK  &kp N4        &kp N5           &tog 1  &tog 1    &tog 0  &tog 0   &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
-                &none           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4     &kp B   &kp E     &kp H   &kp K    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
-                &bootloader     &sys_reset      &none         &out OUT_USB   &out OUT_BLE  &bt BT_CLR       &kp C   &kp F     &kp I   &kp L    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
+                &to L_MTGAP     &to L_GRAPHITE  &to L_MTGAP1  &to L_COLEMAK  &kp N4        &kp N5           &trans  &trans   &trans  &trans   &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
+                &none           &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4     &trans  &trans   &trans  &trans   &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
+                &bootloader     &sys_reset      &none         &out OUT_USB   &out OUT_BLE  &bt BT_CLR       &trans  &trans   &trans  &trans   &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
             >;
             label = "Settings";
         };
@@ -82,9 +82,9 @@
         // MTGAP
         layer_mtgap {
             bindings = <
-                &trans  &kp Y  &kp P  &kp O  &kp U  &kp J       &kp K  &trans       &trans   &trans         &kp Z  &kp I  &kp N  &kp E  &kp A   &trans
-                &trans  &kp Q  &kp S  &kp D  &kp F  &kp G       &kp H  &trans       &trans   &trans         &kp M  &kp T  &kp S  &kp R  &trans  &trans
-                &trans  &kp B  &kp V  &kp X  &kp C  &kp W       &trans  &trans      &kp BSPC  &kp SPACE     &kp ,  &kp .  &kp :  &kp /  &trans  &trans
+                &trans  &kp Y  &kp P  &kp O  &kp U  &kp J       &trans  &trans   &trans  &trans         &kp Z  &kp I  &kp N  &kp E  &kp A   &trans
+                &trans  &kp Q  &kp S  &kp D  &kp F  &kp G       &trans  &trans   &trans  &trans         &kp M  &kp T  &kp S  &kp R  &trans  &trans
+                &trans  &kp B  &kp V  &kp X  &kp C  &kp W       &trans  &trans   &trans  &trans         &kp ,  &kp .  &kp :  &kp /  &trans  &trans
             >;
             label = "MTGAP";
         };
@@ -92,27 +92,27 @@
         // GRAPHITE
         layer_graphite {
             bindings = <
-                &trans  &kp Q  &kp W  &kp F  &kp P  &kp G       &kp J  &trans       &trans   &trans     &kp Z  &kp X  &kp C  &kp D   &kp V   &trans
-                &trans  &kp A  &kp R  &kp S  &kp T  &kp Y       &kp H  &trans       &trans   &trans     &kp L  &kp N  &kp E  &kp O   &trans  &trans
-                &trans  &kp U  &kp I  &kp K  &kp M  &kp ,       &trans &trans       &kp BSPC &kp SPACE  &kp .  &kp ;  &kp /  &trans  &trans  &trans
+                &trans  &kp Q  &kp W  &kp F  &kp P  &kp G       &trans  &trans   &trans  &trans     &kp Z  &kp X  &kp C  &kp D   &kp V   &trans
+                &trans  &kp A  &kp R  &kp S  &kp T  &kp Y       &trans  &trans   &trans  &trans     &kp L  &kp N  &kp E  &kp O   &trans  &trans
+                &trans  &kp U  &kp I  &kp K  &kp M  &kp ,       &trans  &trans   &trans  &trans     &kp .  &kp ;  &kp /  &trans  &trans  &trans
             >;
             label = "Graphite";
         };
         
         layer_mtgap1 {
             bindings = <
-                &trans  &kp Y  &kp P  &kp O      &kp U    &kp J         &kp K   &trans      &trans    &trans        &kp K  &kp D  &kp L  &kp C  &kp W  &trans
-                &trans  &kp I  &kp N  &kp E      &kp A    &kp COMMA     &kp H   &trans      &trans    &trans        &kp M  &kp H  &kp T  &kp S  &kp R  &trans
-                &trans  &kp Q  &kp Z  &kp SLASH  &kp DOT  &kp COLON     &trans  &trans      &kp BSPC  &kp SPACE     &kp B  &kp F  &kp G  &kp V  &kp X  &trans
+                &trans  &kp Y  &kp P  &kp O      &kp U    &kp J         &trans  &trans   &trans  &trans        &kp K  &kp D  &kp L  &kp C  &kp W  &trans
+                &trans  &kp I  &kp N  &kp E      &kp A    &kp COMMA     &trans  &trans   &trans  &trans        &kp M  &kp H  &kp T  &kp S  &kp R  &trans
+                &trans  &kp Q  &kp Z  &kp SLASH  &kp DOT  &kp COLON     &trans  &trans   &trans  &trans        &kp B  &kp F  &kp G  &kp V  &kp X  &trans
             >;
             label = "MTGAP1";
         };
 
         layer_colemak {
             bindings = <
-                &kp ESC  &kp A  &kp W  &kp E  &kp R  &kp T      &tog 0  &tog 0    &tog 1  &tog 1   &kp Z  &kp U  &kp I      &kp O    &kp P      &kp Q
-                &kp TAB  &kp B  &kp S  &kp D  &kp F  &kp G      &kp B   &kp E     &kp H   &kp K    &kp H  &kp J  &kp K      &kp L    &kp POUND  &kp A
-                &kp LT   &kp C  &kp X  &kp C  &kp V  &kp B      &kp C   &kp F     &kp I   &kp L    &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp Y
+                &kp ESC  &kp A  &kp W  &kp E  &kp R  &kp T      &trans  &trans   &trans  &trans    &kp Z  &kp U  &kp I      &kp O    &kp P      &kp Q
+                &kp TAB  &kp B  &kp S  &kp D  &kp F  &kp G      &trans  &trans   &trans  &trans    &kp H  &kp J  &kp K      &kp L    &kp POUND  &kp A
+                &kp LT   &kp C  &kp X  &kp C  &kp V  &kp B      &trans  &trans   &trans  &trans    &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp Y
             >;
             label = "Colemak";   
         };

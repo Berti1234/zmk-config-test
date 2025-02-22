@@ -26,7 +26,7 @@
                 #binding-cells = <0>;
                 display-name = "Toggle Colemak";
                 toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-                to-layer = ; // Explicitly target layer_colemak
+                to-layer = layer_colemak; // Explicitly target layer_colemak
             };
 
             tog_qwerty: toggle_layer_qwerty {
@@ -34,7 +34,7 @@
                 #binding-cells = <0>;
                 display-name = "Toggle QWERTY";
                 toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-                to-layer = ; // Explicitly target default_layer
+                to-layer = default_layer; // Explicitly target default_layer
             };
         };
 

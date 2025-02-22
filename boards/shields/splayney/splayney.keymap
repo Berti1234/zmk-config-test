@@ -37,8 +37,8 @@
 
                 switch_layer {
                     bindings = <
-                        &set_default_layer default_layer
-                        &set_default_layer layer_colemak
+                        &set_default_layer 0
+                        &set_default_layer 1
                     >;
                 };
             };

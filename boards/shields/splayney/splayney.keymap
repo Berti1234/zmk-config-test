@@ -20,24 +20,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        behaviors {
-            tog_colemak: toggle_layer_colemak {
-                compatible = "zmk,behavior-toggle-layer";
-                binding-cells = <0>;
-                param1 = <1>; // Layer 1 (Colemak)
-                label = "Toggle Colemak";
-                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-            };
-
-            tog_qwerty: toggle_layer_qwerty {
-                compatible = "zmk,behavior-toggle-layer";
-                binding-cells = <0>;
-                param1 = <0>; // Layer 0 (QWERTY)
-                label = "Toggle QWERTY";
-                toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
-            };
-        };
-
         default_layer {
             bindings = <
                 &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T      &tog 1  &tog 1    &tog 0  &tog 0   &kp Z  &kp U  &kp I      &kp O    &kp P      &kp Q

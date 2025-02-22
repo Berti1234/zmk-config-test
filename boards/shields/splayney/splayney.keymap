@@ -35,12 +35,12 @@
                     toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
                 };
 
-                switch_layer {
-                    bindings = <
-                        &set_default_layer 0
-                        &set_default_layer 1
-                    >;
-                };
+                // switch_layer {
+                //     bindings = <
+                //         &set_default_layer 0
+                //         &set_default_layer 1
+                //     >;
+                // };
             };
 
         default_layer {

@@ -36,6 +36,14 @@
                 };
             };
 
+
+        switch_layer {
+            bindings = <
+                &set_default_layer default_layer
+                &set_default_layer layer_colemak
+            >;
+        };
+
         default_layer {
             bindings = <
                 &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T      &tog_colemak  &tog_colemak    &tog_querty  &tog_querty   &kp Z  &kp U  &kp I      &kp O    &kp P      &kp Q
@@ -53,24 +61,24 @@
             >;
         };
 
-        // Behavior to switch between layers
-        behaviors {
-            tog_layer: toggle_layout {
-                compatible = "zmk,behavior-momentary";
-                label = "Toggle Layer";
-                #binding-cells = <0>;
-                bindings = <&switch_to_colemak>, <&switch_to_qwerty>;
-            };
-        };
+        // // Behavior to switch between layers
+        // behaviors {
+        //     tog_layer: toggle_layout {
+        //         compatible = "zmk,behavior-momentary";
+        //         label = "Toggle Layer";
+        //         #binding-cells = <0>;
+        //         bindings = <&switch_to_colemak>, <&switch_to_qwerty>;
+        //     };
+        // };
 
-        // Switch Layer Action
-        switch_to_colemak {
-            bindings = <&set_default_layer layer_colemak>;
-        };
+        // // Switch Layer Action
+        // switch_to_colemak {
+        //     bindings = <&set_default_layer layer_colemak>;
+        // };
 
-        switch_to_qwerty {
-            bindings = <&set_default_layer default_layer>;
-        };
+        // switch_to_qwerty {
+        //     bindings = <&set_default_layer default_layer>;
+        // };
 
     };
 };

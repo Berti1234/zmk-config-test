@@ -84,7 +84,7 @@
             bindings = <
                 &trans  &kp Y  &kp P  &kp O  &kp U  &kp J       &trans  &trans   &trans  &trans         &kp Z  &kp I  &kp N  &kp E  &kp A   &trans
                 &trans  &kp Q  &kp S  &kp D  &kp F  &kp G       &trans  &trans   &trans  &trans         &kp M  &kp T  &kp S  &kp R  &trans  &trans
-                &trans  &kp B  &kp V  &kp X  &kp C  &kp W       &trans  &trans   &trans  &trans         &kp ,  &kp .  &kp :  &kp /  &trans  &trans
+                &trans  &kp B  &kp V  &kp X  &kp C  &kp W       &trans  &trans   &trans  &trans         &kp COMMA  &kp DOT  &kp COLON  &kp SLASH &trans  &trans
             >;
             label = "MTGAP";
         };
@@ -94,7 +94,7 @@
             bindings = <
                 &trans  &kp Q  &kp W  &kp F  &kp P  &kp G       &trans  &trans   &trans  &trans     &kp Z  &kp X  &kp C  &kp D   &kp V   &trans
                 &trans  &kp A  &kp R  &kp S  &kp T  &kp Y       &trans  &trans   &trans  &trans     &kp L  &kp N  &kp E  &kp O   &trans  &trans
-                &trans  &kp U  &kp I  &kp K  &kp M  &kp ,       &trans  &trans   &trans  &trans     &kp .  &kp ;  &kp /  &trans  &trans  &trans
+                &trans  &kp U  &kp I  &kp K  &kp M  &kp ,       &trans  &trans   &trans  &trans     &kp DOT  &kp SEMI  &kp SLASH  &trans  &trans  &trans
             >;
             label = "Graphite";
         };

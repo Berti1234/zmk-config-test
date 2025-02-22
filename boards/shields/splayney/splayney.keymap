@@ -23,16 +23,16 @@
         behaviors {
             tog_colemak: toggle_layer_colemak {
                 compatible = "zmk,behavior-toggle-layer";
-                binding-cells = <0>;
-                param1 = <1>; // Layer 1 (Colemak)
+                #binding-cells = <0>;
+                //param1 = <1>; // Layer 1 (Colemak)
                 label = "Toggle Colemak";
                 toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
             };
 
             tog_qwerty: toggle_layer_qwerty {
                 compatible = "zmk,behavior-toggle-layer";
-                binding-cells = <0>;
-                param1 = <0>; // Layer 0 (QWERTY)
+                #binding-cells = <0>;
+                //param1 = <0>; // Layer 0 (QWERTY)
                 label = "Toggle QWERTY";
                 toggle-mode = "on"; // Nur aktivieren, nicht deaktivieren
             };

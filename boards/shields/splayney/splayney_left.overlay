@@ -2,6 +2,13 @@
 
 #include "splayney.dtsi"
 
+
+/ {
+    chosen {
+        zmk,split-role = "central";
+    };
+};
+
 &kscan0 {
     col-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH> // C0 p0.06
               , <&pro_micro 0 GPIO_ACTIVE_HIGH> // C1 p0.08

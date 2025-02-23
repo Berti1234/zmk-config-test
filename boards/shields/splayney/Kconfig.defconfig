@@ -8,9 +8,45 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
+
+if SHIELD_SPLAYNEY_RIGHT
+
+# Rechte Hälfte ist der Peripheral (Client)
+config ZMK_SPLIT_ROLE_PERIPHERAL
+    default y
+
+endif
+
+
 if SHIELD_SPLAYNEY_LEFT || SHIELD_SPLAYNEY_RIGHT
 
 config ZMK_SPLIT
     default y
 
+# Bluetooth aktivieren
+config BT
+    default y
+
+config BT_CENTRAL
+    default y
+
+config BT_PERIPHERAL
+    default y
+
+config BT_GATT_CLIENT
+    default y
+
+config BT_GATT_DYNAMIC_DB
+    default y
+
+# Flash-Speicher aktivieren (für BLE-Pairing)
+config SETTINGS
+    default y
+
+config FLASH
+    default y
+
+config NVS
+    default y
+    
 endif

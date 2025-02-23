@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
+#include <locale/keys_de.h>
 
 #define L_QWERTZ 0
 #define L_SYM 1
@@ -40,9 +40,9 @@
 
         default_layer {
             bindings = <
-                &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T      &mo L_NUM &kp SPACE &kp BSPC  &kp BSPC      &kp Z  &kp U  &kp I      &kp O    &kp P      &kp Q
+                &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T      &mo L_NUM &kp SPACE &kp BSPC  &kp BSPC      &kp DE_Z  &kp U  &kp I      &kp O    &kp P      &kp Q
                 &kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G      &mo L_SYM &mo L_NAV &mo L_NAV &kp ENTER     &kp H  &kp J  &kp K      &kp L    &kp POUND  &kp A
-                &kp LT   &kp Y  &kp X  &kp C  &kp V  &kp B      &kp ENTER &mo L_ADJ &mo L_ADJ &kp SPACE     &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp Y
+                &kp LT   &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp ENTER &mo L_ADJ &mo L_ADJ &kp SPACE     &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp Y
             >;
             label = "QWERTZ";
         };

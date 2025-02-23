@@ -46,7 +46,7 @@
             >;
             label = "QWERTZ";
         };
-        layer_sym {e
+        layer_sym {
             bindings = <
                 &kp HOME &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR &kp PERCENT    &trans  &trans   &trans  &trans   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
                 &kp END  &kp LGUI  &kp LALT &kp LCTRL &kp LSHFT  &kp PG_UP      &trans  &trans   &trans  &trans    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans

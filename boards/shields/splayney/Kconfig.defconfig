@@ -3,16 +3,7 @@ if SHIELD_SPLAYNEY_LEFT
 config ZMK_KEYBOARD_NAME
     default "splayney"
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
-
-if SHIELD_SPLAYNEY_RIGHT
-
-# Rechte Hälfte ist der Peripheral (Client)
-config ZMK_SPLIT_ROLE_PERIPHERAL
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
 endif

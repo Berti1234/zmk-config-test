@@ -7,6 +7,7 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
 config ZMK_BLE_CENTRAL
+    bool "Enable BLE Central Role"
     default y
 
 endif

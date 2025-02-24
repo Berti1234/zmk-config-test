@@ -21,6 +21,11 @@ endif
 
 if SHIELD_SPLAYNEY_LEFT || SHIELD_SPLAYNEY_RIGHT
 
+config ZMK_BLE_EXPERIMANTAL_CONN
+    default y
+config BT_CTLR_TX_PWR_PLUS_8
+    default y
+
 config ZMK_BLE
     default y
 
@@ -29,11 +34,13 @@ config ZMK_SPLIT
 
 # Bluetooth aktivieren
 config BT
+    bool "Enable Bluetooth"
     default y
 
 
 # Flash-Speicher aktivieren (für BLE-Pairing)
 config SETTINGS
+    bool "Enable Settings Storage"
     default y
 
 config FLASH

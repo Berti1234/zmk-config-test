@@ -98,7 +98,7 @@
             bindings = <
                 &trans    &kp B  &kp L  &kp D  &kp W  &kp DE_Z    &trans  &trans   &trans  &trans     &kp SQT  &kp F  &kp O   &kp U     &kp J     &kp SEMI
                 &trans    &kp N  &kp R  &kp T  &kp S  &kp G       &trans  &trans   &trans  &trans     &kp DE_Y &kp H  &kp A   &kp E     &kp I     &kp COMMA
-                &kp BSLH  &kp Q  &kp X  &kp M  &kp C  &kp V       &trans  &trans   &trans  &trans     &kp K    &kp P  &kp DOT &KP MINUS &kp SLASH &kp ENTER
+                &kp BSLH  &kp Q  &kp X  &kp M  &kp C  &kp V       &trans  &trans   &trans  &trans     &kp K    &kp P  &kp DOT &kp MINUS &kp SLASH &kp ENTER
             >;
             label = "Graphite";
         };

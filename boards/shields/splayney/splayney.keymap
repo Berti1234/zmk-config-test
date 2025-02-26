@@ -52,9 +52,9 @@
         };
         layer_sym {
             bindings = <
-                &kp HOME &kp EXCL  &kp KC_DQUO &kp UC(0x00A7) &kp DOLLAR &kp PERCENT    &trans  &trans   &trans  &trans   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-                &kp END  &kp AT    &kp LALT    &kp LCTRL      &kp LSHFT  &kp PG_UP      &trans  &trans   &trans  &trans   &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
-                &trans   &kp Undo  &kp Cut     &kp Copy       &kp Paste  &kp PG_DN      &trans  &trans   &trans  &trans   &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
+                &kp HOME &kp EXCL  &kp DQT   &kp HASH   &kp DOLLAR &kp PERCENT    &trans  &trans   &trans  &trans   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+                &kp END  &kp AT    &kp LALT  &kp LCTRL  &kp LSHFT  &kp PG_UP      &trans  &trans   &trans  &trans   &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+                &trans   &kp Undo  &kp Cut   &kp Copy   &kp Paste  &kp PG_DN      &trans  &trans   &trans  &trans   &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
             >;
             label = "SYM";
         };
@@ -96,9 +96,9 @@
         // GRAPHITE
         layer_graphite {
             bindings = <
-                &trans    &kp B  &kp L  &kp D  &kp W  &kp DE_Z    &trans  &trans   &trans  &trans     &kp QUOT &kp F  &kp O   &kp U     &kp J     &kp SEMI
+                &trans    &kp B  &kp L  &kp D  &kp W  &kp DE_Z    &trans  &trans   &trans  &trans     &kp SQT  &kp F  &kp O   &kp U     &kp J     &kp SEMI
                 &trans    &kp N  &kp R  &kp T  &kp S  &kp G       &trans  &trans   &trans  &trans     &kp DE_Y &kp H  &kp A   &kp E     &kp I     &kp COMMA
-                &kp BSLSH &kp Q  &kp X  &kp M  &kp C  &kp V       &trans  &trans   &trans  &trans     &kp K    &kp P  &kp DOT &KP MINUS &kp RSLSH &kp ENTER
+                &kp BSLSH &kp Q  &kp X  &kp M  &kp C  &kp V       &trans  &trans   &trans  &trans     &kp K    &kp P  &kp DOT &KP MINUS &kp SLASH &kp ENTER
             >;
             label = "Graphite";
         };
@@ -124,8 +124,8 @@
         layer_galliumv2 {
             bindings = <
                 &trans  &kp B &kp L  &kp D  &kp C  &kp V      &trans  &trans   &trans  &trans    &kp J  &kp F  &kp O    &kp U     &kp COMMA &kp MINUS
-                &trans  &kp N &kp R  &kp T  &kp S  &kp G      &trans  &trans   &trans  &trans    &kp Y  &kp H  &kp A    &kp E     &kp I     &kp RSLSH
-                &trans  &kp X &kp Q  &kp M  &kp W  &kp DE_Z   &trans  &trans   &trans  &trans    &kp K  &kp P  &kp QUOT &kp SEMI  &kp DOT   &ko ENTER
+                &trans  &kp N &kp R  &kp T  &kp S  &kp G      &trans  &trans   &trans  &trans    &kp Y  &kp H  &kp A    &kp E     &kp I     &kp SLASH
+                &trans  &kp X &kp Q  &kp M  &kp W  &kp DE_Z   &trans  &trans   &trans  &trans    &kp K  &kp P  &kp SQT  &kp SEMI  &kp DOT   &ko ENTER
             >;
             label = "GalliumV2";   
         };
@@ -134,7 +134,7 @@
             bindings = <
                 &trans    &kp W &kp G  &kp D  &kp F  &kp B      &trans  &trans   &trans  &trans    &kp Q    &kp L     &kp U    &kp O     &kp DE_Y  &kp MINUS
                 &trans    &kp R &kp S  &kp T  &kp H  &kp K      &trans  &trans   &trans  &trans    &kp J    &kp N     &kp E    &kp A     &kp I     &kp SEMI
-                &kp BSLSH &kp X &kp C  &kp M  &kp P  &kp V      &trans  &trans   &trans  &trans    &kp DE_Z &kp COMMA &kp DOT  &kp QUOT  &kp RSLSH &ko ENTER
+                &kp BSLH  &kp X &kp C  &kp M  &kp P  &kp V      &trans  &trans   &trans  &trans    &kp DE_Z &kp COMMA &kp DOT  &kp SQT   &kp SLASH &ko ENTER
             >;
             label = "aptV3";   
         };

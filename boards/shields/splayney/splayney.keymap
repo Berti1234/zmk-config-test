@@ -98,7 +98,7 @@
             bindings = <
                 &trans    &kp B  &kp L  &kp D  &kp W  &kp DE_Z    &trans  &trans   &trans  &trans     &kp SQT  &kp F  &kp O   &kp U     &kp J     &kp SEMI
                 &trans    &kp N  &kp R  &kp T  &kp S  &kp G       &trans  &trans   &trans  &trans     &kp DE_Y &kp H  &kp A   &kp E     &kp I     &kp COMMA
-                &kp BSLSH &kp Q  &kp X  &kp M  &kp C  &kp V       &trans  &trans   &trans  &trans     &kp K    &kp P  &kp DOT &KP MINUS &kp SLASH &kp ENTER
+                &kp BSLH  &kp Q  &kp X  &kp M  &kp C  &kp V       &trans  &trans   &trans  &trans     &kp K    &kp P  &kp DOT &KP MINUS &kp SLASH &kp ENTER
             >;
             label = "Graphite";
         };
@@ -116,7 +116,7 @@
             bindings = <
                 &trans  &kp Q    &kp W  &kp F  &kp P  &kp B      &trans  &trans   &trans  &trans    &kp J  &kp L  &kp U      &kp DE_Y &kp SEMICOLON &trans
                 &trans  &kp A    &kp R  &kp S  &kp T  &kp G      &trans  &trans   &trans  &trans    &kp M  &kp N  &kp E      &kp I    &kp O         &trans
-                &trans  &kp DE_Z &kp X  &kp C  &kp D  &kp V      &trans  &trans   &trans  &trans    &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH      &trans
+                &trans  &kp DE_Z &kp X  &kp C  &kp D  &kp V      &trans  &trans   &trans  &trans    &kp K  &kp H  &kp COMMA  &kp DOT  &kp SLASH     &trans
             >;
             label = "ColemakDH";   
         };

@@ -13,14 +13,16 @@
 
 #define L_QWERTZ 0
 #define L_SYM 1
-#define L_NUM 2
+#define L_NUM 2  
 #define L_NAV 3
-#define L_ADJ 4
+#define L_SYS 4
 
 #define L_MTGAP 5
 #define L_GRAPHITE 6
 #define L_MTGAP1 7
 #define L_COLEMAK 8
+#define L_GALLIUMV2 9
+#define L_APTV3 10
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -42,17 +44,17 @@
 
         default_layer {
             bindings = <
-                &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T         &mo L_NUM &kp SPACE &kp BSPC  &kp BSPC      &kp DE_Z  &kp U  &kp I      &kp O    &kp P      &kp Q
-                &kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G         &mo L_SYM &mo L_NAV &mo L_NAV &kp ENTER     &kp H     &kp J  &kp K      &kp L    &kp POUND  &kp A
-                &kp LT   &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp ENTER &mo L_ADJ &mo L_ADJ &kp SPACE     &kp N     &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp Y
+                &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T         &mo L_NUM &kp SPACE &kp BSPC  &kp BSPC      &kp DE_Z  &kp U  &kp I      &kp O    &kp P      &kp INS
+                &kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G         &mo L_SYM &mo L_NAV &mo L_NAV &kp ENTER     &kp H     &kp J  &kp K      &kp L    &kp POUND  &none
+                &kp LT   &kp DE_Y  &kp X  &kp C  &kp V  &kp B      &kp ENTER &mo L_SYS &mo L_SYS &kp SPACE     &kp N     &kp M  &kp COMMA  &kp DOT  &kp MINUS  &none
             >;
             label = "QWERTZ";
         };
         layer_sym {
             bindings = <
-                &kp HOME &kp EXCL  &kp AT   &kp HASH  &kp DOLLAR &kp PERCENT    &trans  &trans   &trans  &trans   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-                &kp END  &kp LGUI  &kp LALT &kp LCTRL &kp LSHFT  &kp PG_UP      &trans  &trans   &trans  &trans    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
-                &trans   &kp Undo  &kp Cut  &kp Copy  &kp Paste  &kp PG_DN      &trans  &trans   &trans  &trans    &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
+                &kp HOME &kp EXCL  &kp KC_DQUO &kp UC(0x00A7) &kp DOLLAR &kp PERCENT    &trans  &trans   &trans  &trans   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+                &kp END  &kp AT    &kp LALT    &kp LCTRL      &kp LSHFT  &kp PG_UP      &trans  &trans   &trans  &trans   &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &trans
+                &trans   &kp Undo  &kp Cut     &kp Copy       &kp Paste  &kp PG_DN      &trans  &trans   &trans  &trans   &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &trans
             >;
             label = "SYM";
         };
@@ -66,17 +68,17 @@
         };
         layer_nav {
             bindings = <
-                &kp F11 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &trans  &trans   &trans  &trans   &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
-                &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &trans  &trans   &trans  &trans   &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
-                &trans  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10   &trans  &trans   &trans  &trans   &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
+                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &none        &kp HOME  &kp UP    &kp PG_UP   &none     &trans
+                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &kp C_VOL_UP &kp LEFT  &kp DOWN  &kp RIGHT   &kp RGUI  &trans
+                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &kp C_VOL_DN &kp END   &kp DOWN  &kp PG_DOWN &kp RIGHT &kp DEL
             >;
             label = "NAV";
         };
-        layer_adj {
+        layer_sys {
             bindings = <
-                &to L_MTGAP  &to L_GRAPHITE  &to L_MTGAP1  &to L_COLEMAK  &none         &none            &trans  &trans   &trans  &trans   &none &none &none &none &none &none
-                &none        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4     &trans  &trans   &trans  &trans   &none &none &none &none &none &none
-                &bootloader  &sys_reset      &none         &out OUT_USB   &out OUT_BLE  &bt BT_CLR       &trans  &trans   &trans  &trans   &none &none &none &none &sys_reset &bootloader
+                &to L_QWERTZ &to L_MTGAP   &to L_GRAPHITE &to L_MTGAP1  &to L_COLEMAK &to L_GALLIUMV2   &trans  &trans   &trans  &trans   &to _APTV3 &none &none &none &none &none
+                &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR        &trans  &trans   &trans  &trans   &none      &none &none &none &none &none
+                &bootloader  &sys_reset    &none          &none         &out OUT_USB  &out OUT_BLE      &trans  &trans   &trans  &trans   &none      &none &none &none &sys_reset &bootloader
             >;
             label = "Settings";
         };
@@ -84,9 +86,9 @@
         // MTGAP
         layer_mtgap {
             bindings = <
-                &trans  &kp Y  &kp P  &kp O  &kp U  &kp J       &trans  &trans   &trans  &trans         &kp Z  &kp I  &kp N  &kp E  &kp A   &trans
-                &trans  &kp Q  &kp S  &kp D  &kp F  &kp G       &trans  &trans   &trans  &trans         &kp M  &kp T  &kp S  &kp R  &trans  &trans
-                &trans  &kp B  &kp V  &kp X  &kp C  &kp W       &trans  &trans   &trans  &trans         &kp COMMA  &kp DOT  &kp COLON  &kp SLASH &trans  &trans
+                &trans  &kp DE_Y &kp P  &kp O  &kp U  &kp J       &trans  &trans   &trans  &trans         &kp Z  &kp I  &kp N  &kp E  &kp A   &trans
+                &trans  &kp Q    &kp S  &kp D  &kp F  &kp G       &trans  &trans   &trans  &trans         &kp M  &kp T  &kp S  &kp R  &trans  &trans
+                &trans  &kp B    &kp V  &kp X  &kp C  &kp W       &trans  &trans   &trans  &trans         &kp COMMA  &kp DOT  &kp COLON  &kp SLASH &trans  &trans
             >;
             label = "MTGAP";
         };
@@ -94,29 +96,49 @@
         // GRAPHITE
         layer_graphite {
             bindings = <
-                &trans  &kp Q  &kp W  &kp F  &kp P  &kp G       &trans  &trans   &trans  &trans     &kp Z  &kp X  &kp C  &kp D   &kp V   &trans
-                &trans  &kp A  &kp R  &kp S  &kp T  &kp Y       &trans  &trans   &trans  &trans     &kp L  &kp N  &kp E  &kp O   &trans  &trans
-                &trans  &kp U  &kp I  &kp K  &kp M  &kp COMMA   &trans  &trans   &trans  &trans     &kp DOT  &kp SEMI  &kp SLASH  &trans  &trans  &trans
+                &trans    &kp B  &kp L  &kp D  &kp W  &kp DE_Z    &trans  &trans   &trans  &trans     &kp QUOT &kp F  &kp O   &kp U     &kp J     &kp SEMI
+                &trans    &kp N  &kp R  &kp T  &kp S  &kp G       &trans  &trans   &trans  &trans     &kp DE_Y &kp H  &kp A   &kp E     &kp I     &kp COMMA
+                &kp BSLSH &kp Q  &kp X  &kp M  &kp C  &kp V       &trans  &trans   &trans  &trans     &kp K    &kp P  &kp DOT &KP MINUS &kp RSLSH &kp ENTER
             >;
             label = "Graphite";
         };
         
         layer_mtgap1 {
             bindings = <
-                &trans  &kp Y  &kp P  &kp O      &kp U    &kp J         &trans  &trans   &trans  &trans        &kp K  &kp D  &kp L  &kp C  &kp W  &trans
-                &trans  &kp I  &kp N  &kp E      &kp A    &kp COMMA     &trans  &trans   &trans  &trans        &kp M  &kp H  &kp T  &kp S  &kp R  &trans
-                &trans  &kp Q  &kp Z  &kp SLASH  &kp DOT  &kp COLON     &trans  &trans   &trans  &trans        &kp B  &kp F  &kp G  &kp V  &kp X  &trans
+                &trans  &kp DE_Y &kp P    &kp O      &kp U    &kp J         &trans  &trans   &trans  &trans        &kp K  &kp D  &kp L  &kp C  &kp W  &trans
+                &trans  &kp I    &kp N    &kp E      &kp A    &kp COMMA     &trans  &trans   &trans  &trans        &kp M  &kp H  &kp T  &kp S  &kp R  &trans
+                &trans  &kp Q    &kp DE_Z &kp SLASH  &kp DOT  &kp COLON     &trans  &trans   &trans  &trans        &kp B  &kp F  &kp G  &kp V  &kp X  &trans
             >;
             label = "MTGAP1";
         };
 
         layer_colemak {
             bindings = <
-                &kp ESC  &kp A  &kp W  &kp E  &kp R  &kp T      &trans  &trans   &trans  &trans    &kp Z  &kp U  &kp I      &kp O    &kp P      &kp Q
-                &kp TAB  &kp B  &kp S  &kp D  &kp F  &kp G      &trans  &trans   &trans  &trans    &kp H  &kp J  &kp K      &kp L    &kp POUND  &kp A
-                &kp LT   &kp C  &kp X  &kp C  &kp V  &kp B      &trans  &trans   &trans  &trans    &kp N  &kp M  &kp COMMA  &kp DOT  &kp MINUS  &kp Y
+                &trans  &kp Q    &kp W  &kp F  &kp P  &kp B      &trans  &trans   &trans  &trans    &kp J  &kp L  &kp U      &kp DE_Y &kp SEMICOLON &trans
+                &trans  &kp A    &kp R  &kp S  &kp T  &kp G      &trans  &trans   &trans  &trans    &kp M  &kp N  &kp E      &kp I    &kp O         &trans
+                &trans  &kp DE_Z &kp X  &kp C  &kp D  &kp V      &trans  &trans   &trans  &trans    &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH      &trans
             >;
-            label = "Colemak";   
+            label = "ColemakDH";   
         };
+
+        layer_galliumv2 {
+            bindings = <
+                &trans  &kp B &kp L  &kp D  &kp C  &kp V      &trans  &trans   &trans  &trans    &kp J  &kp F  &kp O    &kp U     &kp COMMA &kp MINUS
+                &trans  &kp N &kp R  &kp T  &kp S  &kp G      &trans  &trans   &trans  &trans    &kp Y  &kp H  &kp A    &kp E     &kp I     &kp RSLSH
+                &trans  &kp X &kp Q  &kp M  &kp W  &kp DE_Z   &trans  &trans   &trans  &trans    &kp K  &kp P  &kp QUOT &kp SEMI  &kp DOT   &ko ENTER
+            >;
+            label = "GalliumV2";   
+        };
+
+        layer_aptV3 {
+            bindings = <
+                &trans    &kp W &kp G  &kp D  &kp F  &kp B      &trans  &trans   &trans  &trans    &kp Q    &kp L     &kp U    &kp O     &kp DE_Y  &kp MINUS
+                &trans    &kp R &kp S  &kp T  &kp H  &kp K      &trans  &trans   &trans  &trans    &kp J    &kp N     &kp E    &kp A     &kp I     &kp SEMI
+                &kp BSLSH &kp X &kp C  &kp M  &kp P  &kp V      &trans  &trans   &trans  &trans    &kp DE_Z &kp COMMA &kp DOT  &kp QUOT  &kp RSLSH &ko ENTER
+            >;
+            label = "aptV3";   
+        };
+
+
     };
 };

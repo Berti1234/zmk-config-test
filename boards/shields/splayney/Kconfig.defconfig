@@ -6,43 +6,11 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
-config ZMK_BLE_CENTRAL
-    bool "Enable BLE Central Role"
-    default y
-
-endif
-
-if SHIELD_SPLAYNEY_RIGHT
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default n
-
 endif
 
 if SHIELD_SPLAYNEY_LEFT || SHIELD_SPLAYNEY_RIGHT
 
-
-config ZMK_BLE
-    default y
-
 config ZMK_SPLIT
-    default y
-
-# Bluetooth aktivieren
-config BT
-    bool "Enable Bluetooth"
-    default y
-
-
-# Flash-Speicher aktivieren (für BLE-Pairing)
-config SETTINGS
-    bool "Enable Settings Storage"
-    default y
-
-config FLASH
-    default y
-
-config NVS
     default y
     
 endif

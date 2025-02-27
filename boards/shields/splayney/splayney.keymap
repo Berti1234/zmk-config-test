@@ -132,9 +132,9 @@
 
         layer_aptV3 {
             bindings = <
-                &trans    &kp DE_W &kp DE_G  &kp DE_D  &kp DE_F  &kp DE_B      &mo L_NUM &kp DE_SPACE &kp BSPC  &kp BSPC     &kp DE_Q    &kp DE_L     &kp DE_U    &kp DE_O     &kp DE_Y  &kp DE_MINUS
-                &trans    &kp DE_R &kp DE_S  &kp DE_T  &kp DE_H  &kp DE_K      &mo L_SYM &mo L_NAV    &mo L_NAV &kp ENTER    &kp DE_J    &kp DE_N     &kp DE_E    &kp DE_A     &kp DE_I     &kp DE_SEMI
-                &kp DE_SLH  &kp DE_X &kp DE_C  &kp DE_M  &kp DE_P  &kp DE_V      &kp ENTER &mo L_SYS    &mo L_SYS &kp DE_SPACE    &kp DE_Z &kp DE_COMMA &kp DE_DOT  &kp DE_SQT   &kp DE_SLASH &kp ENTER
+                &trans       &kp DE_W &kp DE_G  &kp DE_D  &kp DE_F  &kp DE_B      &mo L_NUM &kp DE_SPACE &kp BSPC  &kp BSPC       &kp DE_Q  &kp DE_L     &kp DE_U    &kp DE_O     &kp DE_Y  &kp DE_MINUS
+                &trans       &kp DE_R &kp DE_S  &kp DE_T  &kp DE_H  &kp DE_K      &mo L_SYM &mo L_NAV    &mo L_NAV &kp ENTER      &kp DE_J  &kp DE_N     &kp DE_E    &kp DE_A     &kp DE_I     &kp DE_SEMI
+                &kp DE_SLASH &kp DE_X &kp DE_C  &kp DE_M  &kp DE_P  &kp DE_V      &kp ENTER &mo L_SYS    &mo L_SYS &kp DE_SPACE   &kp DE_Z  &kp DE_COMMA &kp DE_DOT  &kp DE_SQT   &kp DE_SLASH &kp ENTER
             >;
             label = "aptV3";   
         };

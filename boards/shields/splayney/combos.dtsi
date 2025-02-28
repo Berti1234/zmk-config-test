@@ -32,11 +32,16 @@ compatible = "zmk,combos";
 16 17 18 19 20 21   22 23 24 25   26 27 28 29 10 31
 32 33 34 35 36 37   38 39 40 41   42 43 44 45 46 46 
 */
+/ {
+  combos {
+    compatible = "zmk,combos";
+        
+    COMBO(esc, &kp ESC, 1 2)
+    COMBO_LONG(capsword, &caps_word, 14 15)
 
-COMBO(esc, &kp ESC, 1 2)
-COMBO_LONG(capsword, &caps_word, 14 15)
-
-COMBO(cleft,  &kp LEFT, 27 28)
-COMBO(cright, &kp RIGHT, 28 29)
-COMBO(cup,    &kp UP, 28 13)
-COMBO(cdown,  &kp DOWN, 28 44)
+    COMBO(cleft,  &kp LEFT, 27 28)
+    COMBO(cright, &kp RIGHT, 28 29)
+    COMBO(cup,    &kp UP, 28 13)
+    COMBO(cdown,  &kp DOWN, 28 44)
+  };
+};

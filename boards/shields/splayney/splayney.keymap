@@ -12,17 +12,19 @@
 #include <locale/keys_de.h>
 
 #define L_QWERTZ 0
-#define L_SYM 1
-#define L_NUM 2  
-#define L_NAV 3
-#define L_SYS 4
+#define L_MTGAP 1
+#define L_GRAPHITE 2
+#define L_MTGAP1 3
+#define L_COLEMAK 4
+#define L_GALLIUMV2 5
+#define L_APTV3 6
 
-#define L_MTGAP 5
-#define L_GRAPHITE 6
-#define L_MTGAP1 7
-#define L_COLEMAK 8
-#define L_GALLIUMV2 9
-#define L_APTV3 10
+#define L_SYM 7
+#define L_NUM 8  
+#define L_NAV 9
+#define L_SYS 10
+
+
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -49,38 +51,6 @@
                 &kp DE_LT  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      &kp ENTER &mo L_SYS    &mo L_SYS &kp DE_SPACE  &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &none
             >;
             label = "QWERTZ";
-        };
-        layer_sym {
-            bindings = <
-                &kp HOME &kp EXCL  &kp DE_DQT &kp DE_HASH &kp DE_DOLLAR &kp DE_PERCENT   &trans  &trans   &trans  &trans   &kp DE_CARET &kp DE_AMPS  &kp DE_ASTRK &kp DE_LPAR &kp DE_RPAR &trans
-                &kp END  &kp DE_AT &kp LALT   &kp LCTRL   &kp LSHFT     &kp PG_UP        &trans  &trans   &trans  &trans      &kp DE_MINUS &kp DE_EQUAL &kp DE_LBKT  &kp DE_RBKT &kp DE_BSLH &trans
-                &trans   &kp Undo  &kp Cut    &kp Copy    &kp Paste     &kp PG_DN        &trans  &trans   &trans  &trans      &kp DE_UNDER &kp DE_PLUS  &kp DE_LBRC  &kp DE_RBRC &kp DE_PIPE &trans
-            >;
-            label = "SYM";
-        };
-        layer_num {
-            bindings = <
-                &trans &kp N1 &kp N2 &kp N3  &kp N4  &kp N5    &trans  &trans   &trans  &trans    &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
-                &kp F1 &kp F2 &kp F3 &kp F4  &kp F5  &kp F6    &trans  &trans   &trans  &trans    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
-                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans  &trans   &trans  &trans    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
-            >;
-            label = "NUM";
-        };
-        layer_nav {
-            bindings = <
-                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &none        &kp HOME  &kp UP    &kp PG_UP   &none     &trans
-                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &kp C_VOL_UP &kp LEFT  &kp DOWN  &kp RIGHT   &kp RGUI  &trans
-                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &kp C_VOL_DN &kp END   &kp DOWN  &kp PG_DN   &kp RIGHT &kp DEL
-            >;
-            label = "NAV";
-        };
-        layer_sys {
-            bindings = <
-                &tog L_QWERTZ &tog L_MTGAP   &tog L_GRAPHITE &tog L_MTGAP1  &tog L_COLEMAK &tog L_GALLIUMV2   &trans  &trans   &trans  &trans   &tog L_APTV3 &none &none &none &none &none
-                &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR        &trans  &trans   &trans  &trans   &none      &none &none &none &none &none
-                &bootloader  &sys_reset    &none          &none         &out OUT_USB  &out OUT_BLE      &trans  &trans   &trans  &trans   &none      &none &none &none &sys_reset &bootloader
-            >;
-            label = "Settings";
         };
 
         // MTGAP
@@ -138,6 +108,41 @@
             >;
             label = "aptV3";   
         };
+
+
+        layer_sym {
+            bindings = <
+                &kp HOME &kp EXCL  &kp DE_DQT &kp DE_HASH &kp DE_DOLLAR &kp DE_PERCENT   &trans  &trans   &trans  &trans   &kp DE_CARET &kp DE_AMPS  &kp DE_ASTRK &kp DE_LPAR &kp DE_RPAR &trans
+                &kp END  &kp DE_AT &kp LALT   &kp LCTRL   &kp LSHFT     &kp PG_UP        &trans  &trans   &trans  &trans      &kp DE_MINUS &kp DE_EQUAL &kp DE_LBKT  &kp DE_RBKT &kp DE_BSLH &trans
+                &trans   &kp Undo  &kp Cut    &kp Copy    &kp Paste     &kp PG_DN        &trans  &trans   &trans  &trans      &kp DE_UNDER &kp DE_PLUS  &kp DE_LBRC  &kp DE_RBRC &kp DE_PIPE &trans
+            >;
+            label = "SYM";
+        };
+        layer_num {
+            bindings = <
+                &trans &kp N1 &kp N2 &kp N3  &kp N4  &kp N5    &trans  &trans   &trans  &trans    &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
+                &kp F1 &kp F2 &kp F3 &kp F4  &kp F5  &kp F6    &trans  &trans   &trans  &trans    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
+                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans  &trans   &trans  &trans    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
+            >;
+            label = "NUM";
+        };
+        layer_nav {
+            bindings = <
+                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &none        &kp HOME  &kp UP    &kp PG_UP   &none     &trans
+                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &kp C_VOL_UP &kp LEFT  &kp DOWN  &kp RIGHT   &kp RGUI  &trans
+                &none &none &none &none &none &none    &trans  &trans   &trans  &trans   &kp C_VOL_DN &kp END   &kp DOWN  &kp PG_DN   &kp RIGHT &kp DEL
+            >;
+            label = "NAV";
+        };
+        layer_sys {
+            bindings = <
+                &tog L_QWERTZ &tog L_MTGAP   &tog L_GRAPHITE &tog L_MTGAP1  &tog L_COLEMAK &tog L_GALLIUMV2   &trans  &trans   &trans  &trans   &tog L_APTV3 &none &none &none &none &none
+                &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR        &trans  &trans   &trans  &trans   &none      &none &none &none &none &none
+                &bootloader  &sys_reset    &none          &none         &out OUT_USB  &out OUT_BLE      &trans  &trans   &trans  &trans   &none      &none &none &none &sys_reset &bootloader
+            >;
+            label = "Settings";
+        };
+
 
 
     };

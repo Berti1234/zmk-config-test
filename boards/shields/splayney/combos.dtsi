@@ -1,6 +1,5 @@
 // indebted and with much reference to dxmh's zmk-config
 
-compatible = "zmk,combos";
 #define LONG_TIMEOUT_MS 100
 #define NORMAL_LAYERS 0 1 2
 

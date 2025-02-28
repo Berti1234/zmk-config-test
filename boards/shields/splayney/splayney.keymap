@@ -11,7 +11,7 @@
 
 #include <locale/keys_de.h>
 
-#include "combos.dtsi"
+#include <combos.dtsi>
 
 #define L_QWERTZ 0
 #define L_MTGAP 1

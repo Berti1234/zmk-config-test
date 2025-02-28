@@ -11,6 +11,8 @@
 
 #include <locale/keys_de.h>
 
+#include "combos.dtsi"
+
 #define L_QWERTZ 0
 #define L_MTGAP 1
 #define L_GRAPHITE 2
@@ -48,7 +50,7 @@
             bindings = <
                 &kp ESC    &kp DE_Q &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T      &mo L_NUM &kp DE_SPACE &kp BSPC  &kp BSPC      &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O   &kp DE_P     &kp INS
                 &kp TAB    &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      &mo L_SYM &mo L_NAV    &mo L_NAV &kp ENTER     &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
-                &kp DE_LT  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      &kp ENTER &mo L_SYS    &mo L_SYS &kp DE_SPACE  &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &none
+                &kp DE_LT  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      &kp ENTER &mo L_SYS    &mo L_SYS &kp DE_SPACE  &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &mo L_SYS
             >;
             label = "QWERTZ";
         };
@@ -68,7 +70,7 @@
             bindings = <
                 &trans    &kp DE_B  &kp DE_L  &kp DE_D  &kp DE_W  &kp DE_Z     &trans &trans &trans &trans     &kp DE_SQT  &kp DE_F  &kp DE_O   &kp DE_U     &kp DE_J     &kp DE_SEMI
                 &trans    &kp DE_N  &kp DE_R  &kp DE_T  &kp DE_S  &kp DE_G     &trans &trans &trans &trans     &kp DE_Y &kp DE_H  &kp DE_A   &kp DE_E     &kp DE_I     &kp DE_COMMA
-                &kp DE_BSLH  &kp DE_Q  &kp DE_X  &kp DE_M  &kp DE_C  &kp DE_V  &trans &trans &trans &trans     &kp DE_K    &kp DE_P  &kp DE_DOT &kp DE_MINUS &kp DE_SLASH &kp ENTER
+                &kp DE_BSLH  &kp DE_Q  &kp DE_X  &kp DE_M  &kp DE_C  &kp DE_V  &trans &trans &trans &trans     &kp DE_K    &kp DE_P  &kp DE_DOT &kp DE_MINUS &kp DE_SLASH &trans
             >;
             label = "Graphite";
         };
@@ -95,7 +97,7 @@
             bindings = <
                 &trans  &kp DE_B &kp DE_L  &kp DE_D  &kp DE_C  &kp DE_V   &trans &trans &trans &trans    &kp DE_J  &kp DE_F  &kp DE_O    &kp DE_U     &kp DE_COMMA &kp DE_MINUS
                 &trans  &kp DE_N &kp DE_R  &kp DE_T  &kp DE_S  &kp DE_G   &trans &trans &trans &trans    &kp DE_Y  &kp DE_H  &kp DE_A    &kp DE_E     &kp DE_I     &kp DE_SLASH
-                &trans  &kp DE_X &kp DE_Q  &kp DE_M  &kp DE_W  &kp DE_Z   &trans &trans &trans &trans    &kp DE_K  &kp DE_P  &kp DE_SQT  &kp DE_SEMI  &kp DE_DOT   &kp ENTER
+                &trans  &kp DE_X &kp DE_Q  &kp DE_M  &kp DE_W  &kp DE_Z   &trans &trans &trans &trans    &kp DE_K  &kp DE_P  &kp DE_SQT  &kp DE_SEMI  &kp DE_DOT   &trans
             >;
             label = "GalliumV2";   
         };
@@ -104,7 +106,7 @@
             bindings = <
                 &trans       &kp DE_W &kp DE_G  &kp DE_D  &kp DE_F  &kp DE_B      &trans &trans &trans &trans   &kp DE_Q  &kp DE_L     &kp DE_U    &kp DE_O     &kp DE_Y  &kp DE_MINUS
                 &trans       &kp DE_R &kp DE_S  &kp DE_T  &kp DE_H  &kp DE_K      &trans &trans &trans &trans   &kp DE_J  &kp DE_N     &kp DE_E    &kp DE_A     &kp DE_I     &kp DE_SEMI
-                &kp DE_SLASH &kp DE_X &kp DE_C  &kp DE_M  &kp DE_P  &kp DE_V      &trans &trans &trans &trans   &kp DE_Z  &kp DE_COMMA &kp DE_DOT  &kp DE_SQT   &kp DE_SLASH &kp ENTER
+                &kp DE_SLASH &kp DE_X &kp DE_C  &kp DE_M  &kp DE_P  &kp DE_V      &trans &trans &trans &trans   &kp DE_Z  &kp DE_COMMA &kp DE_DOT  &kp DE_SQT   &kp DE_SLASH &trans
             >;
             label = "aptV3";   
         };
@@ -122,7 +124,7 @@
             bindings = <
                 &trans &kp N1 &kp N2 &kp N3  &kp N4  &kp N5    &trans &trans &trans  &trans    &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
                 &kp F1 &kp F2 &kp F3 &kp F4  &kp F5  &kp F6    &trans &trans &trans  &trans    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
-                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans &trans &trans  &trans    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &kp DEL
+                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans &trans &trans  &trans    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &trans
             >;
             label = "NUM";
         };
@@ -130,7 +132,7 @@
             bindings = <
                 &none &none &none &none &none &none    &trans &trans &trans &trans   &none        &kp HOME  &kp UP    &kp PG_UP   &none     &trans
                 &none &none &none &none &none &none    &trans &trans &trans &trans   &kp C_VOL_UP &kp LEFT  &kp DOWN  &kp RIGHT   &kp RGUI  &trans
-                &none &none &none &none &none &none    &trans &trans &trans &trans   &kp C_VOL_DN &kp END   &kp DOWN  &kp PG_DN   &kp RIGHT &kp DEL
+                &none &none &none &none &none &none    &trans &trans &trans &trans   &kp C_VOL_DN &kp END   &kp DOWN  &kp PG_DN   &kp RIGHT &trans
             >;
             label = "NAV";
         };

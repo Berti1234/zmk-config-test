@@ -40,7 +40,7 @@
 
     COMBO(cleft,  &kp LEFT, 27 28)
     COMBO(cright, &kp RIGHT, 28 29)
-    COMBO(cup,    &kp UP, 28 13)
+    COMBO(cup,    &kp UP, 28 12)
     COMBO(cdown,  &kp DOWN, 28 44)
   };
 };

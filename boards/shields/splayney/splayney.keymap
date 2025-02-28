@@ -48,8 +48,8 @@
 
         default_layer {
             bindings = <
-                &kp ESC    &kp DE_Q &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T      &mo L_NUM &kp DE_SPACE &kp BSPC  &kp BSPC      &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O   &kp DE_P     &kp INS
-                &kp TAB    &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      &mo L_SYM &mo L_NAV    &mo L_NAV &kp ENTER     &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
+                &kp DE_LT  &kp DE_Q &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T      &mo L_NUM &kp DE_SPACE &kp BSPC  &kp BSPC      &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O   &kp DE_P     &kp INS
+                &kp DE_LT  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      &mo L_SYM &mo L_NAV    &mo L_NAV &kp ENTER     &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
                 &kp DE_LT  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      &kp ENTER &mo L_SYS    &mo L_SYS &kp DE_SPACE  &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &mo L_SYS
             >;
             label = "QWERTZ";

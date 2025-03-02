@@ -145,7 +145,7 @@
             bindings = <
                 &trans &none    &none    &none      &none       &none   TR_half_trans    &none      &kp DOT  &kp LBKT  &kp N7 &kp N8 &kp N9 &kp RBKT   &none
                 &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &kp MINUS  &none    &kp EQUAL &kp N4 &kp N5 &kp N6 &kp SEMI   &none
-                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &kp N0     &none    &kp BLSLH &kp N1 &kp N2 &kp N3 &kp GRAVE  &none
+                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &kp N0     &none    &kp BSLH  &kp N1 &kp N2 &kp N3 &kp GRAVE  &none
             >;
             label = "NUM";
         };

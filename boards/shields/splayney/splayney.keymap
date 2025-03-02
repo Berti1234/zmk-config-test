@@ -25,6 +25,8 @@
 #define L_NUM 8  
 #define L_NAV 9
 #define L_SYS 10
+#define L_MAUS 11
+#define L_MEDIA 12
 
 
 
@@ -32,12 +34,20 @@
 #define Cut    LC(X)
 #define Copy   LC(C)
 #define Paste  LC(V)
+#define Redo   LC(Y)
 
-#define TR_1 &mo L_NUM &kp DE_SPACE &kp BSPC  &kp BSPC   
-#define TR_2 &mo L_SYM &mo L_NAV    &mo L_NAV &kp ENTER
-#define TR_3 &kp ENTER &mo L_SYS    &mo L_SYS &kp DE_SPACE
+/*
+            7.2 7.3     8.3 8.2
+ 6.1 6.2 6.3 7.1             8.1 9.3 9.2 9.1
+*/
+
+//       Col 6                  7                         8                 9
+#define TR_1 &mo L_NUM          &lt L_MAUS DE_SPACE       &lt L_SYM ENTER   &kp BSPC   
+#define TR_2 &lt L_NUM ESCAPE   &mo L_NAV                 &mo L_NAV         &lt L_FUN DELETE
+#define TR_3 &lt L_NAV ENTER    &mo L_SYS                 &mo L_SYS         &lt L_MEDIA BSPC 
 
 #define TR_trans &trans &trans &trans &trans
+#define TR_half_trans &trans &trans 
 
 
 /*
@@ -60,9 +70,9 @@
 
         default_layer {
             bindings = <
-                &kp DE_LT  &kp DE_Q &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T      TR_1    &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O   &kp DE_P     &kp INS
-                &kp DE_LT  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      TR_2    &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
-                &kp DE_LT  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      TR_3    &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &mo L_SYS
+                &none  &kp DE_Q &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T      TR_1    &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O   &kp DE_P     &none
+                &none  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      TR_2    &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
+                &none  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      TR_3    &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &none
             >;
             label = "QWERTZ";
         };
@@ -70,9 +80,9 @@
         // MTGAP
         layer_mtgap {
             bindings = <
-                &trans  &kp DE_Y &kp DE_P  &kp DE_O  &kp DE_U  &kp DE_J       TR_trans         &kp DE_Z  &kp DE_I  &kp DE_N  &kp DE_E  &kp DE_A   &trans
-                &trans  &kp DE_Q    &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G    TR_trans         &kp DE_M  &kp DE_T  &kp DE_S  &kp DE_R  &trans  &trans
-                &trans  &kp DE_B    &kp DE_V  &kp DE_X  &kp DE_C  &kp DE_W    TR_trans         &kp DE_COMMA  &kp DE_DOT  &kp DE_COLON  &kp DE_SLASH &trans  &trans
+                &trans  &kp DE_Y &kp DE_P  &kp DE_O  &kp DE_U  &kp DE_J    TR_trans         &kp DE_Z  &kp DE_I  &kp DE_N  &kp DE_E  &kp DE_A   &trans
+                &trans  &kp DE_Q &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G    TR_trans         &kp DE_M  &kp DE_T  &kp DE_S  &kp DE_R  &trans  &trans
+                &trans  &kp DE_B &kp DE_V  &kp DE_X  &kp DE_C  &kp DE_W    TR_trans         &kp DE_COMMA  &kp DE_DOT  &kp DE_COLON  &kp DE_SLASH &trans  &trans
             >;
             label = "MTGAP";
         };
@@ -80,27 +90,27 @@
         // GRAPHITE
         layer_graphite {
             bindings = <
-                &trans    &kp DE_B  &kp DE_L  &kp DE_D  &kp DE_W  &kp DE_Z     TR_trans     &kp DE_SQT  &kp DE_F  &kp DE_O   &kp DE_U     &kp DE_J     &kp DE_SEMI
-                &trans    &kp DE_N  &kp DE_R  &kp DE_T  &kp DE_S  &kp DE_G     TR_trans     &kp DE_Y &kp DE_H  &kp DE_A   &kp DE_E     &kp DE_I     &kp DE_COMMA
-                &kp DE_BSLH  &kp DE_Q  &kp DE_X  &kp DE_M  &kp DE_C  &kp DE_V  TR_trans     &kp DE_K    &kp DE_P  &kp DE_DOT &kp DE_MINUS &kp DE_SLASH &trans
+                &trans       &kp DE_B  &kp DE_L  &kp DE_D  &kp DE_W  &kp DE_Z   TR_trans    &kp DE_SQT  &kp DE_F  &kp DE_O   &kp DE_U     &kp DE_J     &kp DE_SEMI
+                &trans       &kp DE_N  &kp DE_R  &kp DE_T  &kp DE_S  &kp DE_G   TR_trans    &kp DE_Y    &kp DE_H  &kp DE_A   &kp DE_E     &kp DE_I     &kp DE_COMMA
+                &kp DE_BSLH  &kp DE_Q  &kp DE_X  &kp DE_M  &kp DE_C  &kp DE_V   TR_trans    &kp DE_K    &kp DE_P  &kp DE_DOT &kp DE_MINUS &kp DE_SLASH &trans
             >;
             label = "Graphite";
         };
         
         layer_mtgap1 {
             bindings = <
-                &trans  &kp DE_Y &kp DE_P    &kp DE_O      &kp DE_U    &kp DE_J         TR_trans        &kp DE_K  &kp DE_D  &kp DE_L  &kp DE_C  &kp DE_W  &trans
-                &trans  &kp DE_I    &kp DE_N    &kp DE_E      &kp DE_A    &kp DE_COMMA  TR_trans        &kp DE_M  &kp DE_H  &kp DE_T  &kp DE_S  &kp DE_R  &trans
-                &trans  &kp DE_Q    &kp DE_Z &kp DE_SLASH  &kp DE_DOT  &kp DE_COLON     TR_trans        &kp DE_B  &kp DE_F  &kp DE_G  &kp DE_V  &kp DE_X  &trans
+                &trans  &kp DE_Y  &kp DE_P  &kp DE_O      &kp DE_U    &kp DE_J         TR_trans        &kp DE_K  &kp DE_D  &kp DE_L  &kp DE_C  &kp DE_W  &trans
+                &trans  &kp DE_I  &kp DE_N  &kp DE_E      &kp DE_A    &kp DE_COMMA     TR_trans        &kp DE_M  &kp DE_H  &kp DE_T  &kp DE_S  &kp DE_R  &trans
+                &trans  &kp DE_Q  &kp DE_Z  &kp DE_SLASH  &kp DE_DOT  &kp DE_COLON     TR_trans        &kp DE_B  &kp DE_F  &kp DE_G  &kp DE_V  &kp DE_X  &trans
             >;
             label = "MTGAP1";
         };
 
         layer_colemak {
             bindings = <
-                &trans  &kp DE_Q    &kp DE_W  &kp DE_F  &kp DE_P  &kp DE_B   TR_trans    &kp DE_J  &kp DE_L  &kp DE_U      &kp DE_Y &kp DE_SEMICOLON &trans
-                &trans  &kp DE_A    &kp DE_R  &kp DE_S  &kp DE_T  &kp DE_G   TR_trans    &kp DE_M  &kp DE_N  &kp DE_E      &kp DE_I    &kp DE_O         &trans
-                &trans  &kp DE_Z &kp DE_X  &kp DE_C  &kp DE_D  &kp DE_V      TR_trans    &kp DE_K  &kp DE_H  &kp DE_COMMA  &kp DE_DOT  &kp DE_SLASH     &trans
+                &trans  &kp DE_Q &kp DE_W  &kp DE_F  &kp DE_P  &kp DE_B   TR_trans    &kp DE_J  &kp DE_L  &kp DE_U      &kp DE_Y    &kp DE_SEMICOLON &trans
+                &trans  &kp DE_A &kp DE_R  &kp DE_S  &kp DE_T  &kp DE_G   TR_trans    &kp DE_M  &kp DE_N  &kp DE_E      &kp DE_I    &kp DE_O         &trans
+                &trans  &kp DE_Z &kp DE_X  &kp DE_C  &kp DE_D  &kp DE_V   TR_trans    &kp DE_K  &kp DE_H  &kp DE_COMMA  &kp DE_DOT  &kp DE_SLASH     &trans
             >;
             label = "ColemakDH";   
         };
@@ -116,35 +126,33 @@
 
         layer_aptV3 {
             bindings = <
-                &trans       &kp DE_W &kp DE_G  &kp DE_D  &kp DE_F  &kp DE_B      TR_trans   &kp DE_Q  &kp DE_L     &kp DE_U    &kp DE_O     &kp DE_Y  &kp DE_MINUS
+                &trans       &kp DE_W &kp DE_G  &kp DE_D  &kp DE_F  &kp DE_B      TR_trans   &kp DE_Q  &kp DE_L     &kp DE_U    &kp DE_O     &kp DE_Y     &kp DE_MINUS
                 &trans       &kp DE_R &kp DE_S  &kp DE_T  &kp DE_H  &kp DE_K      TR_trans   &kp DE_J  &kp DE_N     &kp DE_E    &kp DE_A     &kp DE_I     &kp DE_SEMI
                 &kp DE_SLASH &kp DE_X &kp DE_C  &kp DE_M  &kp DE_P  &kp DE_V      TR_trans   &kp DE_Z  &kp DE_COMMA &kp DE_DOT  &kp DE_SQT   &kp DE_SLASH &trans
             >;
             label = "aptV3";   
         };
-
-
         layer_sym {
             bindings = <
-                &kp HOME &kp EXCL  &kp DE_DQT &kp DE_HASH &kp DE_DOLLAR &kp DE_PERCENT   TR_trans   &kp DE_CARET &kp DE_AMPS  &kp DE_ASTRK &kp DE_LPAR &kp DE_RPAR &trans
-                &kp END  &kp DE_AT &kp LALT   &kp LCTRL   &kp LSHFT     &kp PG_UP        TR_trans   &kp DE_MINUS &kp DE_EQUAL &kp DE_LBKT  &kp DE_RBKT &kp DE_BSLH &trans
-                &trans   &kp Undo  &kp Cut    &kp Copy    &kp Paste     &kp PG_DN        TR_trans   &kp DE_UNDER &kp DE_PLUS  &kp DE_LBRC  &kp DE_RBRC &kp DE_PIPE &trans
+                &trans  &kp LBRC  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC  &none    &kp UNDER  TR_half_trans   &none &none    &none    &none      &none       &trans 
+                &trans  &kp COLON &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS  &kp LPAR &none      TR_half_trans   &none &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &trans
+                &trans  &kp TILDE &kp EXCL  &kp AT     &kp HASH   &kp PIPE  &kp RPAR &none      TR_half_trans   &none &none    &kp RALT &none      &none       &trans
             >;
             label = "SYM";
         };
         layer_num {
             bindings = <
-                &trans &kp N1 &kp N2 &kp N3  &kp N4  &kp N5    TR_trans    &kp N6       &kp N7    &kp N8    &kp N9   &kp N0    &trans
-                &kp F1 &kp F2 &kp F3 &kp F4  &kp F5  &kp F6    TR_trans    &kp C_VOL_UP &kp RSHFT &kp RCTRL &kp LALT &kp RGUI  &trans
-                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   TR_trans    &kp C_VOL_DN &kp LEFT  &kp UP    &kp DOWN &kp RIGHT &trans
+                &trans &none    &none    &none      &none       &none   TR_half_trans    &none      &kp DOT  &kp LBKT  &kp N7 &kp N8 &kp N9 &kp RBKT   &none
+                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &kp MINUS  &none    &kp EQUAL &kp N4 &kp N5 &kp N6 &kp SEMI   &none
+                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &kp N0     &none    &kp BLSLH &kp N1 &kp N2 &kp N3 &kp GRAVE  &none
             >;
             label = "NUM";
         };
         layer_nav {
             bindings = <
-                &none &none &none &none &none &none    TR_trans   &none        &kp HOME  &kp UP    &kp PG_UP   &none     &trans
-                &none &none &none &none &none &none    TR_trans   &kp C_VOL_UP &kp LEFT  &kp DOWN  &kp RIGHT   &kp RGUI  &trans
-                &none &none &none &none &none &none    TR_trans   &kp C_VOL_DN &kp END   &kp DOWN  &kp PG_DN   &kp RIGHT &trans
+                &none  &none    &none    &none      &none       &none    TR_trans   &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
+                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none    TR_trans   &capsword    &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DOWN  &trans
+                &none  &none    &kp RALT &none      &none       &none    TR_trans   &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
             >;
             label = "NAV";
         };
@@ -156,9 +164,23 @@
             >;
             label = "Settings";
         };
+        layer_maus {
+            bindings = <
+                &trans &none    &none    &none      &none       &none   TR_half_trans    &none      &mkp LCLK  &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
+                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &mkp RCLK  &none      &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
+                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &mkp MCLK  &none      &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
+            >;
+            label = "Settings";
+        };
 
-
-
+        layer_media {
+            bindings = <
+                &to L_QWERTZ &to L_MTGAP &to L_GRAPHITE &to L_MTGAP1 &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
+                &to L_APTV3  &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE
+                &none        &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &none        &none
+            >;
+            label = "Settings";
+        };
     };
 };
 

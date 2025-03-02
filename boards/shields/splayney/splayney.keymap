@@ -43,7 +43,7 @@
 
 //       Col 6                  7                         8                 9
 #define TR_1 &mo L_NUM          &lt L_MAUS DE_SPACE       &lt L_SYM ENTER   &kp BSPC   
-#define TR_2 &lt L_NUM ESCAPE   &mo L_NAV                 &mo L_NAV         &lt L_FUN DELETE
+#define TR_2 &lt L_NUM DE_ESC   &mo L_NAV                 &mo L_NAV         &lt L_FUN DELETE
 #define TR_3 &lt L_NAV ENTER    &mo L_SYS                 &mo L_SYS         &lt L_MEDIA BSPC 
 
 #define TR_trans &trans &trans &trans &trans

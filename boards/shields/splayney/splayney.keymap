@@ -152,7 +152,7 @@
         layer_nav {
             bindings = <
                 &none  &none    &none    &none      &none       &none    TR_trans   &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
-                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none    TR_trans   &capsword    &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DOWN  &trans
+                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none    TR_trans   &capsword    &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
                 &none  &none    &kp RALT &none      &none       &none    TR_trans   &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
             >;
             label = "NAV";

@@ -41,9 +41,9 @@
  6.1 6.2 6.3 7.1             8.1 9.3 9.2 9.1
 */
 
-//       Col 6                  7                         8                 9
+/*       Col 6                  7                         8                 9       */
 #define TR_1 &mo L_NUM          &lt L_MAUS DE_SPACE       &lt L_SYM ENTER   &kp BSPC   
-// #define TR_2 &lt L_NUM DE_ESC   &mo L_NAV                 &mo L_NAV         &lt L_FUN DELETE
+/* #define TR_2 &lt L_NUM DE_ESC   &mo L_NAV                 &mo L_NAV         &lt L_FUN DELETE */
 #define TR_2 &mo L_NUM          &mo L_NAV                 &mo L_NAV         &mo L_FUN
 #define TR_3 &lt L_NAV ENTER    &mo L_SYS                 &mo L_SYS         &lt L_MEDIA BSPC 
 
@@ -72,7 +72,7 @@
         default_layer {
             bindings = <
                 &none  &kp DE_Q &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T      TR_1    &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O   &kp DE_P     &none
-                &none  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      TR_2    &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
+                &none  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      &lt L_NUM DE_ESC   &mo L_NAV                 &mo L_NAV         &lt L_FUN DELETE       &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
                 &none  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      TR_3    &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &none
             >;
             label = "QWERTZ";

@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #include <locale/keys_de.h>
 
@@ -165,19 +166,10 @@
             >;
             label = "Settings";
         };
-/*        layer_maus {
+        layer_maus {
             bindings = <
                 &trans &none    &none    &none      &none       &none   &trans &trans    &none      &mkp LCLK  &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
                 &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &mkp RCLK  &none      &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
-                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &mkp MCLK  &none      &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
-            >;
-            label = "Maus";
-        };
-        */
-        layer_maus {
-            bindings = <
-                &trans &none    &none    &none      &none       &none   &trans &trans    &none      &mkp LCLK  &none   &none &none   &none &none     &trans
-                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &mkp RCLK  &none      &none &mmv MOVE_LEFT &none &none &none     &trans
                 &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &mkp MCLK  &none      &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
             >;
             label = "Maus";

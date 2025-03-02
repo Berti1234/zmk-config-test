@@ -167,20 +167,19 @@
         };
         layer_maus {
             bindings = <
-                &trans &none    &none    &none      &none       &none   TR_half_trans    &none      &mkp LCLK  &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
+                &trans &none    &none    &none      &none       &none   &trans &trans    &none      &mkp LCLK  &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
                 &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &mkp RCLK  &none      &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
                 &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &mkp MCLK  &none      &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
             >;
-            label = "Settings";
+            label = "Maus";
         };
-
         layer_media {
             bindings = <
                 &to L_QWERTZ &to L_MTGAP &to L_GRAPHITE &to L_MTGAP1 &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
                 &to L_APTV3  &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE
                 &none        &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &none        &none
             >;
-            label = "Settings";
+            label = "Media";
         };
     };
 };

@@ -43,9 +43,9 @@
 */
 
 /*       Col 6                  7                         8                 9       */
-#define TR_1 &mo L_NUM          &lt L_MAUS DE_SPACE       &lt L_SYM ENTER   &kp BSPC   
-#define TR_20 &lt L_NUM DE_ESC   &mo L_NAV                 &mo L_NAV         &lt L_FUN DELETE 
-#define TR_2 &lt L_NUM N1   &mo L_NAV                 &mo L_NAV         &lt L_NAV N2
+#define TR_1 &none          &lt L_MAUS DE_SPACE       &lt L_SYM ENTER   &kp BSPC   
+#define TR_20 &lt L_NUM DE_ESC   &none                 &mo L_NAV         &lt L_FUN DELETE 
+#define TR_2 &lt L_NUM ESCAPE   &mo L_NAV                 &mo L_NAV         &lt L_NAV DELETE
 #define TR_3 &lt L_NAV ENTER    &mo L_SYS                 &mo L_SYS         &lt L_MEDIA BSPC 
 
 #define TR_trans &trans &trans &trans &trans
@@ -73,7 +73,7 @@
         default_layer {
             bindings = <
                 &none  &kp DE_Q &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T      TR_1    &kp DE_Z  &kp DE_U  &kp DE_I     &kp DE_O   &kp DE_P     &none
-                &none  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      TR_2    &kp DE_H  &kp DE_J  &kp DE_K     &kp DE_L   &kp DE_POUND &none
+                &none  &hm LGUI DE_A &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G      TR_2    &kp DE_H  &hm LSHIFT DE_J  &hm LCTRL DE_K     &hm LALT DE_L   &hm LGUI DE_POUND &none
                 &none  &kp DE_Y &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B      TR_3    &kp DE_N  &kp DE_M  &kp DE_COMMA &kp DE_DOT &kp DE_MINUS &none
             >;
             label = "QWERTZ";
@@ -168,9 +168,9 @@
         };
         layer_maus {
             bindings = <
-                &trans &none    &none    &none      &none       &none   TR_half_trans    &none      &mkp LCLK  &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
-                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &mkp RCLK  &none      &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
-                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &mkp MCLK  &none      &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
+                &trans &none    &none    &none      &none       &none   TR_half_trans    &mkp LCLK  &none  &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
+                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &none      &mkp RCLk  &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
+                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &none      &mkp MCLK  &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
             >;
             label = "Maus";
         };

@@ -82,7 +82,7 @@
         default_layer {
             bindings = <
                 &none  &kp DE_Q      &kp DE_W       &kp DE_E        &kp DE_R         &kp DE_T      TR_1    &kp DE_Z  &kp DE_U         &kp DE_I          &kp DE_O        &kp DE_P          &none
-                &none  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      TR_2    &kp DE_H  &kp DE_J  &kp DE_K    &kp DE_L   &kp DE_POUND &none
+                &none  &kp DE_A &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G      &none          &none        &none         &none     &kp DE_H  &kp DE_J  &kp DE_K    &kp DE_L   &kp DE_POUND &none
                 &none  &kp DE_Y      &kp DE_X       &kp DE_C        &kp DE_V         &kp DE_B      TR_3    &kp DE_N  &kp DE_M         &kp DE_COMMA      &kp DE_DOT      &kp DE_MINUS      &none
             >;
             label = "QWERTZ";

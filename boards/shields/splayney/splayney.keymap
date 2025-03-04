@@ -40,7 +40,7 @@
 
 /*              Col 6                7                         8                       9       */
 #define TR_1    &none                &lt L_MEDIAMAUS DE_SPACE  &lt L_MEDIAMAUS ENTER   &kp BSPC   
-#define TR_2    &lt L_NUMSYM ESCAPE  &none                     &none                   &lt L_SYMNUM DELETE
+#define TR_2    &lt L_SYMNUM ESCAPE  &none                     &none                   &lt L_SYMNUM DELETE
 #define TR_3    &lt L_FUNNAV ENTER   &mo L_SYS                 &mo L_SYS               &lt L_FUNNAV BSPC 
 
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 

@@ -81,9 +81,9 @@
 
         default_layer {
             bindings = <
-                &none  &kp DE_Q      &kp DE_W       &kp DE_E        &kp DE_R         &kp DE_T      TR_1    &kp DE_Z  &kp DE_U           &kp DE_I          &kp DE_O        &kp DE_P          &none
-                &none  &hm LGUI DE_A &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G      TR_2    &kp DE_H  &hm LSHIFT kp DE_J &hm LCTRL DE_K    &hm LALT DE_L   &hm LGUI DE_POUND &none
-                &none  &kp DE_Y      &hm RALT DE_X  &kp DE_C        &kp DE_V         &kp DE_B      TR_3    &kp DE_N  &kp DE_M           &kp DE_COMMA      &hm RALT DE_DOT &kp DE_MINUS      &none
+                &none  &kp DE_Q      &kp DE_W       &kp DE_E        &kp DE_R         &kp DE_T      TR_1    &kp DE_Z  &kp DE_U        &kp DE_I          &kp DE_O        &kp DE_P          &none
+                &none  &hm LGUI DE_A &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G      TR_2    &kp DE_H  &hm LSHIFT DE_J &hm LCTRL DE_K    &hm LALT DE_L   &hm LGUI DE_POUND &none
+                &none  &kp DE_Y      &hm RALT DE_X  &kp DE_C        &kp DE_V         &kp DE_B      TR_3    &kp DE_N  &kp DE_M        &kp DE_COMMA      &hm RALT DE_DOT &kp DE_MINUS      &none
             >;
             label = "QWERTZ";
         };
@@ -150,7 +150,7 @@
                 &trans &hm LGUI COLON &hm LALT DLLR &hm LCTRL PRCNT &hm LSHIFT CARET &none          &kp LPAR &none      &kp MINUS  &none       &hm LSHIFT EQUAL &hm LCTRL N4 &hm LALT N5 &hm LGUI N6 &kp SEMI   &none
                 &trans &kp TILDE      &hm RALT EXCL &kp AT          &kp HASH         &kp PIPE       &kp RPAR &none      &kp N0     &none       &kp BSLH         &kp N1       &kp N2      &kp N3      &kp GRAVE  &none
             >;
-            label = "SYMNUM";
+            label = "SYM+NUM";
         };
         layer_funnav {
             bindings = <
@@ -158,7 +158,7 @@
                 &kp F7  &hm LGUI F8 &hm LALT F9  &hm LCTRL F10 &hm LSHIFT F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
                 &kp F13 &kp F14     &hm RALT F15 &kp F16       &kp F17         &hm PSCRN F18   TR_trans       &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
             >;
-            label = "NAV";
+            label = "FUN+NAV";
         };
 
         layer_sys {
@@ -175,7 +175,7 @@
                 &trans &kp LGUI &kp LALT &hm LCTRL C_BRI_DN &hm LSHIFT C_BRI_UP &kp C_BRI_MIN   TR_half_trans    &none      &mkp RCLK  &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
                 &trans &none    &kp RALT &none              &none               &none           TR_half_trans    &none      &mkp MCLK  &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
             >;
-            label = "MediaMaus";
+            label = "Media+Maus";
         };
     };
 };

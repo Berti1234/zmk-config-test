@@ -22,14 +22,10 @@
 #define L_GALLIUMV2 5
 #define L_APTV3 6
 
-#define L_SYM 7
-#define L_NUM 8  
-#define L_NAV 9
-#define L_SYS 10
-#define L_MAUS 11
-#define L_MEDIA 12
-
-
+#define L_SYMNUM 7
+#define L_FUNNAV 8
+#define L_SYS 9
+#define L_MEDIAMAUS 10
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -42,11 +38,13 @@
  6.1 6.2 6.3 7.1             8.1 9.3 9.2 9.1
 */
 
-/*       Col 6                  7                         8                 9       */
-#define TR_1 &none          &lt L_MAUS DE_SPACE       &lt L_SYM ENTER   &kp BSPC   
-#define TR_20 &lt L_NUM DE_ESC   &none                 &mo L_NAV         &lt L_FUN DELETE 
-#define TR_2 &lt L_NUM ESCAPE   &mo L_NAV                 &mo L_NAV         &lt L_NAV DELETE
-#define TR_3 &lt L_NAV ENTER    &mo L_SYS                 &mo L_SYS         &lt L_MEDIA BSPC 
+/*              Col 6                7                         8                       9       */
+#define TR_1    &none                &lt L_MEDIAMAUS DE_SPACE  &lt L_MEDIAMAUS ENTER   &kp BSPC   
+#define TR_2    &lt L_NUMSYM ESCAPE  &none                     &none                   &lt L_SYMNUM DELETE
+#define TR_3    &lt L_FUNNAV ENTER   &mo L_SYS                 &mo L_SYS               &lt L_FUNNAV BSPC 
+
+// #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 
+
 
 #define TR_trans &trans &trans &trans &trans
 #define TR_half_trans &trans &trans 
@@ -67,6 +65,18 @@
  */
 
 / {
+     {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -134,30 +144,24 @@
             >;
             label = "aptV3";   
         };
-        layer_sym {
+
+        layer_symnum {
             bindings = <
-                &trans  &kp LBRC  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC  &none    &kp UNDER  TR_half_trans   &none &none    &none    &none      &none       &trans 
-                &trans  &kp COLON &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS  &kp LPAR &none      TR_half_trans   &none &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &trans
-                &trans  &kp TILDE &kp EXCL  &kp AT     &kp HASH   &kp PIPE  &kp RPAR &none      TR_half_trans   &none &none    &kp RALT &none      &none       &trans
+                &trans &kp LBRC       &kp AMPS      &kp ASTRK       &kp LPAR         &kp RBRC       &none    &kp UNDER  &none      &kp DOT     &kp LBKT         &kp N7       &kp N8      &kp N9      &kp RBKT   &none
+                &trans &hm LGUI COLON &hm LALT DLLR &hm LCTRL PRCNT &hm LSHIFT CARET &none          &kp LPAR &none      &kp MINUS  &none       &hm LSHIFT EQUAL &hm LCTRL N4 &hm LALT N5 &hm LGUI N6 &kp SEMI   &none
+                &trans &kp TILDE      &hm RALT EXCL &kp AT          &kp HASH         &kp PIPE       &kp RPAR &none      &kp N0     &none       &kp BSLH         &kp N1       &kp N2      &kp N3      &kp GRAVE  &none
             >;
-            label = "SYM";
+            label = "SYMNUM";
         };
-        layer_num {
+        layer_funnav {
             bindings = <
-                &trans &none    &none    &none      &none       &none   TR_half_trans    &none      &kp DOT  &kp LBKT  &kp N7 &kp N8 &kp N9 &kp RBKT   &none
-                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &kp MINUS  &none    &kp EQUAL &kp N4 &kp N5 &kp N6 &kp SEMI   &none
-                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &kp N0     &none    &kp BSLH  &kp N1 &kp N2 &kp N3 &kp GRAVE  &none
-            >;
-            label = "NUM";
-        };
-        layer_nav {
-            bindings = <
-                &none  &none    &none    &none      &none       &none    TR_trans   &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
-                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none    TR_trans   &caps_word    &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
-                &none  &none    &kp RALT &none      &none       &none    TR_trans   &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
+                &kp F1  &kp F2      &kp F3       &kp F4        &kp F5          &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
+                &km F7  &hm LGUI F8 &hm LALT F9  &hm LCTRL F10 &hm LSHIFT F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
+                &kp F13 &kp F14     &hm RALT F15 &kp F16       &kp F17         &hm PSCRN F18   TR_trans       &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
             >;
             label = "NAV";
         };
+
         layer_sys {
             bindings = <
                 &to L_QWERTZ &to L_MTGAP &to L_GRAPHITE &to L_MTGAP1 &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
@@ -166,21 +170,13 @@
             >;
             label = "Settings";
         };
-        layer_maus {
+        layer_mediamaus {
             bindings = <
-                &trans &none    &none    &none      &none       &none   TR_half_trans    &mkp LCLK  &none  &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
-                &trans &kp LGUI &kp LALT &kp LCTRL  &kp LSHIFT  &none   TR_half_trans    &none      &mkp RCLK  &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
-                &trans &none    &kp RALT &none      &none       &none   TR_half_trans    &none      &mkp MCLK  &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
+                &trans &none    &none    &kp C_VOL_DN       &kp C_VOL_UP        &kp C_MUTE      TR_half_trans    &mkp LCLK  &none      &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none     &trans
+                &trans &kp LGUI &kp LALT &hm LCTRL C_BRI_DN &hm LSHIFT C_BRI_UP &kp C_BRI_MIN   TR_half_trans    &none      &mkp RCLK  &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &trans
+                &trans &none    &kp RALT &none              &none               &none           TR_half_trans    &none      &mkp MCLK  &kp Redo       &kp Paste      &kp Copy       &kp Cut         &kp Undo  &trans
             >;
-            label = "Maus";
-        };
-        layer_media {
-            bindings = <
-                &to L_QWERTZ &to L_MTGAP &to L_GRAPHITE &to L_MTGAP1 &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
-                &to L_APTV3  &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE
-                &none        &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &none        &none
-            >;
-            label = "Media";
+            label = "MediaMaus";
         };
     };
 };

@@ -24,7 +24,7 @@
 
 #define L_SYMNUM 7
 #define L_FUNNAV 8
-#define L_SYS 9
+#define L_SETTINGS 9
 #define L_MEDIAMAUS 10
 
 #define Undo   LC(Z)
@@ -40,8 +40,8 @@
 
 /*              Col 6                7                         8                       9       */
 #define TR_1    &none                &lt L_MEDIAMAUS DE_SPACE  &lt L_MEDIAMAUS ENTER   &kp BSPC   
-#define TR_2    &lt L_SYMNUM 1  &none                     &none                   &lt L_SYMNUM 2
-#define TR_3    &lt L_FUNNAV ENTER   &mo L_SYS                 &mo L_SYS               &lt L_FUNNAV BSPC 
+#define TR_2    &lt L_SYMNUM ESCAPE  &none                     &none                   &lt L_SYMNUM DELETE
+#define TR_3    &lt L_FUNNAV ENTER   &mo L_SETTINGS            &mo L_SYS               &lt L_FUNNAV BSPC 
 
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 
 
@@ -56,13 +56,6 @@
 #define TR_3 &kp DE_I &kp DE_J &kp DE_K &kp DE_L
 */
 
-/* Uncomment this block if using RGB
-&led_strip {
-    chain-length = ;
-    // chain-length = ; // Uncomment if using both per-key and underglow LEDs
-    // chain-length = ; // Uncomment if using only per-key LEDs.
-};
- */  
 
 / {
     behaviors {
@@ -90,10 +83,10 @@
 
         // MTGAP
         layer_mtgap {
-            bindings = <
-                &trans  &kp DE_Y &kp DE_P  &kp DE_O  &kp DE_U  &kp DE_J    TR_trans         &kp DE_Z  &kp DE_I  &kp DE_N  &kp DE_E  &kp DE_A   &trans
-                &trans  &kp DE_Q &kp DE_S  &kp DE_D  &kp DE_F  &kp DE_G    TR_trans         &kp DE_M  &kp DE_T  &kp DE_S  &kp DE_R  &trans  &trans
-                &trans  &kp DE_B &kp DE_V  &kp DE_X  &kp DE_C  &kp DE_W    TR_trans         &kp DE_COMMA  &kp DE_DOT  &kp DE_COLON  &kp DE_SLASH &trans  &trans
+            bindings = <    
+                &trans  &kp DE_Y      &kp DE_P       &kp DE_O        &kp DE_U         &kp DE_J    TR_trans         &kp DE_Z      &kp DE_I          &kp DE_N        &kp DE_E          &kp DE_A           &trans
+                &trans  &hm LGUI DE_Q &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G    TR_trans         &kp DE_M      &hm LSHIFT  DE_T  &hm LCTRL DE_S  &hm LALT DE_R     &hm LGUI DE_POUND  &trans
+                &trans  &kp DE_B      &hm RALT DE_V  &kp DE_X        &kp DE_C         &kp DE_W    TR_trans         &kp DE_COMMA  &kp DE_DOT        &kp DE_COLON    &hm RALT DE_SLASH &trans             &trans
             >;
             label = "MTGAP";
         };
@@ -101,56 +94,56 @@
         // GRAPHITE
         layer_graphite {
             bindings = <
-                &trans       &kp DE_B  &kp DE_L  &kp DE_D  &kp DE_W  &kp DE_Z   TR_trans    &kp DE_SQT  &kp DE_F  &kp DE_O   &kp DE_U     &kp DE_J     &kp DE_SEMI
-                &trans       &kp DE_N  &kp DE_R  &kp DE_T  &kp DE_S  &kp DE_G   TR_trans    &kp DE_Y    &kp DE_H  &kp DE_A   &kp DE_E     &kp DE_I     &kp DE_COMMA
-                &kp DE_BSLH  &kp DE_Q  &kp DE_X  &kp DE_M  &kp DE_C  &kp DE_V   TR_trans    &kp DE_K    &kp DE_P  &kp DE_DOT &kp DE_MINUS &kp DE_SLASH &trans
+                &trans       &kp DE_B       &kp DE_L       &kp DE_D        &kp DE_W         &kp DE_Z   TR_trans    &kp DE_SQT  &kp DE_F         &kp DE_O         &kp DE_U           &kp DE_J       &kp DE_SEMI
+                &trans       &hm LGUI DE_N  &hm LALT DE_R  &hm LCTRL DE_T  &hm LSHIFT DE_S  &kp DE_G   TR_trans    &kp DE_Y    &hm LSHIFT DE_H  &hm LCTRL DE_A   &hm LALT DE_E      &hm LGUI DE_I  &kp DE_COMMA
+                &kp DE_BSLH  &kp DE_Q       &hm RALT DE_X  &kp DE_M        &kp DE_C         &kp DE_V   TR_trans    &kp DE_K    &kp DE_P         &kp DE_DOT       &hm RALTDE_MINUS   &kp DE_SLASH   &trans
             >;
             label = "Graphite";
         };
         
         layer_mtgap1 {
             bindings = <
-                &trans  &kp DE_Y  &kp DE_P  &kp DE_O      &kp DE_U    &kp DE_J         TR_trans        &kp DE_K  &kp DE_D  &kp DE_L  &kp DE_C  &kp DE_W  &trans
-                &trans  &kp DE_I  &kp DE_N  &kp DE_E      &kp DE_A    &kp DE_COMMA     TR_trans        &kp DE_M  &kp DE_H  &kp DE_T  &kp DE_S  &kp DE_R  &trans
-                &trans  &kp DE_Q  &kp DE_Z  &kp DE_SLASH  &kp DE_DOT  &kp DE_COLON     TR_trans        &kp DE_B  &kp DE_F  &kp DE_G  &kp DE_V  &kp DE_X  &trans
+                &trans  &kp DE_Y       &kp DE_P       &kp DE_O        &kp DE_U         &kp DE_J         TR_trans      &kp DE_K         &kp DE_D        &kp DE_L  &kp DE_C       &kp DE_W       &trans
+                &trans  &hm LGUI DE_I  &hm LALT DE_N  &hm LCTRL DE_E  &hm LSHIFT DE_A  &kp DE_COMMA     TR_trans      &hm LSHIFT DE_M  &hm LCTRL DE_H  &kp DE_T  &hm LALT DE_S  &hm LGUI DE_R  &trans
+                &trans  &kp DE_Q       &hm RALT DE_Z  &kp DE_SLASH    &kp DE_DOT       &kp DE_COLON     TR_trans      &kp DE_B         &kp DE_F        &kp DE_G  &hm RALT DE_V  &kp DE_X       &trans
             >;
             label = "MTGAP1";
         };
 
         layer_colemak {
             bindings = <
-                &trans  &kp DE_Q &kp DE_W  &kp DE_F  &kp DE_P  &kp DE_B   TR_trans    &kp DE_J  &kp DE_L  &kp DE_U      &kp DE_Y    &kp DE_SEMICOLON &trans
-                &trans  &kp DE_A &kp DE_R  &kp DE_S  &kp DE_T  &kp DE_G   TR_trans    &kp DE_M  &kp DE_N  &kp DE_E      &kp DE_I    &kp DE_O         &trans
-                &trans  &kp DE_Z &kp DE_X  &kp DE_C  &kp DE_D  &kp DE_V   TR_trans    &kp DE_K  &kp DE_H  &kp DE_COMMA  &kp DE_DOT  &kp DE_SLASH     &trans
+                &trans  &kp DE_Q      &kp DE_W       &kp DE_F        &kp DE_P         &kp DE_B   TR_trans    &kp DE_J  &kp DE_L         &kp DE_U        &kp DE_Y         &kp DE_SEMICOLON &trans
+                &trans  &hm LGUI DE_A &hm LALT DE_R  &hm LCTRL DE_S  &hm LSHIFT DE_T  &kp DE_G   TR_trans    &kp DE_M  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_I    &hm LGUI DE_O    &trans
+                &trans  &kp DE_Z      &hm RALT DE_X  &kp DE_C        &kp DE_D         &kp DE_V   TR_trans    &kp DE_K  &kp DE_H         &kp DE_COMMA    &hm RALT DE_DOT  &kp DE_SLASH     &trans
             >;
             label = "ColemakDH";   
         };
 
         layer_galliumv2 {
             bindings = <
-                &trans  &kp DE_B &kp DE_L  &kp DE_D  &kp DE_C  &kp DE_V   TR_trans    &kp DE_J  &kp DE_F  &kp DE_O    &kp DE_U     &kp DE_COMMA &kp DE_MINUS
-                &trans  &kp DE_N &kp DE_R  &kp DE_T  &kp DE_S  &kp DE_G   TR_trans    &kp DE_Y  &kp DE_H  &kp DE_A    &kp DE_E     &kp DE_I     &kp DE_SLASH
-                &trans  &kp DE_X &kp DE_Q  &kp DE_M  &kp DE_W  &kp DE_Z   TR_trans    &kp DE_K  &kp DE_P  &kp DE_SQT  &kp DE_SEMI  &kp DE_DOT   &trans
+                &trans  &kp DE_B      &kp DE_L       &kp DE_D        &kp DE_C         &kp DE_V   TR_trans    &kp DE_J  &kp DE_F         &kp DE_O        &kp DE_U          &kp DE_COMMA   &kp DE_MINUS
+                &trans  &hm LGUI DE_N &hm LALT DE_R  &hm LCTRL DE_T  &hm LSHIFT DE_S  &kp DE_G   TR_trans    &kp DE_Y  &hm LSHIFT DE_H  &hm LCTRL DE_A  &hm LALT DE_E     &hm LGUI DE_I  &kp DE_SLASH
+                &trans  &kp DE_X      &hm RALT DE_Q  &kp DE_M        &kp DE_W         &kp DE_Z   TR_trans    &kp DE_K  &kp DE_P         &kp DE_SQT      &hm RALT DE_SEMI  &kp DE_DOT     &trans
             >;
             label = "GalliumV2";   
         };
 
         layer_aptV3 {
             bindings = <
-                &trans       &kp DE_W &kp DE_G  &kp DE_D  &kp DE_F  &kp DE_B      TR_trans   &kp DE_Q  &kp DE_L     &kp DE_U    &kp DE_O     &kp DE_Y     &kp DE_MINUS
-                &trans       &kp DE_R &kp DE_S  &kp DE_T  &kp DE_H  &kp DE_K      TR_trans   &kp DE_J  &kp DE_N     &kp DE_E    &kp DE_A     &kp DE_I     &kp DE_SEMI
-                &kp DE_SLASH &kp DE_X &kp DE_C  &kp DE_M  &kp DE_P  &kp DE_V      TR_trans   &kp DE_Z  &kp DE_COMMA &kp DE_DOT  &kp DE_SQT   &kp DE_SLASH &trans
+                &trans       &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B      TR_trans   &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O         &kp DE_Y       &kp DE_MINUS
+                &trans       &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K      TR_trans   &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A    &hm LGUI DE_I  &kp DE_SEMI
+                &kp DE_SLASH &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V      TR_trans   &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT  &kp DE_SLASH   &trans
             >;
             label = "aptV3";   
         };
 
         layer_symnum {
             bindings = <
-                &trans &kp LBRC       &kp AMPS      &kp ASTRK       &kp LPAR         &kp RBRC       &none    &kp UNDER  &none      &kp DOT     &kp LBKT         &kp N7       &kp N8      &kp N9      &kp RBKT   &none
-                &trans &hm LGUI COLON &hm LALT DLLR &hm LCTRL PRCNT &hm LSHIFT CARET &none          &kp LPAR &none      &kp MINUS  &none       &hm LSHIFT EQUAL &hm LCTRL N4 &hm LALT N5 &hm LGUI N6 &kp SEMI   &none
-                &trans &kp TILDE      &hm RALT EXCL &kp AT          &kp HASH         &kp PIPE       &kp RPAR &none      &kp N0     &none       &kp BSLH         &kp N1       &kp N2      &kp N3      &kp GRAVE  &none
+                &trans &kp EN_LBRC       &kp EN_AMPS      &kp EN_ASTRK       &kp EN_LPAR         &kp EN_RBRC    &none       &kp EN_UNDER &none         &kp EN_DOT  &kp EN_LBKT         &kp N7       &kp N8      &kp N9      &kp EN_RBKT   &none
+                &trans &hm LGUI EN_COLON &hm LALT EN_DLLR &hm LCTRL EN_PRCNT &hm LSHIFT EN_CARET &none          &kp EN_LPAR &none        &kp EN_MINUS  &none       &hm LSHIFT EN_EQUAL &hm LCTRL N4 &hm LALT N5 &hm LGUI N6 &kp EN_SEMI   &none
+                &trans &kp EN_TILDE      &hm RALT EN_EXCL &kp EN_AT          &kp HASH            &kp EN_PIPE    &kp EN_RPAR &none        &kp N0        &none       &kp EN_BSLH         &kp N1       &kp N2      &kp N3      &kp EN_GRAVE  &none
             >;
-            label = "SYM+NUM";
+            label = "SYM NUM";
         };
         layer_funnav {
             bindings = <
@@ -158,10 +151,10 @@
                 &kp F7  &hm LGUI F8 &hm LALT F9  &hm LCTRL F10 &hm LSHIFT F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
                 &kp F13 &kp F14     &hm RALT F15 &kp F16       &kp F17         &hm PSCRN F18   TR_trans       &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
             >;
-            label = "FUN+NAV";
+            label = "FUN NAV";
         };
 
-        layer_sys {
+        layer_settings {
             bindings = <
                 &to L_QWERTZ &to L_MTGAP &to L_GRAPHITE &to L_MTGAP1 &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
                 &to L_APTV3  &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE

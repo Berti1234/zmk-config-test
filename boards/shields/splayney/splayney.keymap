@@ -136,11 +136,11 @@
                 &kp DE_SLASH &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V      TR_trans   &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT  &kp DE_SLASH   &trans
             >;
             label = "aptV3";   
-        };
+        };  
 
         layer_symnum {
-            bindings = <  
-                &trans &kp EN_LBRC       &kp EN_AMPS      &kp EN_ASTRK       &kp EN_LPAR         &kp EN_RBRC      &none       &kp EN_UNDER  &kp EN_DOT  &none            &kp EN_LBKT  &kp N7        &kp N8       &kp N9      &kp EN_RBKT       &trans
+            bindings = <    
+                &trans &kp RALT N8       &kp EN_AMPS      &kp EN_ASTRK       &kp EN_LPAR         &kp EN_RBRC      &none       &kp EN_UNDER  &kp EN_DOT  &none            &kp EN_LBKT  &kp N7        &kp N8       &kp N9      &kp EN_RBKT       &trans
                 &trans &hm LGUI EN_COLON &hm LALT EN_DLLR &hm LCTRL EN_PRCNT &hm LSHIFT EN_CARET &none            &kp EN_LPAR &none         &none       &kp EN_MINUS     &kp EN_EQUAL &hm LSHIFT N4 &hm LCTRL N5 &hm LALT N6 &hm LGUI EN_SEMI  &trans
                 &trans &kp EN_TILDE      &hm RALT EN_EXCL &kp EN_AT          &kp HASH            &kp EN_PIPE      &kp EN_RPAR &none         &none       &kp N0           &kp EN_BSLH  &kp N1        &hm RALT N2  &kp N3      &kp EN_GRAVE      &trans
             >;

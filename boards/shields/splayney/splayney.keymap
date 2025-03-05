@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #include <locale/keys_de.h>
+#include <locale/keys_us_international.h>
 
 #include "combos.dtsi"
 
@@ -145,7 +146,7 @@
             >;
             label = "SYM NUM";
         };
-        layer_funnav {
+        layer_funnav { 
             bindings = <
                 &kp F1  &kp F2      &kp F3       &kp F4        &kp F5          &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
                 &kp F7  &hm LGUI F8 &hm LALT F9  &hm LCTRL F10 &hm LSHIFT F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans

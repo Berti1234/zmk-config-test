@@ -96,7 +96,7 @@
             bindings = <
                 &trans       &kp DE_B       &kp DE_L       &kp DE_D        &kp DE_W         &kp DE_Z   TR_trans    &kp DE_SQT  &kp DE_F         &kp DE_O         &kp DE_U           &kp DE_J       &kp DE_SEMI
                 &trans       &hm LGUI DE_N  &hm LALT DE_R  &hm LCTRL DE_T  &hm LSHIFT DE_S  &kp DE_G   TR_trans    &kp DE_Y    &hm LSHIFT DE_H  &hm LCTRL DE_A   &hm LALT DE_E      &hm LGUI DE_I  &kp DE_COMMA
-                &kp DE_BSLH  &kp DE_Q       &hm RALT DE_X  &kp DE_M        &kp DE_C         &kp DE_V   TR_trans    &kp DE_K    &kp DE_P         &kp DE_DOT       &hm RALTDE_MINUS   &kp DE_SLASH   &trans
+                &kp DE_BSLH  &kp DE_Q       &hm RALT DE_X  &kp DE_M        &kp DE_C         &kp DE_V   TR_trans    &kp DE_K    &kp DE_P         &kp DE_DOT       &hm RALT DE_MINUS  &kp DE_SLASH   &trans
             >;
             label = "Graphite";
         };

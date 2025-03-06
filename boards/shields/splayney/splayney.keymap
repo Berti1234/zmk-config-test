@@ -68,9 +68,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    };
 
-    behaviors { \
         NAME: NAME { \
         compatible = "zmk,behavior-mod-morph"; \
         #binding-cells = <0>; \

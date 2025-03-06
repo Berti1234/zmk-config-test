@@ -142,9 +142,9 @@
 
         layer_symnum {
             bindings = <    
-                &trans   &kp DE_DEG        &kp DE_AMPS      &kp DE_BSLH        &kp DE_LBKT         &kp DE_ASTRK     &none       &kp DE_UNDER  &kp DE_DOT  &none            &kp DE_LBKT  &kp N7        &kp N8       &kp N9      &kp DE_RBKT       &trans
-                &trans   &hm LGUI DE_SECT  &hm LALT DE_LT   &hm LCTRL DE_DLLR  &hm LSHIFT DE_LPAR  &kp DE_PRCNT     &none       &none         &none       &kp DE_MINUS     &kp DE_EQUAL &hm LSHIFT N4 &hm LCTRL N5 &hm LALT N6 &hm LGUI DE_SEMI  &trans
-                &trans   &kp DE_TILDE      &hm RALT DE_AT   &kp DE_EXCL        &kp DE_LBRC         &kp DE_QMARK     &none       &none         &none       &kp N0           &kp DE_BSLH  &kp N1        &hm RALT N2  &kp N3      &kp DE_GRAVE      &trans
+                &trans   &kp DE_DEG        &kp DE_AMPS      &kp DE_BSLH        &kp DE_LBKT         &kp DE_ASTRK     TR_half_trans  &kp DE_DOT  &trans           &kp DE_LBKT  &kp N7        &kp N8       &kp N9      &kp DE_RBKT       &trans
+                &trans   &hm LGUI DE_SECT  &hm LALT DE_LT   &hm LCTRL DE_DLLR  &hm LSHIFT DE_LPAR  &kp DE_PRCNT     TR_half_trans  &trans      &kp DE_MINUS     &kp DE_EQUAL &hm LSHIFT N4 &hm LCTRL N5 &hm LALT N6 &hm LGUI DE_SEMI  &trans
+                &trans   &kp DE_TILDE      &hm RALT DE_AT   &kp DE_EXCL        &kp DE_LBRC         &kp DE_QMARK     TR_half_trans  &trans      &kp N0           &kp DE_BSLH  &kp N1        &hm RALT N2  &kp N3      &kp DE_GRAVE      &trans
             >;
             label = "SYM NUM";
         };

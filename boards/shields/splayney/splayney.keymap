@@ -68,28 +68,9 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         }; 
-
-        NAME: NAME { 
-            compatible = "zmk,behavior-mod-morph"; 
-            #binding-cells = <0>; 
-            bindings = <BINDING>, <SHIFT_BINDING>; 
-            mods = <(MOD_LSFT|MOD_RSFT)>; 
-        }; 
     }; 
 
-    #define U_MACRO(name,...) \
-    / { \
-    macros { \
-        name: name { \
-        compatible = "zmk,behavior-macro"; \
-        #binding-cells = <0>; \
-        __VA_ARGS__ \
-        }; \
-    }; \
-    };
-    #define MIRYOKU_SHIFT_MACRO(NAME, BINDING, SHIFT_BINDING)    U_MACRO(u_macro_ ## NAME, wait-ms = <0>; bindings = <SHIFT_BINDING>;)     MIRYOKU_SHIFT_FUNCTION(NAME, BINDING, &u_macro_ ## NAME)
-    
-    MIRYOKU_SHIFT_MACRO(u_parens, &kp DE_LPAR, &kp DE_RPAR)
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -152,21 +133,29 @@
 
         layer_aptV3 {
             bindings = <
-                &trans       &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B      TR_trans   &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O         &kp DE_Y       &kp DE_MINUS
-                &trans       &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K      TR_trans   &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A    &hm LGUI DE_I  &kp DE_SEMI
-                &kp DE_SLASH &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V      TR_trans   &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT  &kp DE_SLASH   &trans
+                &trans       &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B      TR_trans   &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O          &kp DE_Y       &kp DE_PLUS
+                &trans       &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K      TR_trans   &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A     &hm LGUI DE_I  &kp DE_POUND
+                &kp DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V      TR_trans   &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_MINUS &kp DE_SLASH   &kp DE_DQT
             >;
             label = "aptV3";   
         };  
 
         layer_symnum {
             bindings = <    
-                &trans &kp DE_LBKT       &kp DE_AMPS      &kp DE_ASTRK       &kp u_parens        &kp DE_RBKT      &none       &kp DE_UNDER  &kp DE_DOT  &none            &kp DE_LBKT  &kp N7        &kp N8       &kp N9      &kp DE_RBKT       &trans
-                &trans &hm LGUI DE_COLON &hm LALT DE_DLLR &hm LCTRL DE_PRCNT &hm LSHIFT DE_CARET &none            &kp DE_LPAR &none         &none       &kp DE_MINUS     &kp DE_EQUAL &hm LSHIFT N4 &hm LCTRL N5 &hm LALT N6 &hm LGUI DE_SEMI  &trans
-                &trans &kp DE_TILDE      &hm RALT DE_EXCL &kp DE_AT          &kp DE_HASH         &kp DE_PIPE      &kp DE_RPAR &none         &none       &kp N0           &kp DE_BSLH  &kp N1        &hm RALT N2  &kp N3      &kp DE_GRAVE      &trans
+                &kp DE_DEG &kp DE_SECT       &kp DE_AMPS      &kp DE_ASTRK       &kp DE_LBKT         &kp DE_RBKT      &none       &kp DE_UNDER  &kp DE_DOT  &none            &kp DE_LBKT  &kp N7        &kp N8       &kp N9      &kp DE_RBKT       &trans
+                &trans     &hm LGUI DE_BSLH  &hm LALT DE_LT   &hm LCTRL DE_DLLR  &hm LSHIFT DE_LPAR  &kp DE_PRCNT     &none       &none         &none       &kp DE_MINUS     &kp DE_EQUAL &hm LSHIFT N4 &hm LCTRL N5 &hm LALT N6 &hm LGUI DE_SEMI  &trans
+                &trans     &kp DE_TILDE      &hm RALT DE_AT   &kp DE_EXCL        &kp DE_LBRC         &kp DE_QMARK     &none       &none         &none       &kp N0           &kp DE_BSLH  &kp N1        &hm RALT N2  &kp N3      &kp DE_GRAVE      &trans
             >;
             label = "SYM NUM";
         };
+
+DE_RPAR )
+DE_RBKT ]
+DE_RBRC }
+DE_GT >
+
+
+
         layer_funnav { 
             bindings = <
                 &kp F1  &kp F2      &kp F3       &kp F4        &kp F5          &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans

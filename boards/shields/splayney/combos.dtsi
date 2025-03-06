@@ -3,18 +3,18 @@
 #define LONG_TIMEOUT_MS 100
 #define NORMAL_LAYERS 0 1 2
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <NORMAL_LAYERS>; \
+    layers = <LAYERS>; \
   };
 
-#define COMBO_LONG(NAME, BINDINGS, KEYPOS) \
+#define COMBO_LONG(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <NORMAL_LAYERS>; \
+    layers = <LAYERS>; \
     timeout-ms = <LONG_TIMEOUT_MS>; \
   };
 
@@ -35,12 +35,18 @@
   combos {
     compatible = "zmk,combos";
         
-    COMBO(esc, &kp ESC, 1 2)
-    COMBO_LONG(capsword, &caps_word, 14 15)
+    COMBO(esc, &kp ESC, 1 2, 0)
+    COMBO_LONG(capsword, &caps_word, 14 15, 0)
 
-    COMBO(cleft,  &kp LEFT, 27 28)
-    COMBO(cright, &kp RIGHT, 28 29)
-    COMBO(cup,    &kp UP, 28 12)
-    COMBO(cdown,  &kp DOWN, 28 44)
+    COMBO(cleft,  &kp LEFT, 27 28, 0)
+    COMBO(cright, &kp RIGHT, 28 29, 0)
+    COMBO(cup,    &kp UP, 28 12, 0)
+    COMBO(cdown,  &kp DOWN, 28 44, 0)
+
+    COMBO(rbkt,  &kp DE_RBKT, 4 5, 7)
+    COMBO(rpar,  &kp DE_RPAR, 20 21, 7)
+    COMBO(rbrc,  &kp DE_RBRC, 36 37, 7)
+    COMBO(gt,    &kp DE_GT, 19 20, 7)
+
   };
 };

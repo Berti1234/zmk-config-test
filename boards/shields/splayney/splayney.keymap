@@ -70,6 +70,19 @@
         };
     };
 
+    behaviors { \
+        NAME: NAME { \
+        compatible = "zmk,behavior-mod-morph"; \
+        #binding-cells = <0>; \
+        bindings = <BINDING>, <SHIFT_BINDING>; \
+        mods = <(MOD_LSFT|MOD_RSFT)>; \
+        }; \
+    }; 
+
+    #define MIRYOKU_SHIFT_MACRO(NAME, BINDING, SHIFT_BINDING)    U_MACRO(u_macro_ ## NAME, wait-ms = <0>; bindings = <SHIFT_BINDING>;)     MIRYOKU_SHIFT_FUNCTION(NAME, BINDING, &u_macro_ ## NAME)
+    
+    MIRYOKU_SHIFT_MACRO(u_parens, &kp DE_LPAR, &kp DE_RPAR)
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -140,7 +153,7 @@
 
         layer_symnum {
             bindings = <    
-                &trans &kp DE_LBKT       &kp DE_AMPS      &kp DE_ASTRK       &kp DE_LPAR         &kp DE_RBKT      &none       &kp DE_UNDER  &kp DE_DOT  &none            &kp DE_LBKT  &kp N7        &kp N8       &kp N9      &kp DE_RBKT       &trans
+                &trans &kp DE_LBKT       &kp DE_AMPS      &kp DE_ASTRK       &kp u_parens        &kp DE_RBKT      &none       &kp DE_UNDER  &kp DE_DOT  &none            &kp DE_LBKT  &kp N7        &kp N8       &kp N9      &kp DE_RBKT       &trans
                 &trans &hm LGUI DE_COLON &hm LALT DE_DLLR &hm LCTRL DE_PRCNT &hm LSHIFT DE_CARET &none            &kp DE_LPAR &none         &none       &kp DE_MINUS     &kp DE_EQUAL &hm LSHIFT N4 &hm LCTRL N5 &hm LALT N6 &hm LGUI DE_SEMI  &trans
                 &trans &kp DE_TILDE      &hm RALT DE_EXCL &kp DE_AT          &kp DE_HASH         &kp DE_PIPE      &kp DE_RPAR &none         &none       &kp N0           &kp DE_BSLH  &kp N1        &hm RALT N2  &kp N3      &kp DE_GRAVE      &trans
             >;

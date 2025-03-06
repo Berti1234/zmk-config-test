@@ -46,7 +46,7 @@
     COMBO(rbkt,  &kp DE_RBKT, 4 5, 7)
     COMBO(rpar,  &kp DE_RPAR, 20 21, 7)
     COMBO(rbrc,  &kp DE_RBRC, 36 37, 7)
-    COMBO(gt,    &kp DE_GT, 19 20, 7)
+    COMBO(gt,    &kp DE_GT, 18 19, 7)
 
   };
 };

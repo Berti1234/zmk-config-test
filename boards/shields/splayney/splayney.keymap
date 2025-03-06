@@ -148,14 +148,6 @@
             >;
             label = "SYM NUM";
         };
-
-DE_RPAR )
-DE_RBKT ]
-DE_RBRC }
-DE_GT >
-
-
-
         layer_funnav { 
             bindings = <
                 &kp F1  &kp F2      &kp F3       &kp F4        &kp F5          &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans

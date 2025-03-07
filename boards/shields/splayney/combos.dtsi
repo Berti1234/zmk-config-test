@@ -37,9 +37,6 @@
     COMBO(chome,  &kp HOME, 11 12, NORMAL_LAYERS)
     COMBO(cend,   &kp END, 12 13, NORMAL_LAYERS)
 
-    COMBO(rbkt,  &kp DE_RBKT, 4 5, NORMAL_LAYERS)
-    COMBO(rpar,  &kp DE_RPAR, 20 21, NORMAL_LAYERS)
-    COMBO(rbrc,  &kp DE_RBRC, 36 37, NORMAL_LAYERS)
     COMBO(gt,    &kp DE_GT, 18 19, NORMAL_LAYERS)
     COMBO(lt,    &kp DE_LT, 34 35, NORMAL_LAYERS)
 

@@ -13,7 +13,7 @@
 #include <locale/keys_de.h>
 #include <locale/keys_us_international.h>
 
-#include "combos.dtsi"
+
 
 #define L_QWERTZ 0
 #define L_MTGAP 1
@@ -33,6 +33,8 @@
 #define Copy   LC(C)
 #define Paste  LC(V)
 #define Redo   LC(Y)
+
+#include "combos.dtsi"
 
 /*
             7.2 7.3     8.3 8.2
@@ -77,9 +79,9 @@
 
         default_layer {
             bindings = <
-                &none  &kp DE_Q      &kp DE_W       &kp DE_E        &kp DE_R         &kp DE_T      TR_1    &kp DE_Z  &kp DE_U        &kp DE_I          &kp DE_O        &kp DE_P          &none
-                &none  &hm LGUI DE_A &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G      TR_2    &kp DE_H  &hm LSHIFT DE_J &hm LCTRL DE_K    &hm LALT DE_L   &hm LGUI DE_POUND &none
-                &none  &kp DE_Y      &hm RALT DE_X  &kp DE_C        &kp DE_V         &kp DE_B      TR_3    &kp DE_N  &kp DE_M        &kp DE_COMMA      &hm RALT DE_DOT &kp DE_MINUS      &none
+                &kp DE_DQT   &kp DE_Q      &kp DE_W       &kp DE_E        &kp DE_R         &kp DE_T      TR_1    &kp DE_Z  &kp DE_U        &kp DE_I          &kp DE_O        &kp DE_P           &kp DE_PLUS
+                &kp DE_BSLH  &hm LGUI DE_A &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G      TR_2    &kp DE_H  &hm LSHIFT DE_J &hm LCTRL DE_K    &hm LALT DE_L   &hm LGUI DE_POUND  &kp DE_DQT
+                &kp DE_PIPE  &kp DE_Y      &hm RALT DE_X  &kp DE_C        &kp DE_V         &kp DE_B      TR_3    &kp DE_N  &kp DE_M        &kp DE_COMMA      &hm RALT DE_DOT &kp DE_MINUS       &kp DE_SLASH
             >;
             label = "QWERTZ";
         };
@@ -99,7 +101,7 @@
             bindings = <
                 &trans       &kp DE_B       &kp DE_L       &kp DE_D        &kp DE_W         &kp DE_Z   TR_trans    &kp DE_SQT  &kp DE_F         &kp DE_O         &kp DE_U           &kp DE_J       &kp DE_SEMI
                 &trans       &hm LGUI DE_N  &hm LALT DE_R  &hm LCTRL DE_T  &hm LSHIFT DE_S  &kp DE_G   TR_trans    &kp DE_Y    &hm LSHIFT DE_H  &hm LCTRL DE_A   &hm LALT DE_E      &hm LGUI DE_I  &kp DE_COMMA
-                &kp DE_BSLH  &kp DE_Q       &hm RALT DE_X  &kp DE_M        &kp DE_C         &kp DE_V   TR_trans    &kp DE_K    &kp DE_P         &kp DE_DOT       &hm RALT DE_MINUS  &kp DE_SLASH   &trans
+                &kp DE_BSLH  &kp DE_Q       &hm RALT DE_X  &kp DE_M        &kp DE_C         &kp DE_V   TR_trans    &kp DE_K    &kp DE_P         &kp DE_DOT       &hm RALT DE_MINUS  &kp DE_SLASH   &kp ENTER
             >;
             label = "Graphite";
         };
@@ -124,35 +126,35 @@
 
         layer_galliumv2 {
             bindings = <
-                &trans  &kp DE_B      &kp DE_L       &kp DE_D        &kp DE_C         &kp DE_V   TR_trans    &kp DE_J  &kp DE_F         &kp DE_O        &kp DE_U          &kp DE_COMMA   &kp DE_MINUS
-                &trans  &hm LGUI DE_N &hm LALT DE_R  &hm LCTRL DE_T  &hm LSHIFT DE_S  &kp DE_G   TR_trans    &kp DE_Y  &hm LSHIFT DE_H  &hm LCTRL DE_A  &hm LALT DE_E     &hm LGUI DE_I  &kp DE_SLASH
-                &trans  &kp DE_X      &hm RALT DE_Q  &kp DE_M        &kp DE_W         &kp DE_Z   TR_trans    &kp DE_K  &kp DE_P         &kp DE_SQT      &hm RALT DE_SEMI  &kp DE_DOT     &trans
+                &kp DE_DQT   &kp DE_B      &kp DE_L       &kp DE_D        &kp DE_C         &kp DE_V     TR_trans    &kp DE_J  &kp DE_F         &kp DE_O        &kp DE_U          &kp DE_COMMA   &kp DE_MINUS
+                &kp DE_BLSH  &hm LGUI DE_N &hm LALT DE_R  &hm LCTRL DE_T  &hm LSHIFT DE_S  &kp DE_G     TR_trans    &kp DE_Y  &hm LSHIFT DE_H  &hm LCTRL DE_A  &hm LALT DE_E     &hm LGUI DE_I  &kp DE_SEMI
+                &kp DE_PIPE  &kp DE_X      &hm RALT DE_Q  &kp DE_M        &kp DE_W         &kp DE_Z     TR_trans    &kp DE_K  &kp DE_P         &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &kp DE_POUND
             >;
             label = "GalliumV2";   
         };
 
         layer_aptV3 {
             bindings = <
-                &trans       &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B      TR_trans   &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O          &kp DE_Y       &kp DE_PLUS
-                &trans       &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K      TR_trans   &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A     &hm LGUI DE_I  &kp DE_POUND
-                &kp DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V      TR_trans   &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_MINUS &kp DE_SLASH   &kp DE_DQT
+                &kp DE_DQT   &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B     TR_trans    &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O          &kp DE_Y       &kp DE_MINUS
+                &kp DE_BLSH  &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A     &hm LGUI DE_I  &kp DE_SEMI
+                &kp DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &kp DE_POUND
             >;
             label = "aptV3";   
         };  
 
         layer_symnum {
             bindings = <    
-                &trans   &kp DE_DEG        &kp DE_AMPS      &kp DE_BSLH        &kp DE_LBKT         &kp DE_ASTRK     TR_half_trans  &kp DE_DOT  &trans           &kp DE_LBKT  &kp N7        &kp N8       &kp N9      &kp DE_RBKT       &trans
-                &trans   &hm LGUI DE_SECT  &hm LALT DE_LT   &hm LCTRL DE_DLLR  &hm LSHIFT DE_LPAR  &kp DE_PRCNT     TR_half_trans  &trans      &kp DE_MINUS     &kp DE_EQUAL &hm LSHIFT N4 &hm LCTRL N5 &hm LALT N6 &hm LGUI DE_SEMI  &trans
-                &trans   &kp DE_TILDE      &hm RALT DE_AT   &kp DE_EXCL        &kp DE_LBRC         &kp DE_QMARK     TR_half_trans  &trans      &kp N0           &kp DE_BSLH  &kp N1        &hm RALT N2  &kp N3      &kp DE_GRAVE      &trans
+                &trans   &kp DE_DEG   &kp DE_AMPS &kp DE_BSLH  &kp DE_LBKT  &kp DE_ASTRK     TR_half_trans  &kp DE_DOT  &trans           &kp DE_LBKT  &kp N7 &kp N8 &kp N9 &kp DE_RBKT  &trans
+                &trans   &kp DE_SECT  &kp DE_LT   &kp DE_DLLR  &kp DE_LPAR  &kp DE_PRCNT     TR_half_trans  &trans      &kp DE_MINUS     &kp DE_EQUAL &kp N4 &kp N5 &kp N6 &kp DE_SEMI  &trans
+                &trans   &kp DE_TILDE &kp DE_AT   &kp DE_EXCL  &kp DE_LBRC  &kp DE_QMARK     TR_half_trans  &trans      &kp N0           &kp DE_BSLH  &kp N1 &kp N2 &kp N3 &kp DE_GRAVE &trans
             >;
             label = "SYM NUM";
         };
         layer_funnav { 
             bindings = <
-                &kp F1  &kp F2      &kp F3       &kp F4        &kp F5          &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
-                &kp F7  &hm LGUI F8 &hm LALT F9  &hm LCTRL F10 &hm LSHIFT F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
-                &kp F13 &kp F14     &hm RALT F15 &kp F16       &kp F17         &hm PSCRN F18   TR_trans       &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
+                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
+                &kp F7  &kp F8  &kp F9  &kp F10 &kp F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
+                &kp F13 &kp F14 &kp F15 &kp F16 &kp F17  &hm PSCRN F18   TR_trans       &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
             >;
             label = "FUN NAV";
         };

@@ -1,7 +1,7 @@
 // indebted and with much reference to dxmh's zmk-config
 
 #define LONG_TIMEOUT_MS 100
-#define NORMAL_LAYERS 0 1 2
+#define NORMAL_LAYERS 0 1 2 3 4 5 6
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \
@@ -18,35 +18,56 @@
     timeout-ms = <LONG_TIMEOUT_MS>; \
   };
 
-/*           34 Keys
-╭──────────────╮ ╭──────────────╮
-│ 0  1  2  3  4│ │ 5  6  7  8  9│
-│10 11 12 13 14│ │15 16 17 18 19│
-│20 21 22 23 24│ │25 26 27 28 29│
-╰────────╮30 31│ │32 33╭────────╯
-         ╰─────╯ ╰─────╯         */
-
 /* 
  0  1  2  3  4  5    6  7  8  9   10 11 12 13 14 15
-16 17 18 19 20 21   22 23 24 25   26 27 28 29 10 31
+16 17 18 19 20 21   22 23 24 25   26 27 28 29 30 31
 32 33 34 35 36 37   38 39 40 41   42 43 44 45 46 46 
 */
 / {
   combos {
     compatible = "zmk,combos";
         
-    COMBO(esc, &kp ESC, 1 2, 0)
+/*    COMBO(esc, &kp ESC, 1 2, 0)
     COMBO_LONG(capsword, &caps_word, 14 15, 0)
+*/
+    COMBO(cleft,  &kp LEFT, 27 28, NORMAL_LAYERS)
+    COMBO(cright, &kp RIGHT, 28 29, NORMAL_LAYERS)
+    COMBO(cup,    &kp UP, 28 12, NORMAL_LAYERS)
+    COMBO(cdown,  &kp DOWN, 28 44, NORMAL_LAYERS)
+    COMBO(chome,  &kp HOME, 11 12, NORMAL_LAYERS)
+    COMBO(cend,   &kp END, 12 13, NORMAL_LAYERS)
 
-    COMBO(cleft,  &kp LEFT, 27 28, 0)
-    COMBO(cright, &kp RIGHT, 28 29, 0)
-    COMBO(cup,    &kp UP, 28 12, 0)
-    COMBO(cdown,  &kp DOWN, 28 44, 0)
+    COMBO(rbkt,  &kp DE_RBKT, 4 5, NORMAL_LAYERS)
+    COMBO(rpar,  &kp DE_RPAR, 20 21, NORMAL_LAYERS)
+    COMBO(rbrc,  &kp DE_RBRC, 36 37, NORMAL_LAYERS)
+    COMBO(gt,    &kp DE_GT, 18 19, NORMAL_LAYERS)
+    COMBO(lt,    &kp DE_LT, 34 35, NORMAL_LAYERS)
 
-    COMBO(rbkt,  &kp DE_RBKT, 4 5, 7)
-    COMBO(rpar,  &kp DE_RPAR, 20 21, 7)
-    COMBO(rbrc,  &kp DE_RBRC, 36 37, 7)
-    COMBO(gt,    &kp DE_GT, 18 19, 7)
+    COMBO(esc,   &kp ESC, 0 1, NORMAL_LAYERS)
+    COMBO(tab,   &kp TAB, 16 17, NORMAL_LAYERS)
+
+    COMBO(lbkt,  &kp DE_LBKT, 3 4, NORMAL_LAYERS)
+    COMBO(rbkt,  &kp DE_RBKT, 4 5, NORMAL_LAYERS)
+    COMBO(lpar,  &kp DE_LPAR, 19 20, NORMAL_LAYERS)
+    COMBO(rpar,  &kp DE_RPAR, 20 21, NORMAL_LAYERS)
+    COMBO(lbrc,  &kp DE_LBRC, 35 36, NORMAL_LAYERS)
+    COMBO(rbrc,  &kp DE_RBRC, 36 37, NORMAL_LAYERS)
+
+    COMBO(n0,  &kp DE_N0, 10 26, NORMAL_LAYERS)
+    COMBO(n1,  &kp DE_N1, 4  20, NORMAL_LAYERS)
+    COMBO(n2,  &kp DE_N2, 11 27, NORMAL_LAYERS)
+    COMBO(n3,  &kp DE_N3, 3  19, NORMAL_LAYERS)
+    COMBO(n4,  &kp DE_N4, 12 28, NORMAL_LAYERS)
+    COMBO(n5,  &kp DE_N5, 2  18, NORMAL_LAYERS)
+    COMBO(n6,  &kp DE_N6, 13 29, NORMAL_LAYERS)
+    COMBO(n7,  &kp DE_N7, 1  17, NORMAL_LAYERS)
+    COMBO(n8,  &kp DE_N8, 14 30, NORMAL_LAYERS)
+    COMBO(n9,  &kp DE_N9, 5  21, NORMAL_LAYERS)
+
+    COMBO(cut,    &kp Cut,   2   4, NORMAL_LAYERS)
+    COMBO(copy,   &kp Copy,  18 20, NORMAL_LAYERS)
+    COMBO(paste,  &kp Paste, 34 36, NORMAL_LAYERS)
+
 
   };
 };

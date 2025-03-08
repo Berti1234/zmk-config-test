@@ -44,7 +44,7 @@
 
 /*              Col 6                   7                         8                         9       */
 #define TR_1    &none                   &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &none   
-#define TR_2    &lt L_SYMNUM BSPC       &none                     &none                     &lt L_SYMNUM -BSCP
+#define TR_2    &lt L_SYMNUM BSPC       &none                     &none                     &lt L_SYMNUM BSCP
 #define TR_3    &lt L_FUNNAV DE_SPACE   &mo L_SETTINGS            &mo L_SETTINGS            &lt L_FUNNAV DE_SPACE
 
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 
@@ -63,7 +63,7 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        thm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -71,6 +71,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         }; 
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {

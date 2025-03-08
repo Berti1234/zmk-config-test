@@ -41,10 +41,10 @@
  6.1 6.2 6.3 7.1             8.1 9.3 9.2 9.1
 */
 
-/*              Col 6                7                         8                       9       */
-#define TR_1    &none                &lt L_MEDIAMAUS DE_SPACE  &lt L_MEDIAMAUS ENTER   &kp BSPC   
-#define TR_2    &lt L_SYMNUM ESCAPE  &none                     &none                   &lt L_SYMNUM DELETE
-#define TR_3    &lt L_FUNNAV ENTER   &mo L_SETTINGS            &mo L_SETTINGS          &lt L_FUNNAV BSPC 
+/*              Col 6                   7                         8                         9       */
+#define TR_1    &none                   &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &none   
+#define TR_2    &lt L_SYMNUM BSPC       &none                     &none                     &lt L_SYMNUM DELETE
+#define TR_3    &lt L_FUNNAV DE_SPACE   &mo L_SETTINGS            &mo L_SETTINGS            &lt L_FUNNAV DE_SPACE
 
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 
 
@@ -62,7 +62,7 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        thm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -70,9 +70,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         }; 
-    }; 
-
-
+    
+        hm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";

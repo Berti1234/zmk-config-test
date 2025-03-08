@@ -32,8 +32,8 @@
 */
     COMBO(cleft,  &kp LEFT, 27 28, NORMAL_LAYERS)
     COMBO(cright, &kp RIGHT, 28 29, NORMAL_LAYERS)
-    COMBO(cup,    &kp UP, 28 12, NORMAL_LAYERS)
-    COMBO(cdown,  &kp DOWN, 28 44, NORMAL_LAYERS)
+    COMBO(cup,    &kp UP, 43 44, NORMAL_LAYERS)
+    COMBO(cdown,  &kp DOWN, 44 45, NORMAL_LAYERS)
     COMBO(chome,  &kp HOME, 11 12, NORMAL_LAYERS)
     COMBO(cend,   &kp END, 12 13, NORMAL_LAYERS)
 

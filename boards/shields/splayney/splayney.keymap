@@ -63,6 +63,7 @@
 
 / {
     behaviors {
+        /*
         thm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -71,6 +72,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         }; 
+    */
     
         hm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";

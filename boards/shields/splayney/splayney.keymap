@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #include <locale/keys_de.h>
 #include <locale/keys_us_international.h>
@@ -43,7 +44,7 @@
 
 /*              Col 6                   7                         8                         9       */
 #define TR_1    &none                   &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &none   
-#define TR_2    &lt L_SYMNUM BSPC       &none                     &none                     &lt L_SYMNUM DELETE
+#define TR_2    &lt L_SYMNUM BSPC       &none                     &none                     &lt L_SYMNUM -BSCP
 #define TR_3    &lt L_FUNNAV DE_SPACE   &mo L_SETTINGS            &mo L_SETTINGS            &lt L_FUNNAV DE_SPACE
 
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 

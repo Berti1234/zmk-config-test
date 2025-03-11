@@ -144,7 +144,7 @@
             bindings = <
                 &kp DE_DQT        &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B     TR_trans    &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O          &kp DE_Y       &kp DE_MINUS
                 &kp DE_BSLH       &kp DE_R      &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A     &kp DE_I       &kp DE_SEMI
-                &hm LGUI DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &hm LGUID E_POUND
+                &hm LGUI DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &hm LGUI E_POUND
             >;
             label = "aptV3";   
         };  

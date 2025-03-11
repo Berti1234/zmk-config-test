@@ -8,7 +8,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
-    timeout-ms = <25>\
+    timeout-ms = <25>;\
   };
 
 #define COMBO_LONG(NAME, BINDINGS, KEYPOS, LAYERS) \

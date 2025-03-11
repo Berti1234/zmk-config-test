@@ -87,8 +87,8 @@
         default_layer {
             bindings = <
                 &kp DE_DQT   &kp DE_Q      &kp DE_W       &kp DE_E        &kp DE_R         &kp DE_T      TR_1    &kp DE_Z  &kp DE_U        &kp DE_I          &kp DE_O        &kp DE_P           &kp DE_PLUS
-                &kp DE_BSLH  &hm LGUI DE_A &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G      TR_2    &kp DE_H  &hm LSHIFT DE_J &hm LCTRL DE_K    &hm LALT DE_L   &hm LGUI DE_POUND  &kp DE_DQT
-                &kp DE_PIPE  &kp DE_Y      &hm RALT DE_X  &kp DE_C        &kp DE_V         &kp DE_B      TR_3    &kp DE_N  &kp DE_M        &kp DE_COMMA      &hm RALT DE_DOT &kp DE_MINUS       &kp DE_SLASH
+                &kp DE_BSLH  &hm LGUI DE_A &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G      TR_2    &kp DE_H  &hm LSHIFT DE_J &hm LCTRL DE_K    &hm LALT DE_L   &kp DE_POUND       &kp DE_DQT
+                &kp DE_PIPE  &kp DE_Y      &hm RALT DE_X  &kp DE_C        &kp DE_V         &kp DE_B      TR_3    &kp DE_N  &kp DE_M        &kp DE_COMMA      &hm RALT DE_DOT &kp DE_MINUS       &hm LGUI DE_SLASH
             >;
             label = "QWERTZ";
         };
@@ -142,9 +142,9 @@
 
         layer_aptV3 {
             bindings = <
-                &kp DE_DQT   &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B     TR_trans    &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O          &kp DE_Y       &kp DE_MINUS
-                &kp DE_BSLH  &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A     &hm LGUI DE_I  &kp DE_SEMI
-                &kp DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &kp DE_POUND
+                &kp DE_DQT        &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B     TR_trans    &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O          &kp DE_Y       &kp DE_MINUS
+                &kp DE_BSLH       &kp DE_R      &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_A     &kp DE_I       &kp DE_SEMI
+                &hm LGUI DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &hm LGUID E_POUND
             >;
             label = "aptV3";   
         };  

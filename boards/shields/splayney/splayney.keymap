@@ -98,7 +98,7 @@
 
         td_uml: tap_dance_generic {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
+            #binding-cells = <3>;
             tapping-term-ms = <200>;
             bindings = <&mt>, <&kp>;  // Platzhalter für Parameter
         };

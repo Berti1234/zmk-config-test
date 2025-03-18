@@ -100,7 +100,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <3>;
             tapping-term-ms = <200>;
-            bindings = <&mt $0 $1>, <&kp $2>;  // Platzhalter für Parameter
+            bindings = <&mt @0 @1>, <&kp @2>;  // Platzhalter für Parameter
         };
     };
 

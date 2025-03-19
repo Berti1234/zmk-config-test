@@ -98,9 +98,9 @@
 
         td_uml: tap_dance_generic {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <3>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt @0 @1>, <&kp @2>;  // Platzhalter für Parameter
+            bindings = <&mt LALT DE_A>, <&kp DE_AE>;  
         };
     };
 
@@ -166,7 +166,7 @@
         layer_aptV3 {
             bindings = <
                 &kp DE_DQT   &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B     TR_trans    &kp DE_Q  &kp DE_L         &kp DE_U        &kp DE_O          &kp DE_Y       &kp DE_MINUS
-                &kp DE_BSLH  &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &td_uml LALT DE_A DE_AE    &hm LGUI DE_I  &kp DE_SEMI
+                &kp DE_BSLH  &hm LGUI DE_R &hm LALT DE_S  &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &td_uml           &hm LGUI DE_I  &kp DE_SEMI
                 &kp DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &kp DE_POUND
             >;
             label = "aptV3";   

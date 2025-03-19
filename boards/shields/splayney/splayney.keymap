@@ -101,7 +101,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
 //            bindings = <&mt LALT DE_A>, <&kp LCTRL>;  
-            bindings = <&mt LSHIFT DE_A>, <&kp LCTRL>;
+            bindings = <&mt LSHIFT DE_A>, <&kp DE_B>;
         };
     };
 

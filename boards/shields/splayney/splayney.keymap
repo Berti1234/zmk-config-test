@@ -100,7 +100,8 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mm LALT DE_A>, <&kp DE_AE>;  
+//            bindings = <&mt LALT DE_A>, <&kp LCTRL>;  
+            bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
         };
     };
 

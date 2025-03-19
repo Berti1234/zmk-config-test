@@ -96,26 +96,26 @@
             bindings = <&kp>, <&kp>;
         };
 
-        td_umla: tap_dance_generic {
+        td_umla: tap_dance_generic_a {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt LALT DE_A>, <&kp DE_A_UMLAUT>;
         };
 
-        td_umlo: tap_dance_generic {
+        td_umlo: tap_dance_generic_o {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DE_O>, <&kp DE_O_UMLAUT>;
         };
-        td_umlu: tap_dance_generic {
+        td_umlu: tap_dance_generic_u {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp DE_U>, <&kp DE_U_UMLAUT>;
         };
-        td_umlss: tap_dance_generic {
+        td_umlss: tap_dance_generic_ss {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;

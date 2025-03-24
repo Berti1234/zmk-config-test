@@ -203,7 +203,7 @@
         layer_funnav { 
             bindings = <
                 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
-                &kp F7  &kp F8  &kp F9  &kp F10 &kp F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans
+                &kp F7  &kp F8  &kp F9  &kp F10 &kp F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp CAPS
                 &kp F13 &kp F14 &kp F15 &kp F16 &kp F17  &hm PSCRN F18   TR_trans       &kp Redo     &kp Paste &kp Copy  &kp Cut    &kp Undo     &trans
             >;
             label = "FUN NAV";

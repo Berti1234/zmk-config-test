@@ -141,7 +141,7 @@
             bindings = <    
                 &trans      &kp DE_Q      &kp DE_Y         &kp DE_O        &kp DE_U         &kp DE_Z      TR_trans         &kp DE_W  &kp DE_D          &kp DE_N        &kp DE_C          &kp DE_K       &kp DE_MINUS
                 &trans      &hm LGUI DE_H &hm LALT DE_I    &hm LCTRL DE_E  &hm LSHIFT DE_A  &kp DE_COMMA  TR_trans         &kp DE_G  &hm LSHIFT  DE_T  &hm LCTRL DE_R  &hm LALT DE_S     &hm LGUI DE_P  &kp DE_SEMI
-                &kp DE_BLSH &kp DE_J      &hm RALT DE_DQT  &kp DE_SLASH    &kp DE_DOT       &kp DE_X      TR_trans         &kp DE_V  &kp DE_M          &kp DE_L          &hm RALT DE_F     &kp DE_B       &kp ENTER
+                &kp DE_BSLH &kp DE_J      &hm RALT DE_DQT  &kp DE_SLASH    &kp DE_DOT       &kp DE_X      TR_trans         &kp DE_V  &kp DE_M          &kp DE_L          &hm RALT DE_F     &kp DE_B       &kp ENTER
             >;
             label = "beakl19bis";
         };

@@ -21,7 +21,7 @@
 #define L_QWERTZ 0
 #define L_MTGAP 1
 #define L_GRAPHITE 2
-#define L_MTGAP1 3
+#define L_BEAKL19BIS 3
 #define L_COLEMAK 4
 #define L_GALLIUMV2 5
 #define L_APTV3 6
@@ -136,14 +136,14 @@
             label = "QWERTZ";
         };
 
-        // MTGAP
-        layer_mtgap {
+        // beakl19bis
+        layer_beakl19bis {
             bindings = <    
-                &trans  &kp DE_Y      &kp DE_P       &kp DE_O        &kp DE_U         &kp DE_J    TR_trans         &kp DE_Z      &kp DE_I          &kp DE_N        &kp DE_E          &kp DE_A           &trans
-                &trans  &hm LGUI DE_Q &hm LALT DE_S  &hm LCTRL DE_D  &hm LSHIFT DE_F  &kp DE_G    TR_trans         &kp DE_M      &hm LSHIFT  DE_T  &hm LCTRL DE_S  &hm LALT DE_R     &hm LGUI DE_POUND  &trans
-                &trans  &kp DE_B      &hm RALT DE_V  &kp DE_X        &kp DE_C         &kp DE_W    TR_trans         &kp DE_COMMA  &kp DE_DOT        &kp DE_COLON    &hm RALT DE_SLASH &trans             &trans
+                &trans      &kp DE_Q      &kp DE_Y         &kp DE_O        &kp DE_U         &kp DE_Z      TR_trans         &kp DE_W  &kp DE_D          &kp DE_N        &kp DE_C          &kp DE_K       &kp DE_MINUS
+                &trans      &hm LGUI DE_H &hm LALT DE_I    &hm LCTRL DE_E  &hm LSHIFT DE_A  &kp DE_COMMA  TR_trans         &kp DE_G  &hm LSHIFT  DE_T  &hm LCTRL DE_R  &hm LALT DE_S     &hm LGUI DE_P  &kp DE_SEMI
+                &kp DE_BLSH &kp DE_J      &hm RALT DE_DQT  &kp DE_SLASH    &kp DE_DOT       &kp DE_X      TR_trans         &kp DE_V  &kp DE_M          &kp DE_L          &hm RALT DE_F     &kp DE_B       &kp ENTER
             >;
-            label = "MTGAP";
+            label = "beakl19bis";
         };
 
         // GRAPHITE
@@ -211,7 +211,7 @@
 
         layer_settings {
             bindings = <
-                &to L_QWERTZ &to L_MTGAP &to L_GRAPHITE &to L_MTGAP1 &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
+                &to L_QWERTZ &to L_BEAKL19BIS  &to L_GRAPHITE &to L_MTGAP1 &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
                 &to L_APTV3  &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE
                 &none        &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &none        &none
             >;

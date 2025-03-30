@@ -102,6 +102,12 @@
             tapping-term-ms = <200>;
             bindings = <&mt LALT DE_A>, <&kp DE_A_UMLAUT>;
         };
+        td_LS_umla: tap_dance_generic_LS_a {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LSHIFT DE_A>, <&kp DE_A_UMLAUT>;
+        };
 
         td_umlo: tap_dance_generic_o {
             compatible = "zmk,behavior-tap-dance";
@@ -139,9 +145,9 @@
         // beakl19bis
         layer_beakl19bis {
             bindings = <    
-                &trans      &kp DE_Q      &kp DE_Y         &kp DE_O        &kp DE_U         &kp DE_Z      TR_trans         &kp DE_W  &kp DE_D          &kp DE_N        &kp DE_C          &kp DE_K       &kp DE_MINUS
-                &trans      &hm LGUI DE_H &hm LALT DE_I    &hm LCTRL DE_E  &hm LSHIFT DE_A  &kp DE_COMMA  TR_trans         &kp DE_G  &hm LSHIFT  DE_T  &hm LCTRL DE_R  &hm LALT DE_S     &hm LGUI DE_P  &kp DE_SEMI
-                &kp DE_BSLH &kp DE_J      &hm RALT DE_DQT  &kp DE_SLASH    &kp DE_DOT       &kp DE_X      TR_trans         &kp DE_V  &kp DE_M          &kp DE_L          &hm RALT DE_F     &kp DE_B       &kp ENTER
+                &trans      &kp DE_Q      &kp DE_Y         &td_umlo        &td_umlu         &kp DE_Z      TR_trans         &kp DE_W  &kp DE_D          &kp DE_N        &kp DE_C          &kp DE_K       &kp DE_MINUS
+                &trans      &hm LGUI DE_H &hm LALT DE_I    &hm LCTRL DE_E  &td_LS_umla      &kp DE_COMMA  TR_trans         &kp DE_G  &hm LSHIFT  DE_T  &hm LCTRL DE_R  &td_umlss         &hm LGUI DE_P  &kp DE_SEMI
+                &kp DE_BSLH &kp DE_J      &hm RALT DE_SQT  &kp DE_SLASH    &kp DE_DOT       &kp DE_X      TR_trans         &kp DE_V  &kp DE_M          &kp DE_L        &hm RALT DE_F     &kp DE_B       &kp ENTER
             >;
             label = "beakl19bis";
         };
@@ -158,9 +164,9 @@
         
         layer_mtgap {
             bindings = <
-                &trans  &kp DE_Y       &kp DE_P       &kp DE_O        &kp DE_U         &kp DE_J         TR_trans      &kp DE_K         &kp DE_D        &kp DE_L  &kp DE_C       &kp DE_W       &trans
-                &trans  &hm LGUI DE_I  &hm LALT DE_N  &hm LCTRL DE_E  &hm LSHIFT DE_A  &kp DE_COMMA     TR_trans      &hm LSHIFT DE_M  &hm LCTRL DE_H  &kp DE_T  &hm LALT DE_S  &hm LGUI DE_R  &trans
-                &trans  &kp DE_Q       &hm RALT DE_Z  &kp DE_SLASH    &kp DE_DOT       &kp DE_COLON     TR_trans      &kp DE_B         &kp DE_F        &kp DE_G  &hm RALT DE_V  &kp DE_X       &trans
+                &trans      &kp DE_Y       &kp DE_P       &td_umlo        &td_umlu         &kp DE_J         TR_trans      &kp DE_K         &kp DE_D        &kp DE_L  &kp DE_C       &kp DE_W       &kp DE_MINUS
+                &kp DE_PIPE &hm LGUI DE_I  &hm LALT DE_N  &hm LCTRL DE_E  &td_LS_umla      &kp DE_COMMA     TR_trans      &hm LSHIFT DE_M  &hm LCTRL DE_H  &kp DE_T  &td_umlss      &hm LGUI DE_R  &kp DE_SQT 
+                &kp DE_BSLH &kp DE_Q       &hm RALT DE_Z  &kp DE_SLASH    &kp DE_DOT       &kp DE_SEMI      TR_trans      &kp DE_B         &kp DE_F        &kp DE_G  &hm RALT DE_V  &kp DE_X       &trans
             >;
             label = "MTGAP";
         };
@@ -186,8 +192,8 @@
         layer_aptV3 {
             bindings = <
                 &kp DE_DQT   &kp DE_W      &kp DE_G       &kp DE_D        &kp DE_F         &kp DE_B     TR_trans    &kp DE_Q  &kp DE_L         &td_umlu        &td_umlo          &kp DE_Y       &kp DE_MINUS
-                &kp DE_BSLH  &hm LGUI DE_R &td_umlss      &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &td_umla          &hm LGUI DE_I  &kp DE_SEMI
-                &kp DE_PIPE  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &kp DE_POUND
+                &kp DE_PIPE  &hm LGUI DE_R &td_umlss      &hm LCTRL DE_T  &hm LSHIFT DE_H  &kp DE_K     TR_trans    &kp DE_J  &hm LSHIFT DE_N  &hm LCTRL DE_E  &td_umla          &hm LGUI DE_I  &kp DE_SEMI
+                &kp DE_BSLH  &kp DE_X      &hm RALT DE_C  &kp DE_M        &kp DE_P         &kp DE_V     TR_trans    &kp DE_Z  &kp DE_COMMA     &kp DE_DOT      &hm RALT DE_SQT   &kp DE_SLASH   &kp DE_POUND
             >;
             label = "aptV3";   
         };  
@@ -212,8 +218,8 @@
         layer_settings {
             bindings = <
                 &to L_QWERTZ &to L_BEAKL19BIS  &to L_GRAPHITE &to L_MTGAP &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
-                &to L_APTV3  &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE
-                &none        &none       &none          &none        &none         &none                TR_trans     &none        &none        &none        &none        &none        &none
+                &to L_APTV3  &none             &none          &none       &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE
+                &none        &none             &none          &none       &none         &none                TR_trans     &none        &none        &none        &none        &none        &none
             >;
             label = "Settings";
         };

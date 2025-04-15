@@ -32,8 +32,8 @@
     COMBO_LONG(capsword, &caps_word, 14 15, 0)
 */
 
-    COMBO(shiftins, &kp LS(INS), 32 33, NORMAL_LAYERS)
-    COMBO(ctrlins,  &kp LC(INS), 33 34, NORMAL_LAYERS)
+    COMBO(shiftins, &kp LS(INS), 33 34, NORMAL_LAYERS)
+    COMBO(ctrlins,  &kp LC(INS), 32 33, NORMAL_LAYERS)
 
     COMBO(cleft,  &kp LEFT, 27 28, NORMAL_LAYERS)
     COMBO(cright, &kp RIGHT, 28 29, NORMAL_LAYERS)

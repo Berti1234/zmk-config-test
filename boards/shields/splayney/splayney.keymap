@@ -22,14 +22,15 @@
 #define L_BEAKL19BIS 1
 #define L_GRAPHITE 2
 #define L_MTGAP 3
-#define L_COLEMAK 4
+#define L_BEAKL43 4
 #define L_GALLIUMV2 5
 #define L_APTV3 6
 
-#define L_SYMNUM 7
-#define L_FUNNAV 8
-#define L_SETTINGS 9
-#define L_MEDIAMAUS 10
+#define L_SYM 7
+#define L_NUM 8
+#define L_FUNNAV 9
+#define L_SETTINGS 10
+#define L_MEDIAMAUS 11
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -45,8 +46,8 @@
 */
 
 /*              Col 6                   7                         8                         9       */
-#define TR_1    &none                   &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &none   
-#define TR_2    &lt L_SYMNUM BSPC       &none                     &none                     &lt L_SYMNUM BSPC
+#define TR_1    &lt L_NUM none          &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &lt L_NUM none   
+#define TR_2    &lt L_SYM BSPC          &none                     &none                     &lt L_SYM BSPC
 #define TR_3    &lt L_FUNNAV DE_SPACE   &mo L_SETTINGS            &mo L_SETTINGS            &lt L_FUNNAV DE_SPACE
 
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 
@@ -127,7 +128,68 @@
             tapping-term-ms = <200>;
             bindings = <&mt LALT DE_S>, <&kp DE_SHARP_S>;
         };
+        td_LC_umlss: tap_dance_generic_ss {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LCTRL DE_S>, <&kp DE_SHARP_S>;
+        };
 
+        // BEAKL43
+        comma_excl: comma_excl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_COMMA>, <&kp DE_EXCLAMATION>; // Ohne Modifikator: COMMA, Mit Shift: EXCLAMATION
+            mods = <(MOD_LSFT | MOD_RSFT)>; // Die Modifikatoren, die das Verhalten ändern (Left Shift oder Right Shift)
+        };
+        quote_under: quote_under {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            // Das erste Binding ist für den unmodifizierten Zustand (ohne Shift)
+            // Das zweite Binding ist für den modifizierten Zustand (mit Shift)
+            bindings = <&kp DE_DQT>, <&kp DE_UNDERSCORE>;
+            // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+        dot_grave: dot_grave {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            // Das erste Binding ist für den unmodifizierten Zustand (ohne Shift)
+            // Das zweite Binding ist für den modifizierten Zustand (mit Shift)
+            bindings = <&kp DE_DOT>, <&kp DE_GRAVE>;
+            // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+        sq_qmark: sq_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            // Das erste Binding ist für den unmodifizierten Zustand (ohne Shift)
+            // Das zweite Binding ist für den modifizierten Zustand (mit Shift)
+            bindings = <&kp DE_SQT>, <&kp DE_QMARK>;
+            // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+        layer_quote_under: layer_quote_under {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>; // Tap-Binding und Hold-Binding
+            tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
+            // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
+            // Binding 2 (Hold): Layer-Wechsel zur gewünschten Symbol-Layer (hier ein Platzhalter, z.B. SYMBOL_LAYER)
+            bindings = <&quote_under>, <&mo L_SYM>; // Hier ist das erste Binding dein mod-morph
+        };
+
+        layer_dot_grave: layer_dot_grave {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>; // Tap-Binding und Hold-Binding
+            tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
+            // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
+            // Binding 2 (Hold): Layer-Wechsel zur gewünschten Numpad-Layer (hier ein Platzhalter, z.B. NUMPAD_LAYER)
+            bindings = <&dot_grave>, <&mo L_NUM>; // Hier ist das erste Binding dein mod-morph
+        };
     };
 
     keymap {
@@ -171,14 +233,68 @@
             label = "MTGAP";
         };
 
-        layer_colemak {
-            bindings = <
-                &trans  &kp DE_Q      &kp DE_W       &kp DE_F        &kp DE_P         &kp DE_B   TR_trans    &kp DE_J  &kp DE_L         &kp DE_U        &kp DE_Y         &kp DE_SEMICOLON &trans
-                &trans  &hm LGUI DE_A &hm LALT DE_R  &hm LCTRL DE_S  &hm LSHIFT DE_T  &kp DE_G   TR_trans    &kp DE_M  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_I    &hm LGUI DE_O    &trans
-                &trans  &kp DE_Z      &hm RALT DE_X  &kp DE_C        &kp DE_D         &kp DE_V   TR_trans    &kp DE_K  &kp DE_H         &kp DE_COMMA    &hm RALT DE_DOT  &kp DE_SLASH     &trans
+        // BEAKL 43
+
+        // kb-beakl-numpad-full
+        // tab + / * =        y x z
+        // -   5 2 3 :      ~ F E D   
+        // 7   . 1 0 4      { C B A }
+        // ,   6 9 8 entr     ( ) \
+
+        // kb-beakl-numpad-full shift layer
+        // tab @ $ # %        Y X Z
+        // !   ! [ ] =      _ f e d   
+        // &   $ # % |        c b a 
+        // ;   < ^ > 8 entr     ( ) \
+
+
+        // kb-beakl-numpad-5
+        // tab * / 4 =        y x Z
+        // ,   7 2 5 9      ~ F E D   
+        // :   . 1 0 8      { C B A }
+        // +   -   6 3        ( ) \        
+        // kb-beakl-numpad-5 shift layer
+        // tab @ $ # %        Y X Z
+        // !   ! [ ] =      _ f e d   
+        // &   $ # % |        a b c 
+        // ;   <   > ^        ( ) \
+
+        // kb-beakl-puncs
+        // k r m z          z m r k
+        //   @ $ #            ^ 
+        //   < = >          [ _ ]   
+        // \ ( - ) +      % { ; } !
+        //   * : /          | ~ &
+
+        // BEAKL 43 (main layer):
+        //   32104 76598
+        //   qhou, glrfb
+        //   jieay dtsnp
+        //   xk".' vmcwz
+        // BEAKL 43 (shift layer):
+        //   |@$#% ^(~)&
+        //   QHOU! GLRFB
+        //   JIEAY DTSNP
+        //   XK_`? VMCWZ
+
+        layer_beakl43 {
+            bindings = <    
+                &trans      &kp DE_Q      &kp DE_H         &td_umlo            &td_umlu          &comma_excl   TR_trans         &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &kp DE_MINUS
+                &kp DE_PIPE &hm LGUI DE_J &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Y      TR_trans         &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &kp DE_SEMI
+                &kp DE_BSLH &kp DE_X      &hm RALT DE_K    &layer_quote_under  &layer_dot_grave  &sq_qmark     TR_trans         &kp DE_V  &hm L_SYM  DE_M  &hm L_NUM DE_C  &hm RALT DE_W     &kp DE_Z       &kp ENTER
             >;
-            label = "ColemakDH";   
+            label = "beakl43";
         };
+
+        // layer_colemak {
+        //     bindings = <
+        //         &trans  &kp DE_Q      &kp DE_W       &kp DE_F        &kp DE_P         &kp DE_B   TR_trans    &kp DE_J  &kp DE_L         &kp DE_U        &kp DE_Y         &kp DE_SEMICOLON &trans
+        //         &trans  &hm LGUI DE_A &hm LALT DE_R  &hm LCTRL DE_S  &hm LSHIFT DE_T  &kp DE_G   TR_trans    &kp DE_M  &hm LSHIFT DE_N  &hm LCTRL DE_E  &hm LALT DE_I    &hm LGUI DE_O    &trans
+        //         &trans  &kp DE_Z      &hm RALT DE_X  &kp DE_C        &kp DE_D         &kp DE_V   TR_trans    &kp DE_K  &kp DE_H         &kp DE_COMMA    &hm RALT DE_DOT  &kp DE_SLASH     &trans
+        //     >;
+        //     label = "ColemakDH";   
+        // };
+
 
         layer_galliumv2 {
             bindings = <
@@ -198,15 +314,62 @@
             label = "aptV3";   
         };  
 
-        layer_symnum {
+        // _ ° & \ [ *     _ _ . _    [ 7 8 9 ] _
+        // _ § < $ ( %     _ _ _ -    = 4 5 6 ; _
+        // _ ~ @ ! { ?     _ _ _ 0    \ 1 2 3 ` _
+        // layer_symnum {
+        //     bindings = <    
+        //         &trans   &kp DE_DEG   &kp DE_AMPS &kp DE_BSLH  &kp DE_LBKT  &kp DE_ASTRK     TR_half_trans  &kp DE_DOT  &trans           &kp DE_LBKT  &kp N7 &kp N8 &kp N9 &kp DE_RBKT  &trans
+        //         &trans   &kp DE_SECT  &kp DE_LT   &kp DE_DLLR  &kp DE_LPAR  &kp DE_PRCNT     TR_half_trans  &trans      &kp DE_MINUS     &kp DE_EQUAL &kp N4 &kp N5 &kp N6 &kp DE_SEMI  &trans
+        //         &trans   &kp DE_TILDE &kp DE_AT   &kp DE_EXCL  &kp DE_LBRC  &kp DE_QMARK     TR_half_trans  &trans      &kp N0           &kp DE_BSLH  &kp N1 &kp N2 &kp N3 &kp DE_GRAVE &trans
+        //     >;
+        //     label = "SYM NUM";
+        // };
+
+
+        // kb-beakl-puncs
+        //   k r m z          z m r k
+        // _   @ $ #            ^ 
+        // _   < = >          [ _ ]   
+        // _ \ ( - ) +      % { ; } !
+        // _   * : /          | ~ &
+
+        // https://getreuer.info/posts/keyboards/symbol-layer/index.html
+        // _ ` < > - |    _ _ _ _    ^ { } $ -> _
+        // _ ! * / = &    _ _ _ _    # ( ) ; " _
+        // _ ~ + [ ] %    _ _ _ _    @ : , . ' _
+
+        layer_sym {
+            bindings = <    
+                &trans   &kp DE_GRAVE &kp DE_LT    &kp DE_GT    &kp DE_MINUS &kp DE_PIPE      TR_trans        &kp DE_CARET &kp DE_LBRC  &kp DE_RBRC  &kp DE_DLLR &kp DE_TAB  &trans
+                &trans   &kp DE_EXCL  &kp DE_ASTRK &kp DE_SLASH &kp DE_EQUAL &kp DE_AMPS      TR_trans        &kp DE_HASH  &kp DE_LPAR  &kp DE_RPAR  &kp DE_SEMI &kp DE_DQT  &trans
+                &trans   &kp DE_TILDE &kp DE_PLUS  &kp DE_LBKT  &kp DE_RBRC  &kp DE_PRCNT     TR_trans        &kp DE_AT    &kp DE_COLON &kp DE_COMMA &kp DE_DOT  &kp DE_SQT  &trans
+            >;
+            label = "SYM";
+        };
+
+        // ---------------------------------------------------------------------
+        // | * , 7 2 5 9 |   | ~ F E D x z |  <-- Obere Reihe
+        // | / : . 1 0 8 |   | { C B A } \ |  <-- Mittlere Reihe (Home Row)
+        // | = + - 4 6 3 |   | = ( ) \ y   |  <-- Untere Reihe
+        layer_num {
+            bindings = <    
+                &kp DE_ASTRK &kp DE_COMMA &kp N7       &kp N2 &kp N5 &kp N9       TR_trans       &kp DE_TILDE &kp DE_F    &kp DE_E    &kp DE_D    &kp DE_X    &none
+                &kp DE_SLSH  &kp DE_COLON &kp DE_DOT   &kp N1 &kp N0 &kp N8       TR_trans       &kp DE_LBRC  &kp DE_A    &kp DE_B    &kp DE_C    &kp DE_RBRC &kp DE_BSLH
+                &kp DE_EQUAL &kp DE_PLUS  &kp DE_MINUS &kp N4 &kp N6 &kp N3       TR_trans       &kp DE_EQUAL &kp DE_LPAR &kp DE_RPAR &kp DE_BSLH &kp DE_Y    &kp DE_Z
+            >;
+            label = "NUM";
+        };
+
+/*         layer_symnum {
             bindings = <    
                 &trans   &kp DE_DEG   &kp DE_AMPS &kp DE_BSLH  &kp DE_LBKT  &kp DE_ASTRK     TR_half_trans  &kp DE_DOT  &trans           &kp DE_LBKT  &kp N7 &kp N8 &kp N9 &kp DE_RBKT  &trans
                 &trans   &kp DE_SECT  &kp DE_LT   &kp DE_DLLR  &kp DE_LPAR  &kp DE_PRCNT     TR_half_trans  &trans      &kp DE_MINUS     &kp DE_EQUAL &kp N4 &kp N5 &kp N6 &kp DE_SEMI  &trans
                 &trans   &kp DE_TILDE &kp DE_AT   &kp DE_EXCL  &kp DE_LBRC  &kp DE_QMARK     TR_half_trans  &trans      &kp N0           &kp DE_BSLH  &kp N1 &kp N2 &kp N3 &kp DE_GRAVE &trans
             >;
-            label = "SYM NUM";
+            label = "SYMNUM";
         };
-        layer_funnav { 
+ */        layer_funnav { 
             bindings = <
                 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
                 &kp F7  &kp F8  &kp F9  &kp F10 &kp F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp CAPS
@@ -217,7 +380,7 @@
 
         layer_settings {
             bindings = <
-                &to L_QWERTZ &to L_BEAKL19BIS  &to L_GRAPHITE &to L_MTGAP &to L_COLEMAK &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
+                &to L_QWERTZ &to L_BEAKL19BIS  &to L_GRAPHITE &to L_MTGAP &to L_BEAKL43 &to L_GALLIUMV2      TR_trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR 
                 &to L_APTV3  &none             &none          &none       &none         &none                TR_trans     &none        &none        &none        &none        &out OUT_USB &out OUT_BLE
                 &none        &none             &none          &none       &none         &none                TR_trans     &none        &none        &none        &none        &none        &none
             >;

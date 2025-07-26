@@ -16,8 +16,6 @@
 #include <locale/keys_de.h>
 #include <locale/keys_us_international.h>
 
-
-
 #define L_QWERTZ 0
 #define L_BEAKL19BIS 1
 #define L_GRAPHITE 2
@@ -46,7 +44,7 @@
 */
 
 /*              Col 6                   7                         8                         9       */
-#define TR_1    &lt L_NUM none          &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &lt L_NUM none   
+#define TR_1    &lt L_NUM BSPC          &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &lt L_NUM BSPC   
 #define TR_2    &lt L_SYM BSPC          &none                     &none                     &lt L_SYM BSPC
 #define TR_3    &lt L_FUNNAV DE_SPACE   &mo L_SETTINGS            &mo L_SETTINGS            &lt L_FUNNAV DE_SPACE
 

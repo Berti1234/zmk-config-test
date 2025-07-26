@@ -169,24 +169,24 @@
         };
         layer_quote_under: layer_quote_under {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <3>; // Tap-Binding und Hold-Binding
+            // #binding-cells = <3>; // Tap-Binding und Hold-Binding
             tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
             quick-tap-ms = <0>;
             flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
             // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
             // Binding 2 (Hold): Layer-Wechsel zur gewünschten Symbol-Layer (hier ein Platzhalter, z.B. SYMBOL_LAYER)
-            bindings = <&quote_under> , <&mo L_SYM>; // Hier ist das erste Binding dein mod-morph
+            bindings = <&quote_under &mo L_SYM>; // Hier ist das erste Binding dein mod-morph
         };
 
         layer_dot_grave: layer_dot_grave {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <3>; // Tap-Binding und Hold-Binding
+            // #binding-cells = <3>; // Tap-Binding und Hold-Binding
             tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
             quick-tap-ms = <0>;
             flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
             // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
             // Binding 2 (Hold): Layer-Wechsel zur gewünschten Numpad-Layer (hier ein Platzhalter, z.B. NUMPAD_LAYER)
-            bindings = <&dot_grave> , <&mo L_NUM>; // Hier ist das erste Binding dein mod-morph
+            bindings = <&dot_grave &mo L_NUM>; // Hier ist das erste Binding dein mod-morph
         };
     };
 

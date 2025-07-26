@@ -169,7 +169,7 @@
         };
         layer_quote_under: layer_quote_under {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; // Tap-Binding und Hold-Binding
+            #binding-cells = <3>; // Tap-Binding und Hold-Binding
             tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
             quick-tap-ms = <0>;
             flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
@@ -180,7 +180,7 @@
 
         layer_dot_grave: layer_dot_grave {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; // Tap-Binding und Hold-Binding
+            #binding-cells = <3>; // Tap-Binding und Hold-Binding
             tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
             quick-tap-ms = <0>;
             flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs

@@ -167,27 +167,27 @@
             // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
-        layer_quote_under: layer_quote_under {
-            compatible = "zmk,behavior-hold-tap";
-            // #binding-cells = <3>; // Tap-Binding und Hold-Binding
-            tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
-            // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
-            // Binding 2 (Hold): Layer-Wechsel zur gewünschten Symbol-Layer (hier ein Platzhalter, z.B. SYMBOL_LAYER)
-            bindings = <&quote_under &mo 7>; // L_SYM Hier ist das erste Binding dein mod-morph
-        };
+        // layer_quote_under: layer_quote_under {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     // #binding-cells = <3>; // Tap-Binding und Hold-Binding
+        //     tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
+        //     quick-tap-ms = <0>;
+        //     flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
+        //     // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
+        //     // Binding 2 (Hold): Layer-Wechsel zur gewünschten Symbol-Layer (hier ein Platzhalter, z.B. SYMBOL_LAYER)
+        //     bindings = <&quote_under &mo 7>; // L_SYM Hier ist das erste Binding dein mod-morph
+        // };
 
-        layer_dot_grave: layer_dot_grave {
-            compatible = "zmk,behavior-hold-tap";
-            // #binding-cells = <3>; // Tap-Binding und Hold-Binding
-            tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
-            // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
-            // Binding 2 (Hold): Layer-Wechsel zur gewünschten Numpad-Layer (hier ein Platzhalter, z.B. NUMPAD_LAYER)
-            bindings = <&dot_grave &mo 8>; // L_NUM Hier ist das erste Binding dein mod-morph
-        };
+        // layer_dot_grave: layer_dot_grave {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     // #binding-cells = <3>; // Tap-Binding und Hold-Binding
+        //     tapping-term-ms = <400>; // Nutzt den gleichen tapping-term wie hm
+        //     quick-tap-ms = <0>;
+        //     flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
+        //     // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
+        //     // Binding 2 (Hold): Layer-Wechsel zur gewünschten Numpad-Layer (hier ein Platzhalter, z.B. NUMPAD_LAYER)
+        //     bindings = <&dot_grave &mo 8>; // L_NUM Hier ist das erste Binding dein mod-morph
+        // };
     };
 
     keymap {
@@ -279,7 +279,7 @@
             bindings = <    
                 &trans      &kp DE_Q      &kp DE_H         &td_umlo            &td_umlu          &comma_excl   TR_trans         &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &kp DE_MINUS
                 &kp DE_PIPE &hm LGUI DE_J &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Y      TR_trans         &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &kp DE_SEMI
-                &kp DE_BSLH &kp DE_X      &hm RALT DE_K    &layer_quote_under  &layer_dot_grave  &sq_qmark     TR_trans         &kp DE_V  &hm L_SYM  DE_M  &hm L_NUM DE_C  &hm RALT DE_W     &kp DE_Z       &kp ENTER
+                &kp DE_BSLH &kp DE_X      &hm RALT DE_K    &quote_under        &dot_grave        &sq_qmark     TR_trans         &kp DE_V  &hm L_SYM  DE_M  &hm L_NUM DE_C  &hm RALT DE_W     &kp DE_Z       &kp ENTER
             >;
             label = "beakl43";
         };

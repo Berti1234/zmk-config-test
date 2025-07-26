@@ -175,7 +175,7 @@
             flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
             // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
             // Binding 2 (Hold): Layer-Wechsel zur gewünschten Symbol-Layer (hier ein Platzhalter, z.B. SYMBOL_LAYER)
-            bindings = <&quote_under &mo L_SYM>; // Hier ist das erste Binding dein mod-morph
+            bindings = <&quote_under &mo 7>; // L_SYM Hier ist das erste Binding dein mod-morph
         };
 
         layer_dot_grave: layer_dot_grave {
@@ -186,7 +186,7 @@
             flavor = "tap-preferred"; // Bevorzugt Tap, wie deine anderen HRMs
             // Binding 1 (Tap): Dein bestehendes mod-morph Behavior
             // Binding 2 (Hold): Layer-Wechsel zur gewünschten Numpad-Layer (hier ein Platzhalter, z.B. NUMPAD_LAYER)
-            bindings = <&dot_grave &mo L_NUM>; // Hier ist das erste Binding dein mod-morph
+            bindings = <&dot_grave &mo 8>; // L_NUM Hier ist das erste Binding dein mod-morph
         };
     };
 

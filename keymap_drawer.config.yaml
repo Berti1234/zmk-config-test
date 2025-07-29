@@ -40,6 +40,7 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
+    '&td_umlo': 'O'
     '&mkp LCLK': $$mdi:cursor-default-click$$
     '&mkp RCLK': $$mdi:cursor-default-click-outline$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'
@@ -365,6 +366,7 @@ parse_config:
     GLOBE: $$tabler:world$$
     SPACE: $$mdi:keyboard-space$$
     BACKSPACE: $$mdi:backspace-outline$$
+    BSPC: $$mdi:backspace-outlines$$
     DELETE: $$mdi:backspace-reverse-outline$$
     C_PP: $$mdi:play-pause$$
     UP: $$mdi:arrow-up$$
@@ -376,6 +378,7 @@ parse_config:
     LEFT: $$mdi:arrow-left$$
     RIGHT: $$mdi:arrow-right$$
     RETURN: ⮐
+    ENTER: ⮐
     KP_NUMLOCK: Numlock
     TAB: $$mdi:keyboard-tab$$
     LEFT_GUI: $$mdi:apple-keyboard-command$$
@@ -397,6 +400,7 @@ parse_config:
     LCTRL: $$mdi:apple-keyboard-control$$
     LEFT_CONTROL: $$mdi:apple-keyboard-control$$
     LC(A): 'tmux prefix'    
+    '&td_umlu': 'U'
   zmk_combos: {}
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

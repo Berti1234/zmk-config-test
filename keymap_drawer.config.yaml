@@ -40,7 +40,6 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
-    '&td_umlo': 'O'
     '&mkp LCLK': $$mdi:cursor-default-click$$
     '&mkp RCLK': $$mdi:cursor-default-click-outline$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'

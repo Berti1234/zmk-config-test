@@ -454,7 +454,7 @@ layers:
   - {t: ▽, type: trans}
   - INS
   - HOME
-  - UP
+  - $$mdi:arrow-up$$
   - END
   - PG UP
   - {t: ▽, type: trans}
@@ -469,9 +469,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&caps_word'
-  - LEFT
-  - DOWN
-  - RIGHT
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
   - PG DN
   - CAPS
   - F13
@@ -543,9 +543,9 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - VOL DN
-  - VOL UP
-  - MUTE
+  - $$mdi:volume-minus$$
+  - $$mdi:volume-plus$$
+  - $$mdi:volume-mute$$
   - {t: ▽, type: trans}
   - {type: held}
   - $$mdi:cursor-default-click$$
@@ -559,8 +559,8 @@ layers:
   - {t: ▽, type: trans}
   - LGUI
   - LALT
-  - {t: BRI DN, h: LCTRL}
-  - {t: BRI UP, h: LSHIFT}
+  - {t: '$$tabler:brightness-down$$', h: LCTRL}
+  - {t: '$$tabler:brightness-up$$', h: LSHIFT}
   - BRI MIN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -596,16 +596,16 @@ combos:
   k: Ctl+INS
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [27, 28]
-  k: LEFT
+  k: $$mdi:arrow-left$$
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [28, 29]
-  k: RIGHT
+  k: $$mdi:arrow-right$$
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [43, 44]
-  k: UP
+  k: $$mdi:arrow-up$$
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [44, 45]
-  k: DOWN
+  k: $$mdi:arrow-down$$
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [11, 12]
   k: HOME

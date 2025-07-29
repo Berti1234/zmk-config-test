@@ -1,0 +1,684 @@
+layout: {zmk_keyboard: splayney}
+layers:
+  QWERTZ:
+  - '"'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - {t: BSPC, h: NUM}
+  - {t: ENTER, h: Media+Maus}
+  - {t: ENTER, h: Media+Maus}
+  - {t: BSPC, h: NUM}
+  - Z
+  - U
+  - I
+  - O
+  - P
+  - +
+  - \
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHIFT}
+  - G
+  - {t: BSPC, h: SYM}
+  - ''
+  - ''
+  - {t: BSPC, h: SYM}
+  - H
+  - {t: J, h: LSHIFT}
+  - {t: K, h: LCTRL}
+  - {t: L, h: LALT}
+  - '#'
+  - '"'
+  - '|'
+  - Y
+  - {t: X, h: RALT}
+  - C
+  - V
+  - B
+  - {t: SPACE, h: FUN NAV}
+  - Settings
+  - Settings
+  - {t: SPACE, h: FUN NAV}
+  - N
+  - M
+  - ','
+  - {t: ., h: RALT}
+  - '-'
+  - {t: /, h: LGUI}
+  beakl19bis:
+  - {t: ▽, type: trans}
+  - Q
+  - Y
+  - '&td_umlo'
+  - '&td_umlu'
+  - Z
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - W
+  - D
+  - N
+  - C
+  - K
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: H, h: LGUI}
+  - {t: I, h: LALT}
+  - {t: E, h: LCTRL}
+  - '&td_LS_umla'
+  - ','
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - G
+  - {t: T, h: LSHIFT}
+  - {t: R, h: LCTRL}
+  - '&td_umlss'
+  - {t: P, h: LGUI}
+  - ;
+  - \
+  - J
+  - {t: '''', h: RALT}
+  - /
+  - .
+  - X
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - V
+  - M
+  - L
+  - {t: F, h: RALT}
+  - B
+  - ENTER
+  Graphite:
+  - {t: ▽, type: trans}
+  - B
+  - L
+  - D
+  - W
+  - Z
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''''
+  - F
+  - O
+  - U
+  - J
+  - ;
+  - {t: ▽, type: trans}
+  - {t: N, h: LGUI}
+  - {t: R, h: LALT}
+  - {t: T, h: LCTRL}
+  - {t: S, h: LSHIFT}
+  - G
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Y
+  - {t: H, h: LSHIFT}
+  - {t: A, h: LCTRL}
+  - {t: E, h: LALT}
+  - {t: I, h: LGUI}
+  - ','
+  - \
+  - Q
+  - {t: X, h: RALT}
+  - M
+  - C
+  - V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - K
+  - P
+  - .
+  - {t: '-', h: RALT}
+  - /
+  - ENTER
+  MTGAP:
+  - {t: ▽, type: trans}
+  - Y
+  - P
+  - '&td_umlo'
+  - '&td_umlu'
+  - J
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - K
+  - D
+  - L
+  - C
+  - W
+  - '-'
+  - '|'
+  - {t: I, h: LGUI}
+  - {t: N, h: LALT}
+  - {t: E, h: LCTRL}
+  - '&td_LS_umla'
+  - ','
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: M, h: LSHIFT}
+  - {t: H, h: LCTRL}
+  - T
+  - '&td_umlss'
+  - {t: R, h: LGUI}
+  - ''''
+  - \
+  - Q
+  - {t: Z, h: RALT}
+  - /
+  - .
+  - ;
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - B
+  - F
+  - G
+  - {t: V, h: RALT}
+  - X
+  - {t: ▽, type: trans}
+  beakl43:
+  - {t: ▽, type: trans}
+  - Q
+  - H
+  - '&td_umlo'
+  - '&td_umlu'
+  - {t: ',', s: '!'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - G
+  - L
+  - R
+  - F
+  - B
+  - '-'
+  - '|'
+  - {t: J, h: LGUI}
+  - {t: I, h: LALT}
+  - {t: E, h: LCTRL}
+  - '&td_LS_umla'
+  - Y
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - D
+  - {t: T, h: LSHIFT}
+  - '&td_LC_umlss'
+  - {t: N, h: LALT}
+  - {t: P, h: LGUI}
+  - ;
+  - \
+  - X
+  - {t: K, h: RALT}
+  - {t: '"', s: _}
+  - {t: ., s: '`'}
+  - {t: '''', s: '?'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - V
+  - {t: M, h: '7'}
+  - {t: C, h: '8'}
+  - {t: W, h: RALT}
+  - Z
+  - ENTER
+  GalliumV2:
+  - '"'
+  - B
+  - L
+  - D
+  - C
+  - V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - J
+  - F
+  - O
+  - U
+  - ','
+  - '-'
+  - \
+  - {t: N, h: LGUI}
+  - {t: R, h: LALT}
+  - {t: T, h: LCTRL}
+  - {t: S, h: LSHIFT}
+  - G
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Y
+  - {t: H, h: LSHIFT}
+  - {t: A, h: LCTRL}
+  - {t: E, h: LALT}
+  - {t: I, h: LGUI}
+  - ;
+  - '|'
+  - X
+  - {t: Q, h: RALT}
+  - M
+  - W
+  - Z
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - K
+  - P
+  - .
+  - {t: '''', h: RALT}
+  - /
+  - '#'
+  aptV3:
+  - '"'
+  - W
+  - G
+  - D
+  - F
+  - B
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Q
+  - L
+  - '&td_umlu'
+  - '&td_umlo'
+  - Y
+  - '-'
+  - '|'
+  - {t: R, h: LGUI}
+  - '&td_umlss'
+  - {t: T, h: LCTRL}
+  - {t: H, h: LSHIFT}
+  - K
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - J
+  - {t: N, h: LSHIFT}
+  - {t: E, h: LCTRL}
+  - '&td_umla'
+  - {t: I, h: LGUI}
+  - ;
+  - \
+  - X
+  - {t: C, h: RALT}
+  - M
+  - P
+  - V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Z
+  - ','
+  - .
+  - {t: '''', h: RALT}
+  - /
+  - '#'
+  SYM:
+  - {t: ▽, type: trans}
+  - '`'
+  - <
+  - '>'
+  - '-'
+  - '|'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ^
+  - '{'
+  - '}'
+  - $
+  - SECT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '!'
+  - '*'
+  - /
+  - '='
+  - '&'
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '#'
+  - (
+  - )
+  - ;
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '~'
+  - +
+  - '['
+  - '}'
+  - '%'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '@'
+  - ':'
+  - ','
+  - .
+  - ''''
+  - {t: ▽, type: trans}
+  NUM:
+  - '*'
+  - ','
+  - '7'
+  - '2'
+  - '5'
+  - '9'
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '~'
+  - F
+  - E
+  - D
+  - X
+  - ''
+  - /
+  - ':'
+  - .
+  - '1'
+  - '0'
+  - '8'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '{'
+  - A
+  - B
+  - C
+  - '}'
+  - \
+  - '='
+  - +
+  - '-'
+  - '4'
+  - '6'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '='
+  - (
+  - )
+  - \
+  - Y
+  - Z
+  FUN NAV:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - INS
+  - HOME
+  - UP
+  - END
+  - PG UP
+  - {t: ▽, type: trans}
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&caps_word'
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PG DN
+  - CAPS
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - {t: F18, h: PSCRN}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
+  - {t: ▽, type: trans}
+  Settings:
+  - {t: QWERTZ, h: toggle}
+  - {t: beakl19bis, h: toggle}
+  - {t: Graphite, h: toggle}
+  - {t: MTGAP, h: toggle}
+  - {t: beakl43, h: toggle}
+  - {t: GalliumV2, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - BT CLR
+  - {t: aptV3, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - OUT USB
+  - OUT BLE
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  Media+Maus:
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - VOL DN
+  - VOL UP
+  - MUTE
+  - {t: ▽, type: trans}
+  - {type: held}
+  - '&mkp LCLK'
+  - ''
+  - '&msc SCRL_UP'
+  - '&msc SCRL_LEFT'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_RIGHT'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LGUI
+  - LALT
+  - {t: BRI DN, h: LCTRL}
+  - {t: BRI UP, h: LSHIFT}
+  - BRI MIN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - '&mkp RCLK'
+  - '&msc SCRL_DOWN'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - RALT
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - '&mkp MCLK'
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
+  - {t: ▽, type: trans}
+combos:
+- p: [33, 34]
+  k: Sft+INS
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [32, 33]
+  k: Ctl+INS
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [27, 28]
+  k: LEFT
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [28, 29]
+  k: RIGHT
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [43, 44]
+  k: UP
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [44, 45]
+  k: DOWN
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [11, 12]
+  k: HOME
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [12, 13]
+  k: END
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [18, 19]
+  k: '>'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [34, 35]
+  k: <
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [0, 1]
+  k: ESC
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [16, 17]
+  k: TAB
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [3, 4]
+  k: '['
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [4, 5]
+  k: ']'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [19, 20]
+  k: (
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [20, 21]
+  k: )
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [35, 36]
+  k: '{'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [36, 37]
+  k: '}'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [10, 26]
+  k: '0'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [4, 20]
+  k: '1'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [11, 27]
+  k: '2'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [3, 19]
+  k: '3'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [12, 28]
+  k: '4'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [2, 18]
+  k: '5'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [13, 29]
+  k: '6'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [1, 17]
+  k: '7'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [14, 30]
+  k: '8'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [5, 21]
+  k: '9'
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [2, 4]
+  k: Ctl+X
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [18, 20]
+  k: Ctl+C
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+- p: [34, 36]
+  k: Ctl+V
+  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]

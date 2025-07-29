@@ -36,6 +36,19 @@ draw_config:
   glyph_hold_size: 12
   glyph_shifted_size: 10
   glyphs: {}
+  glyph_urls:
+    tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
+    tablerf: https://unpkg.com/@tabler/icons/icons/filled/{}.svg
+    mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
+    mdil: https://raw.githubusercontent.com/Pictogrammers/MaterialDesignLight/master/svg/{}.svg
+    material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
+    ph: https://unpkg.com/@phosphor-icons/core@2.0.0/assets/{}/{}.svg # For filled/outline
+    phl: https://unpkg.com/@phosphor-icons/core@2.0.0/assets/light/{}.svg # For light
+    phr: https://unpkg.com/@phosphor-icons/core@2.0.0/assets/regular/{}.svg # For regular
+    phs: https://unpkg.com/@phosphor-icons/core@2.0.0/assets/thin/{}.svg # For thin
+    pht: https://unpkg.com/@phosphor-icons/core@2.0.0/assets/thin/{}.svg # For thin (alias)
+    fa: https://unpkg.com/@fortawesome/fontawesome-free@6.5.2/svgs/{}/{}.svg # For regular/solid
+    fab: https://unpkg.com/@fortawesome/fontawesome-free@6.5.2/svgs/brands/{}.svg # For brands
 parse_config:
   preprocess: true
   skip_binding_parsing: false
@@ -53,9 +66,9 @@ parse_config:
       tap: 'A'
       hold: $$mdi:apple-keyboard-shift$$
       type: hold
-    '&mkp LCLK': $$phosphor:mouse-left-click-fill$$
-    '&mkp RCLK': $$phosphor:mouse-right-click-fill$$
-    '&mkp MCLK': $$phosphor:mouse-middle-click-fill$$
+    '&mkp LCLK': $$ph:mouse-left-click-fill$$
+    '&mkp RCLK': $$ph:mouse-right-click-fill$$
+    '&mkp MCLK': $$ph:mouse-middle-click-fill$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'
     '&msc SCRL_DOWN': '$$mdi:mouse-move-down$$'
     '&msc SCRL_LEFT':

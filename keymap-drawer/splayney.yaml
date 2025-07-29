@@ -53,7 +53,7 @@ layers:
   - {t: ▽, type: trans}
   - Q
   - Y
-  - O
+  - '&td_umlo'
   - '&td_umlu'
   - Z
   - {t: ▽, type: trans}
@@ -151,7 +151,7 @@ layers:
   - {t: ▽, type: trans}
   - Y
   - P
-  - O
+  - '&td_umlo'
   - '&td_umlu'
   - J
   - {t: ▽, type: trans}
@@ -200,7 +200,7 @@ layers:
   - {t: ▽, type: trans}
   - Q
   - H
-  - O
+  - '&td_umlo'
   - '&td_umlu'
   - {t: ',', s: '!'}
   - {t: ▽, type: trans}
@@ -308,7 +308,7 @@ layers:
   - Q
   - L
   - '&td_umlu'
-  - O
+  - '&td_umlo'
   - Y
   - '-'
   - '|'

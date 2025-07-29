@@ -43,9 +43,14 @@ parse_config:
     '&td_umlo': 'O'
     '&td_umlu': 'U'
     '&td_umla': 'A'
+    '&td_umlss': 'S'
     '&td_LC_umlss': 
       tap: 'S'
       hold: $$mdi:apple-keyboard-control$$
+      type: hold
+    '&td_LS_umla':
+      tap: 'A'
+      hold: $$mdi:apple-keyboard-shift$$
       type: hold
     '&mkp LCLK': $$mdi:cursor-default-click$$
     '&mkp RCLK': $$mdi:cursor-default-click-outline$$

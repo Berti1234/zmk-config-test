@@ -70,7 +70,7 @@ layers:
   - {t: H, h: '$$mdi:apple-keyboard-command$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
-  - '&td_LS_umla'
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$', type: hold}
   - ','
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,7 +79,7 @@ layers:
   - G
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: R, h: '$$mdi:apple-keyboard-control$$'}
-  - '&td_umlss'
+  - S
   - {t: P, h: '$$mdi:apple-keyboard-command$$'}
   - ;
   - \
@@ -168,7 +168,7 @@ layers:
   - {t: I, h: '$$mdi:apple-keyboard-command$$'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
-  - '&td_LS_umla'
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$', type: hold}
   - ','
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -177,7 +177,7 @@ layers:
   - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: H, h: '$$mdi:apple-keyboard-control$$'}
   - T
-  - '&td_umlss'
+  - S
   - {t: R, h: '$$mdi:apple-keyboard-command$$'}
   - ''''
   - \
@@ -217,7 +217,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
-  - '&td_LS_umla'
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$', type: hold}
   - Y
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -313,7 +313,7 @@ layers:
   - '-'
   - '|'
   - {t: R, h: '$$mdi:apple-keyboard-command$$'}
-  - '&td_umlss'
+  - S
   - {t: T, h: '$$mdi:apple-keyboard-control$$'}
   - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
   - K

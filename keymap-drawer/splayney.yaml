@@ -358,7 +358,7 @@ layers:
   - '{'
   - '}'
   - $
-  - SECT
+  - §
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '!'
@@ -468,7 +468,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&caps_word'
+  - CAPSWORD
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
   - $$mdi:arrow-right$$
@@ -548,12 +548,12 @@ layers:
   - $$mdi:volume-mute$$
   - {t: ▽, type: trans}
   - {type: held}
-  - $$mdi:cursor-default-click$$
+  - $$mdi:phosphor-mouse-left-click-fill$$
   - ''
   - $$mdi:mouse-move-up$$
-  - '&msc SCRL_LEFT'
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
-  - '&msc SCRL_RIGHT'
+  - {t: '$$mdi:mouse-move-down$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse-move-down$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -561,15 +561,15 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$tabler:brightness-down$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$tabler:brightness-up$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - BRI MIN
+  - $$bi:brightness-alt-low$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - $$mdi:cursor-default-click-outline$$
+  - $$mdi:phosphor-mouse-right-click-fill$$
   - $$mdi:mouse-move-down$$
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -581,7 +581,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - '&mkp MCLK'
+  - $$mdi:phosphor-mouse-middle-click-fill$$
   - Ctl+Y
   - Ctl+V
   - Ctl+C

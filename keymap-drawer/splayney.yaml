@@ -7,10 +7,10 @@ layers:
   - E
   - R
   - T
-  - {t: BSPC, h: NUM}
-  - {t: ENTER, h: Media+Maus}
-  - {t: ENTER, h: Media+Maus}
-  - {t: BSPC, h: NUM}
+  - {t: '$$mdi:backspace-outlines$$', h: NUM}
+  - {t: ⮐, h: Media+Maus}
+  - {t: ⮐, h: Media+Maus}
+  - {t: '$$mdi:backspace-outlines$$', h: NUM}
   - Z
   - U
   - I
@@ -23,10 +23,10 @@ layers:
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
-  - {t: BSPC, h: SYM}
+  - {t: '$$mdi:backspace-outlines$$', h: SYM}
   - ''
   - ''
-  - {t: BSPC, h: SYM}
+  - {t: '$$mdi:backspace-outlines$$', h: SYM}
   - H
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
@@ -53,7 +53,7 @@ layers:
   - {t: ▽, type: trans}
   - Q
   - Y
-  - '&td_umlo'
+  - O
   - '&td_umlu'
   - Z
   - {t: ▽, type: trans}
@@ -97,7 +97,7 @@ layers:
   - L
   - {t: F, h: '$$mdi:apple-keyboard-option$$'}
   - B
-  - ENTER
+  - ⮐
   Graphite:
   - {t: ▽, type: trans}
   - B
@@ -146,12 +146,12 @@ layers:
   - .
   - {t: '-', h: '$$mdi:apple-keyboard-option$$'}
   - /
-  - ENTER
+  - ⮐
   MTGAP:
   - {t: ▽, type: trans}
   - Y
   - P
-  - '&td_umlo'
+  - O
   - '&td_umlu'
   - J
   - {t: ▽, type: trans}
@@ -200,7 +200,7 @@ layers:
   - {t: ▽, type: trans}
   - Q
   - H
-  - '&td_umlo'
+  - O
   - '&td_umlu'
   - {t: ',', s: '!'}
   - {t: ▽, type: trans}
@@ -244,7 +244,7 @@ layers:
   - {t: C, h: '8'}
   - {t: W, h: '$$mdi:apple-keyboard-option$$'}
   - Z
-  - ENTER
+  - ⮐
   GalliumV2:
   - '"'
   - B
@@ -308,7 +308,7 @@ layers:
   - Q
   - L
   - '&td_umlu'
-  - '&td_umlo'
+  - O
   - Y
   - '-'
   - '|'

@@ -392,7 +392,7 @@ parse_config:
     C_VOL_DN: $$mdi:volume-minus$$
     C_BRI_UP: $$tabler:brightness-up$$
     C_BRI_DN: $$tabler:brightness-down$$
-    C_BRI_MIN: $$bi:brightness-alt-low$
+    C_BRI_MIN: $$tabler:brightness-off$$
     C_POWER: $$mdi:power$$
     C_SLEEP: $$mdi:power-sleep$$
     PAGE_UP: 'PgUp'

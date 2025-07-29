@@ -68,7 +68,7 @@ parse_config:
       type: hold
     '&mkp LCLK': $$mdi:mouse-left-click$$
     '&mkp RCLK': $$mdi:mouse-right-click$$
-    '&mkp MCLK': $$mdi_mouse-scroll-wheel$$
+    '&mkp MCLK': $$mdi:mouse-scroll-wheel$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'
     '&msc SCRL_DOWN': '$$mdi:mouse-move-down$$'
     '&msc SCRL_LEFT':

@@ -54,7 +54,7 @@ layers:
   - Q
   - Y
   - O
-  - '&td_umlu'
+  - U
   - Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -152,7 +152,7 @@ layers:
   - Y
   - P
   - O
-  - '&td_umlu'
+  - U
   - J
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -201,7 +201,7 @@ layers:
   - Q
   - H
   - O
-  - '&td_umlu'
+  - U
   - {t: ',', s: '!'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -225,7 +225,7 @@ layers:
   - {t: ▽, type: trans}
   - D
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
-  - '&td_LC_umlss'
+  - {t: S, h: '$$mdi:apple-keyboard-control$$', type: hold}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: P, h: '$$mdi:apple-keyboard-command$$'}
   - ;
@@ -307,7 +307,7 @@ layers:
   - {t: ▽, type: trans}
   - Q
   - L
-  - '&td_umlu'
+  - U
   - O
   - Y
   - '-'
@@ -324,7 +324,7 @@ layers:
   - J
   - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
-  - '&td_umla'
+  - A
   - {t: I, h: '$$mdi:apple-keyboard-command$$'}
   - ;
   - \

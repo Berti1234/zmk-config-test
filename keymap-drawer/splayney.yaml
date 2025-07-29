@@ -548,7 +548,7 @@ layers:
   - MUTE
   - {t: ▽, type: trans}
   - {type: held}
-  - '&mkp LCLK'
+  - $$mdi:cursor-default-click$$
   - ''
   - '&msc SCRL_UP'
   - '&msc SCRL_LEFT'
@@ -565,7 +565,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - '&mkp RCLK'
+  - $$mdi:cursor-default-click-outline$$
   - '&msc SCRL_DOWN'
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'

@@ -561,7 +561,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$tabler:brightness-down$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$tabler:brightness-up$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$bi:brightness-alt-low$
+  - $$tabler:brightness-off$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''

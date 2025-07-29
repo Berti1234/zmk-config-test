@@ -548,7 +548,7 @@ layers:
   - $$mdi:volume-mute$$
   - {t: ▽, type: trans}
   - {type: held}
-  - $$phosphor:mouse-left-click-fill$$
+  - $$ph:mouse-left-click-fill$$
   - ''
   - $$mdi:mouse-move-up$$
   - {t: '$$mdi:mouse-move-down$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
@@ -565,7 +565,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - $$phosphor:mouse-right-click-fill$$
+  - $$ph:mouse-right-click-fill$$
   - $$mdi:mouse-move-down$$
   - {t: '$$mdi:mouse$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
   - {t: '$$mdi:mouse$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
@@ -581,7 +581,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - $$phosphor:mouse-middle-click-fill$$
+  - $$ph:mouse-middle-click-fill$$
   - Ctl+Y
   - Ctl+V
   - Ctl+C

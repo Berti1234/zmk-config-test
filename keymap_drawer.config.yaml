@@ -53,9 +53,9 @@ parse_config:
       tap: 'A'
       hold: $$mdi:apple-keyboard-shift$$
       type: hold
-    '&mkp LCLK': $$mdi:phosphor-mouse-left-click-fill$$
-    '&mkp RCLK': $$mdi:phosphor-mouse-right-click-fill$$
-    '&mkp MCLK': $$mdi:phosphor-mouse-middle-click-fill$$
+    '&mkp LCLK': $$phosphor:mouse-left-click-fill$$
+    '&mkp RCLK': $$phosphor:mouse-right-click-fill$$
+    '&mkp MCLK': $$phosphor:mouse-middle-click-fill$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'
     '&msc SCRL_DOWN': '$$mdi:mouse-move-down$$'
     '&msc SCRL_LEFT':

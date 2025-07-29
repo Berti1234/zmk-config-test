@@ -18,37 +18,37 @@ layers:
   - P
   - +
   - \
-  - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHIFT}
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - {t: BSPC, h: SYM}
   - ''
   - ''
   - {t: BSPC, h: SYM}
   - H
-  - {t: J, h: LSHIFT}
-  - {t: K, h: LCTRL}
-  - {t: L, h: LALT}
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - '#'
   - '"'
   - '|'
   - Y
-  - {t: X, h: RALT}
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
   - V
   - B
-  - {t: SPACE, h: FUN NAV}
+  - {t: '$$mdi:keyboard-space$$', h: FUN NAV}
   - Settings
   - Settings
-  - {t: SPACE, h: FUN NAV}
+  - {t: '$$mdi:keyboard-space$$', h: FUN NAV}
   - N
   - M
   - ','
-  - {t: ., h: RALT}
+  - {t: ., h: '$$mdi:apple-keyboard-option$$'}
   - '-'
-  - {t: /, h: LGUI}
+  - {t: /, h: '$$mdi:apple-keyboard-command$$'}
   beakl19bis:
   - {t: ▽, type: trans}
   - Q
@@ -67,9 +67,9 @@ layers:
   - K
   - '-'
   - {t: ▽, type: trans}
-  - {t: H, h: LGUI}
-  - {t: I, h: LALT}
-  - {t: E, h: LCTRL}
+  - {t: H, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - '&td_LS_umla'
   - ','
   - {t: ▽, type: trans}
@@ -77,14 +77,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - G
-  - {t: T, h: LSHIFT}
-  - {t: R, h: LCTRL}
+  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-control$$'}
   - '&td_umlss'
-  - {t: P, h: LGUI}
+  - {t: P, h: '$$mdi:apple-keyboard-command$$'}
   - ;
   - \
   - J
-  - {t: '''', h: RALT}
+  - {t: '''', h: '$$mdi:apple-keyboard-option$$'}
   - /
   - .
   - X
@@ -95,7 +95,7 @@ layers:
   - V
   - M
   - L
-  - {t: F, h: RALT}
+  - {t: F, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - ENTER
   Graphite:
@@ -116,24 +116,24 @@ layers:
   - J
   - ;
   - {t: ▽, type: trans}
-  - {t: N, h: LGUI}
-  - {t: R, h: LALT}
-  - {t: T, h: LCTRL}
-  - {t: S, h: LSHIFT}
+  - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Y
-  - {t: H, h: LSHIFT}
-  - {t: A, h: LCTRL}
-  - {t: E, h: LALT}
-  - {t: I, h: LGUI}
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-command$$'}
   - ','
   - \
   - Q
-  - {t: X, h: RALT}
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - M
   - C
   - V
@@ -144,7 +144,7 @@ layers:
   - K
   - P
   - .
-  - {t: '-', h: RALT}
+  - {t: '-', h: '$$mdi:apple-keyboard-option$$'}
   - /
   - ENTER
   MTGAP:
@@ -165,24 +165,24 @@ layers:
   - W
   - '-'
   - '|'
-  - {t: I, h: LGUI}
-  - {t: N, h: LALT}
-  - {t: E, h: LCTRL}
+  - {t: I, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - '&td_LS_umla'
   - ','
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: M, h: LSHIFT}
-  - {t: H, h: LCTRL}
+  - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
   - T
   - '&td_umlss'
-  - {t: R, h: LGUI}
+  - {t: R, h: '$$mdi:apple-keyboard-command$$'}
   - ''''
   - \
   - Q
-  - {t: Z, h: RALT}
+  - {t: Z, h: '$$mdi:apple-keyboard-option$$'}
   - /
   - .
   - ;
@@ -193,7 +193,7 @@ layers:
   - B
   - F
   - G
-  - {t: V, h: RALT}
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - X
   - {t: ▽, type: trans}
   beakl43:
@@ -214,9 +214,9 @@ layers:
   - B
   - '-'
   - '|'
-  - {t: J, h: LGUI}
-  - {t: I, h: LALT}
-  - {t: E, h: LCTRL}
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - '&td_LS_umla'
   - Y
   - {t: ▽, type: trans}
@@ -224,14 +224,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - D
-  - {t: T, h: LSHIFT}
+  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - '&td_LC_umlss'
-  - {t: N, h: LALT}
-  - {t: P, h: LGUI}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: P, h: '$$mdi:apple-keyboard-command$$'}
   - ;
   - \
   - X
-  - {t: K, h: RALT}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '"', s: _}
   - {t: ., s: '`'}
   - {t: '''', s: '?'}
@@ -242,7 +242,7 @@ layers:
   - V
   - {t: M, h: '7'}
   - {t: C, h: '8'}
-  - {t: W, h: RALT}
+  - {t: W, h: '$$mdi:apple-keyboard-option$$'}
   - Z
   - ENTER
   GalliumV2:
@@ -263,24 +263,24 @@ layers:
   - ','
   - '-'
   - \
-  - {t: N, h: LGUI}
-  - {t: R, h: LALT}
-  - {t: T, h: LCTRL}
-  - {t: S, h: LSHIFT}
+  - {t: N, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Y
-  - {t: H, h: LSHIFT}
-  - {t: A, h: LCTRL}
-  - {t: E, h: LALT}
-  - {t: I, h: LGUI}
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-command$$'}
   - ;
   - '|'
   - X
-  - {t: Q, h: RALT}
+  - {t: Q, h: '$$mdi:apple-keyboard-option$$'}
   - M
   - W
   - Z
@@ -291,7 +291,7 @@ layers:
   - K
   - P
   - .
-  - {t: '''', h: RALT}
+  - {t: '''', h: '$$mdi:apple-keyboard-option$$'}
   - /
   - '#'
   aptV3:
@@ -312,24 +312,24 @@ layers:
   - Y
   - '-'
   - '|'
-  - {t: R, h: LGUI}
+  - {t: R, h: '$$mdi:apple-keyboard-command$$'}
   - '&td_umlss'
-  - {t: T, h: LCTRL}
-  - {t: H, h: LSHIFT}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
   - K
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - J
-  - {t: N, h: LSHIFT}
-  - {t: E, h: LCTRL}
+  - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - '&td_umla'
-  - {t: I, h: LGUI}
+  - {t: I, h: '$$mdi:apple-keyboard-command$$'}
   - ;
   - \
   - X
-  - {t: C, h: RALT}
+  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
   - M
   - P
   - V
@@ -340,7 +340,7 @@ layers:
   - Z
   - ','
   - .
-  - {t: '''', h: RALT}
+  - {t: '''', h: '$$mdi:apple-keyboard-option$$'}
   - /
   - '#'
   SYM:
@@ -453,9 +453,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - INS
-  - HOME
+  - Home
   - $$mdi:arrow-up$$
-  - END
+  - End
   - PG UP
   - {t: ▽, type: trans}
   - F7
@@ -557,10 +557,10 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LGUI
-  - LALT
-  - {t: '$$tabler:brightness-down$$', h: LCTRL}
-  - {t: '$$tabler:brightness-up$$', h: LSHIFT}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - {t: '$$tabler:brightness-down$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$tabler:brightness-up$$', h: '$$mdi:apple-keyboard-shift$$'}
   - BRI MIN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -574,7 +574,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - RALT
+  - $$mdi:apple-keyboard-option$$
   - ''
   - ''
   - ''
@@ -608,10 +608,10 @@ combos:
   k: $$mdi:arrow-down$$
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [11, 12]
-  k: HOME
+  k: Home
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [12, 13]
-  k: END
+  k: End
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [18, 19]
   k: '>'
@@ -620,10 +620,10 @@ combos:
   k: <
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [0, 1]
-  k: ESC
+  k: Esc
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [16, 17]
-  k: TAB
+  k: $$mdi:keyboard-tab$$
   l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
 - p: [3, 4]
   k: '['

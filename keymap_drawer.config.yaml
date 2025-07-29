@@ -146,6 +146,50 @@ parse_config:
       tap: $$mdi:bluetooth$$
       shifted: $$mdi:skip-next$$
       type: sym_sub_text
+    '&dis_down':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$mdi:arrow-down$$
+      type:    sym_by_sym
+    '&dis_up':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$mdi:arrow-up$$
+      type:    sym_by_sym
+    '&dis_next_server':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:world-down$$
+      type:    sym_by_sym
+    '&dis_prev_server':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:world-up$$
+      type:    sym_by_sym
+    '&dis_next_chan':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:row-insert-top$$
+      type:    sym_by_sym
+    '&dis_prev_chan':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:row-insert-bottom$$
+      type:    sym_by_sym
+    '&dis_next_history':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:corner-down-right-double$$
+      type:    sym_by_sym
+    '&dis_prev_history':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:corner-up-left-double$$
+      type:    sym_by_sym
+    '&dis_next_mention':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:at$$
+      type:    sym_by_sym
+    '&dis_pins':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:pinned$$
+      type:    sym_by_sym
+    '&dis_section_nav':
+      tap:     '$$tablerf:brand-discord$$'
+      shifted: $$tabler:section-sign$$
+      type:    sym_by_sym
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle
@@ -303,6 +347,20 @@ parse_config:
     DE_NON_US_HASH: '#'
     DE_NUHS: '#'
     DE_TILDE2: '~'
+    C_PP: $$mdi:play-pause$$
+    C_NEXT: $$mdi:skip-forward$$
+    C_PREV: $$mdi:skip-backward$$
+    C_MUTE: $$mdi:volume-mute$$
+    C_VOL_UP: $$mdi:volume-plus$$
+    C_VOL_DN: $$mdi:volume-minus$$
+    C_BRI_UP: $$tabler:brightness-up$$
+    C_BRI_DN: $$tabler:brightness-down$$
+    C_POWER: $$mdi:power$$
+    C_SLEEP: $$mdi:power-sleep$$
+    UP: $$mdi:arrow-up$$
+    DOWN: $$mdi:arrow-down$$
+    LEFT: $$mdi:arrow-left$$
+    RIGHT: $$mdi:arrow-right$$
   zmk_combos: {}
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

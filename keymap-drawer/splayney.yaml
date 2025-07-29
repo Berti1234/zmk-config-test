@@ -581,7 +581,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - $$mdi_mouse-scroll-wheel$$
+  - $$mdi:mouse-scroll-wheel$$
   - Ctl+Y
   - Ctl+V
   - Ctl+C

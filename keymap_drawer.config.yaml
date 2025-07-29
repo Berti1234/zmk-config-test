@@ -41,6 +41,12 @@ parse_config:
   skip_binding_parsing: false
   raw_binding_map:
     '&td_umlo': 'O'
+    '&td_umlu': 'U'
+    '&td_umla': 'A'
+    '&td_LC_umlss': 
+      tap: 'S'
+      hold: $$mdi:apple-keyboard-control$$
+      type: hold
     '&mkp LCLK': $$mdi:cursor-default-click$$
     '&mkp RCLK': $$mdi:cursor-default-click-outline$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'

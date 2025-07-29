@@ -66,9 +66,9 @@ parse_config:
       tap: 'A'
       hold: $$mdi:apple-keyboard-shift$$
       type: hold
-    '&mkp LCLK': $$ph:mouse-left-click-fill$$
-    '&mkp RCLK': $$ph:mouse-right-click-fill$$
-    '&mkp MCLK': $$ph:mouse-middle-click-fill$$
+    '&mkp LCLK': $$ph:regular/mouse-left-click-fill$$
+    '&mkp RCLK': $$ph:regular/mouse-right-click-fill$$
+    '&mkp MCLK': $$ph:regular/mouse-middle-click-fill$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'
     '&msc SCRL_DOWN': '$$mdi:mouse-move-down$$'
     '&msc SCRL_LEFT':

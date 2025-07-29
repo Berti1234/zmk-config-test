@@ -40,6 +40,7 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
+    '&caps_word': 'CAPSWORD'
     '&td_umlo': 'O'
     '&td_umlu': 'U'
     '&td_umla': 'A'
@@ -52,24 +53,33 @@ parse_config:
       tap: 'A'
       hold: $$mdi:apple-keyboard-shift$$
       type: hold
-    '&mkp LCLK': $$mdi:cursor-default-click$$
-    '&mkp RCLK': $$mdi:cursor-default-click-outline$$
+    '&mkp LCLK': $$mdi:phosphor-mouse-left-click-fill$$
+    '&mkp RCLK': $$mdi:phosphor-mouse-right-click-fill$$
+    '&mkp MCLK': $$mdi:phosphor-mouse-middle-click-fill$$
     '&msc SCRL_UP': '$$mdi:mouse-move-up$$'
     '&msc SCRL_DOWN': '$$mdi:mouse-move-down$$'
+    '&msc SCRL_LEFT':
+      tap:     $$mdi:mouse-move-down$$
+      shifted: $$mdi:arrow-left$$
+      type:    sym_by_sym
+    '&msc SCRL_RIGHT':
+      tap:     $$mdi:mouse-move-down$$
+      shifted: $$mdi:arrow-right$$
+      type:    sym_by_sym
     '&mmv MOVE_LEFT':
-      tap:     $$mdi:tortoise$$
+      tap:     $$mdi:mouse$$
       shifted: $$mdi:arrow-left$$
       type:    sym_by_sym
     '&mmv MOVE_RIGHT':
-      tap:     $$mdi:tortoise$$
+      tap:     $$mdi:mouse$$
       shifted: $$mdi:arrow-right$$
       type:    sym_by_sym
     '&mmv MOVE_UP':
-      tap:     $$mdi:tortoise$$
+      tap:     $$mdi:mouse$$
       shifted: $$mdi:arrow-up$$
       type:    sym_by_sym
     '&mmv MOVE_DOWN':
-      tap:     $$mdi:tortoise$$
+      tap:     $$mdi:mouse$$
       shifted: $$mdi:arrow-down$$
       type:    sym_by_sym
     '&fmmv MOVE_LEFT':
@@ -359,6 +369,7 @@ parse_config:
     DE_NON_US_HASH: '#'
     DE_NUHS: '#'
     DE_TILDE2: '~'
+    DE_SECT: '§'
     'td_umlu': 'U'
     C_PP: $$mdi:play-pause$$
     C_NEXT: $$mdi:skip-forward$$
@@ -368,6 +379,7 @@ parse_config:
     C_VOL_DN: $$mdi:volume-minus$$
     C_BRI_UP: $$tabler:brightness-up$$
     C_BRI_DN: $$tabler:brightness-down$$
+    C_BRI_MIN: $$bi:brightness-alt-low$
     C_POWER: $$mdi:power$$
     C_SLEEP: $$mdi:power-sleep$$
     PAGE_UP: 'PgUp'

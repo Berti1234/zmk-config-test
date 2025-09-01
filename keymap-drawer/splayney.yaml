@@ -7,10 +7,10 @@ layers:
   - E
   - R
   - T
-  - {t: '$$mdi:backspace-outline$$', h: NUM}
+  - {t: Esc, h: NUM}
   - {t: ⮐, h: Media+Maus}
   - {t: ⮐, h: Media+Maus}
-  - {t: '$$mdi:backspace-outline$$', h: NUM}
+  - {t: Esc, h: NUM}
   - Z
   - U
   - I

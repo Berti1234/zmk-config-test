@@ -55,6 +55,7 @@
     COMBO(lbrc,  &kp DE_LBRC, 35 36, NORMAL_LAYERS)
     COMBO(rbrc,  &kp DE_RBRC, 36 37, NORMAL_LAYERS)
 
+/*
     COMBO(n0,  &kp DE_N0, 10 26, NORMAL_LAYERS)
     COMBO(n1,  &kp DE_N1, 4  20, NORMAL_LAYERS)
     COMBO(n2,  &kp DE_N2, 11 27, NORMAL_LAYERS)
@@ -65,11 +66,12 @@
     COMBO(n7,  &kp DE_N7, 1  17, NORMAL_LAYERS)
     COMBO(n8,  &kp DE_N8, 14 30, NORMAL_LAYERS)
     COMBO(n9,  &kp DE_N9, 5  21, NORMAL_LAYERS)
-
+*/
+/*
     COMBO(cut,    &kp Cut,   2   4, NORMAL_LAYERS)
     COMBO(copy,   &kp Copy,  18 20, NORMAL_LAYERS)
     COMBO(paste,  &kp Paste, 34 36, NORMAL_LAYERS)
-
+*/
 
   };
 };

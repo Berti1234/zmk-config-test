@@ -178,7 +178,7 @@
         colon_minus: colon_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DE_DOT>, <&kp DE_DQT>;
+            bindings = <&kp DE_COLON>, <&kp DE_MINUS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
         bslh_pipe: bslh_pipe {

@@ -26,7 +26,7 @@ layers:
   - {t: '$$mdi:backspace-outline$$', h: SYM}
   - ''
   - ''
-  - {t: '$$mdi:backspace-outline$$', h: SYM}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: SYM}
   - H
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
@@ -219,22 +219,22 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - {t: A, h: '$$mdi:apple-keyboard-shift$$', type: hold}
   - Y
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:backspace-outline$$', h: SYM}
+  - {t: \, s: '|'}
+  - ''
+  - {t: '$$mdi:backspace-reverse-outline$$', h: SYM}
   - D
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$', type: hold}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: P, h: '$$mdi:apple-keyboard-command$$'}
   - ;
-  - \
+  - {t: _, s: '?'}
   - X
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '"', s: _}
-  - {t: ., s: '`'}
-  - {t: '''', s: '?'}
+  - {t: /, s: ''''}
+  - {t: ., s: '"'}
+  - {t: ., s: '"'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

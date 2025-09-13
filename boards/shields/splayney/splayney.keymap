@@ -45,8 +45,10 @@
 
 /*              Col 6                   7                         8                         9       */
 #define TR_1    &lt L_NUM ESC           &lt L_MEDIAMAUS ENTER     &lt L_MEDIAMAUS ENTER     &lt L_NUM ESC  
-#define TR_2    &lt L_SYM BSPC          &none                     &none                     &lt L_SYM BSPC
+#define TR_2    &lt L_SYM BSPC          &none                     &none                     &lt L_SYM DELETE
 #define TR_3    &lt L_FUNNAV DE_SPACE   &mo L_SETTINGS            &mo L_SETTINGS            &lt L_FUNNAV DE_SPACE
+
+#define TR_2_beakl43    &lt L_SYM BSPC          &bslh_pipe             &none                     &lt L_SYM DELETE
 
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 
 
@@ -137,36 +139,61 @@
         comma_excl: comma_excl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DE_COMMA>, <&kp DE_EXCLAMATION>; // Ohne Modifikator: COMMA, Mit Shift: EXCLAMATION
-            mods = <(MOD_LSFT | MOD_RSFT)>; // Die Modifikatoren, die das Verhalten ändern (Left Shift oder Right Shift)
+            // Das erste Binding ist für den unmodifizierten Zustand (ohne Shift)
+            // Das zweite Binding ist für den modifizierten Zustand (mit Shift)
+            bindings = <&kp DE_COMMA>, <&kp DE_EXCLAMATION>; 
+            // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
+            mods = <(MOD_LSFT | MOD_RSFT)>; 
         };
         quote_under: quote_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            // Das erste Binding ist für den unmodifizierten Zustand (ohne Shift)
-            // Das zweite Binding ist für den modifizierten Zustand (mit Shift)
             bindings = <&kp DE_DQT>, <&kp DE_UNDERSCORE>;
-            // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
         dot_grave: dot_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            // Das erste Binding ist für den unmodifizierten Zustand (ohne Shift)
-            // Das zweite Binding ist für den modifizierten Zustand (mit Shift)
             bindings = <&kp DE_DOT>, <&kp DE_GRAVE>;
-            // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
         sq_qmark: sq_qmark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            // Das erste Binding ist für den unmodifizierten Zustand (ohne Shift)
-            // Das zweite Binding ist für den modifizierten Zustand (mit Shift)
             bindings = <&kp DE_SQT>, <&kp DE_QMARK>;
-            // Die Modifikatoren, die das Verhalten ändern sollen (linker oder rechter Shift)
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
+        slash_sqt: slash_sqt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_SLASH>, <&kp DE_SQT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+        dot_dqt: dot_dqt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_DOT>, <&kp DE_DQT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+        colon_minus: colon_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_DOT>, <&kp DE_DQT>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+        bslh_pipe: bslh_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_BSLH>, <&kp DE_PIPE>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+        under_qmark: under_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_UNDER>, <&kp DE_QMARK>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+        };
+
         // layer_quote_under: layer_quote_under {
         //     compatible = "zmk,behavior-hold-tap";
         //     // #binding-cells = <3>; // Tap-Binding und Hold-Binding
@@ -269,17 +296,20 @@
         //   qhou, glrfb
         //   jieay dtsnp
         //   xk".' vmcwz
+        //   xk/.:  \ vmcwz
+
         // BEAKL 43 (shift layer):
         //   |@$#% ^(~)&
         //   QHOU! GLRFB
         //   JIEAY DTSNP
         //   XK_`? VMCWZ
+        //   XK'"- VMCWZ
 
         layer_beakl43 {
             bindings = <    
-                &trans      &kp DE_Q      &kp DE_H         &td_umlo            &td_umlu          &comma_excl   TR_trans         &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &kp DE_MINUS
-                &kp DE_PIPE &hm LGUI DE_J &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Y      TR_trans         &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &kp DE_SEMI
-                &kp DE_BSLH &kp DE_X      &hm RALT DE_K    &quote_under        &dot_grave        &sq_qmark     TR_trans         &kp DE_V  &hm L_SYM  DE_M  &hm L_NUM DE_C  &hm RALT DE_W     &kp DE_Z       &kp ENTER
+                &trans       &kp DE_Q      &kp DE_H         &td_umlo            &td_umlu          &comma_excl   TR_trans         &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &kp DE_MINUS
+                &kp DE_PIPE  &hm LGUI DE_J &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Y      TR_2_beakl43     &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &kp DE_SEMI
+                &under_qmark &kp DE_X      &hm RALT DE_K    &slash_sqt          &dot_dqt          &colon_minus  TR_trans         &kp DE_V  &hm L_SYM  DE_M  &hm L_NUM DE_C  &hm RALT DE_W     &kp DE_Z       &kp ENTER
             >;
             label = "beakl43";
         };
@@ -367,7 +397,8 @@
             >;
             label = "SYMNUM";
         };
- */        layer_funnav { 
+ */        
+        layer_funnav { 
             bindings = <
                 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp F6          TR_trans       &kp INS      &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans
                 &kp F7  &kp F8  &kp F9  &kp F10 &kp F11  &kp F12         TR_trans       &caps_word   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &kp CAPS

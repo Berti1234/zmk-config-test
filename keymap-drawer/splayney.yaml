@@ -147,55 +147,55 @@ layers:
   - {t: '-', h: '$$mdi:apple-keyboard-option$$'}
   - /
   - ⮐
-  MTGAP:
-  - {t: ▽, type: trans}
-  - Y
-  - P
+  BEAKL-DETECH:
+  - Esc
+  - J
+  - H
   - O
   - U
-  - J
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - K
-  - D
+  - {t: ',', s: '!'}
+  - <
+  - ⮐
+  - ⮐
+  - '*'
+  - G
   - L
-  - C
-  - W
-  - '-'
-  - '|'
-  - {t: I, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - R
+  - F
+  - B
+  - '#'
+  - $$mdi:keyboard-tab$$
+  - {t: Q, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}
   - {t: A, h: '$$mdi:apple-keyboard-shift$$', type: hold}
-  - ','
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
-  - T
-  - S
-  - {t: R, h: '$$mdi:apple-keyboard-command$$'}
-  - ''''
-  - \
-  - Q
-  - {t: Z, h: '$$mdi:apple-keyboard-option$$'}
-  - /
-  - .
-  - ;
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - B
-  - F
-  - G
-  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
+  - Z
+  - $$mdi:backspace-outline$$
+  - {t: \, s: '|'}
+  - {t: _, s: '?'}
+  - $$mdi:backspace-reverse-outline$$
+  - D
+  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$', type: hold}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: P, h: '$$mdi:apple-keyboard-command$$'}
+  - '='
+  - SYM
   - X
-  - {t: ▽, type: trans}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: /, s: ''''}
+  - {t: ., s: '"'}
+  - {t: ':', s: '-'}
+  - $$mdi:keyboard-space$$
+  - Settings
+  - ;
+  - $$mdi:keyboard-space$$
+  - V
+  - M
+  - C
+  - {t: W, h: '$$mdi:apple-keyboard-option$$'}
+  - Y
+  - NUM
   beakl43:
   - {t: ▽, type: trans}
   - Q
@@ -494,7 +494,7 @@ layers:
   - {t: QWERTZ, h: toggle}
   - {t: beakl19bis, h: toggle}
   - {t: Graphite, h: toggle}
-  - {t: MTGAP, h: toggle}
+  - {t: BEAKL-DETECH, h: toggle}
   - {t: beakl43, h: toggle}
   - {t: GalliumV2, h: toggle}
   - {t: ▽, type: trans}
@@ -591,55 +591,55 @@ layers:
 combos:
 - p: [33, 34]
   k: Sft+INS
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [32, 33]
   k: Ctl+INS
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [27, 28]
   k: $$mdi:arrow-left$$
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [28, 29]
   k: $$mdi:arrow-right$$
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [43, 44]
   k: $$mdi:arrow-up$$
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [44, 45]
   k: $$mdi:arrow-down$$
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [11, 12]
   k: Home
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [12, 13]
   k: End
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [18, 19]
   k: '>'
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [34, 35]
   k: <
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [0, 1]
   k: Esc
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [16, 17]
   k: $$mdi:keyboard-tab$$
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [3, 4]
   k: '['
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [4, 5]
   k: ']'
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [19, 20]
   k: (
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [20, 21]
   k: )
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [35, 36]
   k: '{'
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [36, 37]
   k: '}'
-  l: [QWERTZ, beakl19bis, Graphite, MTGAP, beakl43, GalliumV2, aptV3]
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]

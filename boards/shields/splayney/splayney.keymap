@@ -52,10 +52,10 @@
 
 /*   │ SYM │ BSPC│SPACE│ENTER│   │ENTER│SPACE│DEL  │ NAV │ */
 /*               Col 6          7                8               9       */
-#define TR_B1    &mo L_SYM      &kp ENTER        &kp ENTER       &mo L_NUM   
+/*#define TR_B1    &mo L_SYM      &kp ENTER        &kp ENTER       &mo L_NUM   
 #define TR_B2    &kp BSPC       &blsh_pipe       &none           &kp DELETE
 #define TR_B3    &kp DE_SPACE   &mo L_SETTINGS   &mo L_SETTINGS  &kp DE_SPACE
-
+*/
 // #define TR_20   &lt L_SYMNUM DE_ESC    &none                     &mo L_NAV         &lt L_FUN DELETE 
 
 
@@ -257,12 +257,14 @@
         
         layer_beakl-de-tech {
             bindings = <
-                &kp ESC      &kp DE_J      &kp DE_H         &td_umlo            &td_umlu          &comma_excl   TR_B1     &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &kp DE_MINUS
-                &kp TAB      &hm LGUI DE_Q &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Z      TR_B2     &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &kp DE_SEMI
-                &mo L_SYM    &kp DE_X      &hm RALT DE_K    &slash_sqt          &dot_dqt          &colon_minus  TR_B3     &kp DE_V  &hm L_SYM  DE_M  &hm L_NUM DE_C  &hm RALT DE_W     &kp DE_Y       &mo L_NAV
+            /*  1            2             3                4                   5                 6           |TL 7            8           TR 9              10             | 11        12               13              14                15             16           */
+                &kp ESC      &kp DE_J      &kp DE_H         &td_umlo            &td_umlu          &comma_excl     &mo L_SYM    &kp ENTER      &kp ENTER      &mo L_NUM        &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &kp DE_MINUS
+                &kp TAB      &hm LGUI DE_Q &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Z        &kp BSPC     &blsh_pipe     &none          &kp DELETE       &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &kp DE_SEMI
+                &mo L_SYM    &kp DE_X      &hm RALT DE_K    &slash_sqt          &dot_dqt          &colon_minus    &kp DE_SPACE &mo L_SETTINGS &mo L_SETTINGS &kp DE_SPACE     &kp DE_V  &hm L_SYM  DE_M  &hm L_NUM DE_C  &hm RALT DE_W     &kp DE_Y       &mo L_NAV
             >;
             label = "BEAKL-DETECH";
         };
+
 
         // BEAKL 43
 

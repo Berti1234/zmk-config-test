@@ -204,7 +204,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             // Normal: ; , Shift: `
-            bindings = <&kp DE_SEMI>, <&kp GRV>; 
+            bindings = <&kp DE_SEMI>, <&kp DE_GRAVE>; 
             mods = <(MOD_LSFT | MOD_RSFT)>; 
         };
 
@@ -220,7 +220,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             // Normal: = , Shift: ^
-            bindings = <&kp DE_EQUAL>, <&kp DE_CIRC>; 
+            bindings = <&kp DE_EQUAL>, <&kp DE_CARET>; 
             mods = <(MOD_LSFT | MOD_RSFT)>; 
         };
 

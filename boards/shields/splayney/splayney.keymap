@@ -200,6 +200,39 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
+        semicolon_backtick: semicolon_backtick {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            // Normal: ; , Shift: `
+            bindings = <&kp DE_SEMI>, <&kp GRV>; 
+            mods = <(MOD_LSFT | MOD_RSFT)>; 
+        };
+
+        hash_tilde: hash_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            // Normal: # , Shift: ~
+            bindings = <&kp DE_HASH>, <&kp DE_TILDE>; 
+            mods = <(MOD_LSFT | MOD_RSFT)>; 
+        };
+
+        equal_caret: equal_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            // Normal: = , Shift: ^
+            bindings = <&kp DE_EQUAL>, <&kp DE_CIRC>; 
+            mods = <(MOD_LSFT | MOD_RSFT)>; 
+        };
+
+        asterisk_plus: asterisk_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            // Normal: * , Shift: +
+            bindings = <&kp DE_ASTRK>, <&kp DE_PLUS>; 
+            mods = <(MOD_LSFT | MOD_RSFT)>; 
+        };
+
+
         // layer_quote_under: layer_quote_under {
         //     compatible = "zmk,behavior-hold-tap";
         //     // #binding-cells = <3>; // Tap-Binding und Hold-Binding
@@ -259,9 +292,9 @@
 
         layer_beakldetech {
             bindings = <
-                &kp ESC      &kp DE_J      &kp DE_H         &td_umlo            &td_umlu          &comma_excl     &kp DE_LT    &kp ENTER      &kp ENTER      &kp DE_ASTRK     &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &kp DE_HASH
-                &kp TAB      &hm LGUI DE_Q &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Z        &kp BSPC     &bslh_pipe     &under_qmark   &kp DELETE       &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &kp DE_EQUAL
-                &mo L_SYM    &kp DE_X      &hm RALT DE_K    &slash_sqt          &dot_dqt          &colon_minus    &kp DE_SPACE &mo L_SETTINGS &kp DE_SEMI    &kp DE_SPACE     &kp DE_V  &kp DE_M         &kp DE_C        &hm RALT DE_W     &kp DE_Y       &mo L_NUM
+                &kp ESC      &kp DE_J      &kp DE_H         &td_umlo            &td_umlu          &comma_excl     &kp DE_LT    &kp ENTER      &kp ENTER           &asterisk_plus   &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &hash_tilde
+                &kp TAB      &hm LGUI DE_Q &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Z        &kp BSPC     &bslh_pipe     &under_qmark        &kp DELETE       &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &equal_caret
+                &mo L_SYM    &kp DE_X      &hm RALT DE_K    &slash_sqt          &dot_dqt          &colon_minus    &kp DE_SPACE &mo L_SETTINGS &semicolon_backtick &kp DE_SPACE     &kp DE_V  &kp DE_M         &kp DE_C        &hm RALT DE_W     &kp DE_Y       &mo L_NUM
             >;
             label = "BEAKL-DETECH"; 
         };

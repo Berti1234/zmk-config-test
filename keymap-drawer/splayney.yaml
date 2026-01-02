@@ -157,13 +157,13 @@ layers:
   - <
   - ⮐
   - ⮐
-  - '*'
+  - {t: '*', s: +}
   - G
   - L
   - R
   - F
   - B
-  - '#'
+  - {t: '#', s: '~'}
   - $$mdi:keyboard-tab$$
   - {t: Q, h: '$$mdi:apple-keyboard-command$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
@@ -179,7 +179,7 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-control$$', type: hold}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: P, h: '$$mdi:apple-keyboard-command$$'}
-  - '='
+  - {t: '=', s: CIRC}
   - SYM
   - X
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
@@ -188,7 +188,7 @@ layers:
   - {t: ':', s: '-'}
   - $$mdi:keyboard-space$$
   - Settings
-  - ;
+  - {t: ;, s: GRV}
   - $$mdi:keyboard-space$$
   - V
   - M

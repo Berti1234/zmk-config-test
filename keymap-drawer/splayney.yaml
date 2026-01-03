@@ -589,12 +589,6 @@ layers:
   - Ctl+Z
   - {t: ▽, type: trans}
 combos:
-- p: [33, 34]
-  k: Sft+INS
-  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
-- p: [32, 33]
-  k: Ctl+INS
-  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [27, 28]
   k: $$mdi:arrow-left$$
   l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
@@ -613,18 +607,6 @@ combos:
 - p: [12, 13]
   k: End
   l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
-- p: [18, 19]
-  k: '>'
-  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
-- p: [34, 35]
-  k: <
-  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
-- p: [0, 1]
-  k: Esc
-  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
-- p: [16, 17]
-  k: $$mdi:keyboard-tab$$
-  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [3, 4]
   k: '['
   l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
@@ -642,4 +624,13 @@ combos:
   l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
 - p: [36, 37]
   k: '}'
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
+- p: [2, 4]
+  k: Ctl+X
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
+- p: [18, 20]
+  k: Ctl+C
+  l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]
+- p: [34, 36]
+  k: Ctl+V
   l: [QWERTZ, beakl19bis, Graphite, BEAKL-DETECH, beakl43, GalliumV2, aptV3]

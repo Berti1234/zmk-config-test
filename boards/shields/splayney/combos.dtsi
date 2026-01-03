@@ -8,7 +8,8 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
-    timeout-ms = <25>;\
+    timeout-ms = <90>;\
+    require-prior-idle-ms = <30>; \
   };
 
 #define COMBO_LONG(NAME, BINDINGS, KEYPOS, LAYERS) \
@@ -31,22 +32,19 @@
 /*    COMBO(esc, &kp ESC, 1 2, 0)
     COMBO_LONG(capsword, &caps_word, 14 15, 0)
 */
-
-    COMBO(shiftins, &kp LS(INS), 33 34, NORMAL_LAYERS)
-    COMBO(ctrlins,  &kp LC(INS), 32 33, NORMAL_LAYERS)
-
     COMBO(cleft,  &kp LEFT, 27 28, NORMAL_LAYERS)
     COMBO(cright, &kp RIGHT, 28 29, NORMAL_LAYERS)
     COMBO(cup,    &kp UP, 43 44, NORMAL_LAYERS)
     COMBO(cdown,  &kp DOWN, 44 45, NORMAL_LAYERS)
     COMBO(chome,  &kp HOME, 11 12, NORMAL_LAYERS)
     COMBO(cend,   &kp END, 12 13, NORMAL_LAYERS)
-
+/*
     COMBO(gt,    &kp DE_GT, 18 19, NORMAL_LAYERS)
     COMBO(lt,    &kp DE_LT, 34 35, NORMAL_LAYERS)
 
     COMBO(esc,   &kp ESC, 0 1, NORMAL_LAYERS)
-    COMBO(tab,   &kp TAB, 16 17, NORMAL_LAYERS)
+    COMBO(tab,   &kp TAB, 16 17, NORMAL_LAYERS)q
+*/
 
     COMBO(lbkt,  &kp DE_LBKT, 3 4, NORMAL_LAYERS)
     COMBO(rbkt,  &kp DE_RBKT, 4 5, NORMAL_LAYERS)
@@ -67,11 +65,12 @@
     COMBO(n8,  &kp DE_N8, 14 30, NORMAL_LAYERS)
     COMBO(n9,  &kp DE_N9, 5  21, NORMAL_LAYERS)
 */
-/*
+
     COMBO(cut,    &kp Cut,   2   4, NORMAL_LAYERS)
     COMBO(copy,   &kp Copy,  18 20, NORMAL_LAYERS)
     COMBO(paste,  &kp Paste, 34 36, NORMAL_LAYERS)
-*/
+
+
 
   };
-};
+};+

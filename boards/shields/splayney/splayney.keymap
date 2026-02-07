@@ -86,6 +86,8 @@
 
 / {
     behaviors {
+
+/* HOME ROW MODS */
         thm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -103,16 +105,66 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // Ctrl, GUI (sehr bewusst)
+        hm_strict: hmr_strict {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <260>;
+            require-prior-idle-ms = <170>;
+            quick-tap-ms = <120>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Alt / RAlt (mittel)
+        hm_mid: hmr_mid {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <240>;
+            require-prior-idle-ms = <140>;
+            quick-tap-ms = <120>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Shift (am schnellsten)
+        hm_shift: hmr_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <210>;
+            require-prior-idle-ms = <120>;
+            quick-tap-ms = <110>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+         };
+
+
+/*---------------------*/
+
         td_umla: tap_dance_generic_a {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt LALT DE_A>, <&kp DE_A_UMLAUT>;
         };
+/*
         td_LS_umla: tap_dance_generic_LS_a {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
+            bindings = <&mt LSHIFT DE_A>, <&kp DE_A_UMLAUT>;
+        };
+*/
+        td_LS_umla: tap_dance_generic_LS_a {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;             // wie hm_shift
+            quick-tap-ms = <110>;                // schützt Doppeltaps
+            flavor = "tap-preferred";            // Tap first
+            hold-trigger-on-release;             // Hold wird erst beim Loslassen entschieden
             bindings = <&mt LSHIFT DE_A>, <&kp DE_A_UMLAUT>;
         };
 
@@ -134,12 +186,23 @@
             tapping-term-ms = <200>;
             bindings = <&mt LALT DE_S>, <&kp DE_SHARP_S>;
         };
+/*
         td_LC_umlss: tap_dance_generic_ss {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt LCTRL DE_S>, <&kp DE_SHARP_S>;
         };
+*/
+        td_LC_umlss: tap_dance_generic_ss {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <260>;          // wie hm_strict für Ctrl
+            quick-tap-ms = <120>;             // schützt Doppeltaps
+            flavor = "tap-preferred";         // Tap first
+            hold-trigger-on-release;          // Hold wird erst beim Loslassen entschieden
+            bindings = <&mt LCTRL DE_S>, <&kp DE_SHARP_S>;
+         };
 
         // BEAKL43
         comma_excl: comma_excl {
@@ -292,9 +355,9 @@
 
         layer_beakldetech {
             bindings = <
-                &kp ESC      &kp DE_J      &kp DE_H         &td_umlo            &td_umlu          &comma_excl     &kp DE_LT    &kp ENTER      &kp ENTER           &asterisk_plus   &kp DE_G  &kp DE_L         &kp DE_R        &kp DE_F          &kp DE_B       &hash_tilde
-                &kp TAB      &hm LGUI DE_Q &hm LALT DE_I    &hm LCTRL DE_E      &td_LS_umla       &kp DE_Z        &kp BSPC     &bslh_pipe     &under_qmark        &kp DELETE       &kp DE_D  &hm LSHIFT DE_T  &td_LC_umlss    &hm LALT DE_N     &hm LGUI DE_P  &equal_caret
-                &mo L_SYM    &kp DE_X      &hm RALT DE_K    &slash_sqt          &dot_dqt          &colon_minus    &kp DE_SPACE &mo L_SETTINGS &semicolon_backtick &kp DE_SPACE     &kp DE_V  &kp DE_M         &kp DE_C        &hm RALT DE_W     &kp DE_Y       &mo L_NUM
+                &kp ESC      &kp DE_J             &kp DE_H             &td_umlo               &td_umlu          &comma_excl     &kp DE_LT    &kp ENTER      &kp ENTER           &asterisk_plus   &kp DE_G  &kp DE_L               &kp DE_R        &kp DE_F          &kp DE_B       &hash_tilde
+                &kp TAB      &hm_strict LGUI DE_Q &hm_mid LALT DE_I    &hm_strict LCTRL DE_E  &td_LS_umla       &kp DE_Z        &kp BSPC     &bslh_pipe     &under_qmark        &kp DELETE       &kp DE_D  &hm_shift LSHIFT DE_T  &td_LC_umlss    &hm_mid LALT DE_N     &hm_strict LGUI DE_P  &equal_caret
+                &mo L_SYM    &kp DE_X             &hm_mid RALT DE_K    &slash_sqt             &dot_dqt          &colon_minus    &kp DE_SPACE &mo L_SETTINGS &semicolon_backtick &kp DE_SPACE     &kp DE_V  &kp DE_M               &kp DE_C        &hm RALT DE_W     &kp DE_Y       &mo L_NUM
             >;
             label = "BEAKL-DETECH"; 
         };

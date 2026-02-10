@@ -200,7 +200,7 @@
             // tapping-term-ms = <260>;          // wie hm_strict für Ctrl
             // quick-tap-ms = <120>;             // schützt Doppeltaps
             // flavor = "tap-preferred";         // Tap first
-            hold-trigger-on-release;          // Hold wird erst beim Loslassen entschieden
+            // hold-trigger-on-release;          // Hold wird erst beim Loslassen entschieden
             bindings = <&mt LCTRL DE_S>, <&kp DE_SHARP_S>;
          };
 

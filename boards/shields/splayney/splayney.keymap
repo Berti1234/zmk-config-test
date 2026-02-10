@@ -164,7 +164,7 @@
             tapping-term-ms = <210>;             // wie hm_shift
             // quick-tap-ms = <110>;                // schützt Doppeltaps
             // flavor = "tap-preferred";            // Tap first
-            hold-trigger-on-release;             // Hold wird erst beim Loslassen entschieden
+            // hold-trigger-on-release;             // Hold wird erst beim Loslassen entschieden
             bindings = <&mt LSHIFT DE_A>, <&kp DE_A_UMLAUT>;
         };
 
@@ -199,7 +199,7 @@
             #binding-cells = <0>;
             // tapping-term-ms = <260>;          // wie hm_strict für Ctrl
             // quick-tap-ms = <120>;             // schützt Doppeltaps
-            flavor = "tap-preferred";         // Tap first
+            // flavor = "tap-preferred";         // Tap first
             hold-trigger-on-release;          // Hold wird erst beim Loslassen entschieden
             bindings = <&mt LCTRL DE_S>, <&kp DE_SHARP_S>;
          };

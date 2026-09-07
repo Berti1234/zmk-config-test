@@ -164,7 +164,7 @@ layers:
   - F
   - B
   - {t: '#', s: '~'}
-  - $$mdi:keyboard-tab$$
+  - '&tab_caps'
   - {t: Q, h: '$$mdi:apple-keyboard-command$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: '$$mdi:apple-keyboard-control$$'}

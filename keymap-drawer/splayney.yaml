@@ -155,8 +155,8 @@ layers:
   - U
   - {t: ',', s: '!'}
   - <
-  - ⮐
-  - ⮐
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
   - {t: '*', s: +}
   - G
   - L
@@ -186,10 +186,10 @@ layers:
   - {t: /, s: ''''}
   - {t: ., s: '"'}
   - {t: ':', s: '-'}
-  - $$mdi:keyboard-space$$
+  - ⮐
   - Settings
   - {t: ;, s: '`'}
-  - $$mdi:keyboard-space$$
+  - ⮐
   - V
   - M
   - C

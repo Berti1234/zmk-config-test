@@ -137,9 +137,9 @@
             tapping-term-ms = <210>;
             require-prior-idle-ms = <120>;
             quick-tap-ms = <110>;
-            hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
          };
+//            hold-trigger-on-release;
 
 
 /*---------------------*/

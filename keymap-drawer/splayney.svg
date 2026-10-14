@@ -1144,14 +1144,16 @@ path.combo {
 <g transform="translate(223, 203)" class="key keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">&lt;</text>
-</g>
+<a href="#FUN-NAV">
+<text x="0" y="24" class="key hold layer-activator">FUN NAV</text>
+</a></g>
 <g transform="translate(392, 273) rotate(45.0)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">⮐</text>
 </g>
 <g transform="translate(558, 274) rotate(-45.0)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">ENTER.</text>
+<text x="0" y="0" class="key tap">⮐</text>
 </g>
 <g transform="translate(727, 203)" class="key keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

@@ -266,6 +266,7 @@
             #binding-cells = <0>;
             bindings = <&kp DE_COLON>, <&kp DE_MINUS>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
+            keep-mods = <0>;
         };
         bslh_pipe: bslh_pipe {
             compatible = "zmk,behavior-mod-morph";
